@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body style="background: white;">
+		<div id="titleDiv" style="background: #AFD25E;height: 44px;">
+			<table width="100%">
+				<tr>
+					<td width="15%">
+						<a href="#" id="backBtn"><img src="images/back.png" style="width: 44px;"></a>
+					</td>
+					<td width="85%">
+						<div id="headerTitle" style="color: white;font-size: 14px;"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="allContail">
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$('#backBtn').click(function() {
+				window.history.go(-1);
+			});
+
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			var lang = GetQueryString('language');
+			var id = GetQueryString('id');
+			
+
+			
+
+			if(lang == 'zh-CN') {
+           $('#headerTitle').get(0).innerHTML = '更多房源信息';
+			} else {
+				$('#headerTitle').get(0).innerHTML = 'More informations';
+			}
+
+			function loadData() {
+				$.ajax({
+					url: 'http://api.usleju.cn/estate/house/get',
+					type: 'GET', //GET
+					async: true, //或false,是否异步
+					data: {
+						id: id //'72200884'
+					},
+					timeout: 5000, //超时时间
+					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend: function(request) {
+						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+						request.setRequestHeader("language", lang || 'en-US');
+
+					},
+					success: function(data, textStatus, jqXHR) {
+						var obj = data;
+						if(obj.code == 200) {
+							var recommend_houses = obj.data.details;
+							for(var i = 0; i < recommend_houses.length; i++) {
+								var o = recommend_houses[i];
+								var html = '<div style="height: 40px;font-size: 14px;color: #333333;padding-left: 12px;background: #F2F2F2;margin-top: 1px;padding-top: 10px;">';
+								html += o.title;
+								html += '</div>';
+								$('#allContail').append(html);
+
+								var items = o.items;
+
+								for(var item in items) {
+
+									var ihtml = '<div style="height: 40px;font-size: 12px;color: #999999;padding-left: 12px;padding-top: 9px;">';
+									ihtml += items[item].title + ':' + items[item].value;
+									ihtml += '</div>';
+									$('#allContail').append(ihtml);
+								}
+
+								//$('#allContail').append('<div style="height:1px;background: #f2f2f2;"></div>');
+							}
+						} else {
+
+						}
+					},
+					error: function(xhr, textStatus) {
+						console.log('错误')
+						console.log(xhr)
+						console.log(textStatus)
+					},
+					complete: function() {
+						console.log('结束')
+					}
+				});
+
+			}
+
+			loadData();
+		</script>
+	</body>
+
+</html>

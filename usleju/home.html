@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body style="background: white;">
+
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop" id="mui-slider">
+
+			</div>
+			
+				<div id="titleDiv" style="height: 44px; position: relative;left: 0px;top: -280px">
+			<table width="100%">
+				<tr>
+					<td width="15%">
+						<a href="#" id="backBtn"><img src="images/back.png" style="width: 44px;"></a>
+					</td>
+					<td width="85%">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+      <div id="allContail">
+      	<div>
+      		<div id="locationDiv" style="color: #333333;font-size: 14px;padding-left: 12px;"></div>
+      		<div id="priceDiv" style="margin-top: 5px;font-size: 14px;color: red;padding-left: 12px;"></div>
+      		<div style="height: 1px; background: #f2f2f2;margin-top: 5px;"></div>
+      		<table width="100%" style="margin-top: 5px;font-size: 12px;">
+      			<tr> <td width="25%" style="padding-left: 12px;" id="typeLabel">类型:</td>
+      				 <td width="25%" style="color: red;" id="typeValue"></td>
+      				 <td width="25%" id="bathLabel">卫生间:</td>
+      				 <td width="25%"style="color: red;"  id="bathValue"></td>
+      			</tr>
+      			<tr> <td width="25%" style="padding-left: 12px;" id="bedsLabel">卧室数:</td>
+      				 <td width="25%" style="color: red;"  id="bedsValue"></td>
+      				 <td width="25%" id="squreLabel">面积:</td>
+      				 <td width="25%"style="color: red;"  id="squreValue"></td>
+      			</tr>
+      			
+      			<tr> <td width="25%" style="padding-left: 12px;"id="areaLabel">区域:</td>
+      				 <td width="25%" style="color: red;"  id="areaValue"></td>
+      				 <td width="25%" ></td>
+      				 <td width="25%"style="color: red;"></td>
+      			</tr>
+      		</table>
+      		
+      		<div style="height: 1px; background: #f2f2f2;margin-top: 5px;"></div>
+      		
+      		 <div  align="center" style="height: 80px;color: #AFD25E;font-size: 14px;padding-top: 33px;">
+      		 	   <a style="color:#AFD25E;text-decoration:underline" id="moreBtn">更多房源信息</a>
+      		 </div>
+      		 
+      		 <div style="height: 1px; background: #f2f2f2;margin-top: 5px;"></div>
+      		 
+      		 <table width="100%">
+      		 	<tr>
+      		 		<td width="49.5%" id="ta"></td>
+      		 		<td width="1%"><div style="width: 1px;height: 30px;background: #F2F2F2;margin-top: 5px;"></div></td>
+      		 		<td width="49.5%" id="tb"></td>
+      		 	</tr>
+      		 </table>
+      		  <div style="height: 1px; background: #f2f2f2;margin-top: 5px;"></div>
+      		 
+      		 <table width="100%">
+      		 	<tr>
+      		 		<td width="49.5%" id="tc"></td>
+      		 		<td width="1%"><div style="width: 1px;height: 30px;background: #F2F2F2;margin-top: 5px;"></div></td>
+      		 		<td width="49.5%" id="td"></td>
+      		 	</tr>
+      		 </table>
+      		  <div style="height: 1px; background: #f2f2f2;margin-top: 5px;"></div>
+      		   <table width="100%" style="margin-top: 5px;">
+      		 	<tr>
+      		 		<td width="50%"><div align="left" style="padding-left: 5px;font-size: 12px;" id="nearby">周边房源</div></td>
+      		 	
+      		 		<td width="50%"><div align="right" style="padding-right: 5px;color: #AFD25E;font-size: 12px;"></div></td>
+      		 	</tr>
+      		 </table>
+      	</div>
+      </div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+				function GetQueryString(name)
+	   {
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	   }
+			var lang = GetQueryString('language')||'en-US';
+			var id = GetQueryString('id');
+			$('#backBtn').click(function() {
+				window.history.go(-1);
+			});
+			$.ajax({
+				url: 'http://api.usleju.cn/estate/house/get',
+				type: 'GET', //GET
+				async: true, //或false,是否异步
+				data: {
+					id: id//'72200884'
+				},
+				timeout: 5000, //超时时间
+				dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+				beforeSend: function(request) {
+					request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+					request.setRequestHeader("language", lang);
+
+				},
+				success: function(data, textStatus, jqXHR) {
+					var obj = data;
+
+					if(obj.code == 200) {
+
+						var images = obj.data.images;
+
+						for(var i = 0; i < images.length; i++) {
+							if(i == 0) {
+								$('#mui-slider').append('<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="' + images[i] + '" /></a></div>');
+							} else {
+								$('#mui-slider').append('<div class="mui-slider-item"><a href="#"><img src="' + images[i] + '" /></a></div>');
+							}
+
+						}
+						var gallery = mui('.mui-slider');
+						gallery.slider({
+							interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+						});
+						
+						
+						       $('#locationDiv').get(0).innerHTML = obj.data.location;
+						
+						      $('#priceDiv').get(0).innerHTML = obj.data.list_price;
+						
+							   $('#typeValue').get(0).innerHTML = obj.data.prop_type_name;
+								$('#bathValue').get(0).innerHTML = obj.data.no_full_baths;
+								$('#bedsValue').get(0).innerHTML = obj.data.no_bedrooms;
+							    $('#areaValue').get(0).innerHTML = obj.data.area;
+							    $('#squreValue').get(0).innerHTML = obj.data.square_feet;
+							      if(lang == 'zh-CN'){
+							     $('#typeLabel').get(0).innerHTML = '类型：';
+								$('#bathLabel').get(0).innerHTML = '卫生间数：';
+								$('#bedsLabel').get(0).innerHTML = '卧室数：';
+							    $('#areaLabel').get(0).innerHTML = '区域：';
+							    $('#squreLabel').get(0).innerHTML = '面积：';
+							       $('#moreBtn').get(0).innerHTML = '更多房源信息';
+							         $('#nearby').get(0).innerHTML = '周边房源';
+							       
+							      }else{
+							     $('#typeLabel').get(0).innerHTML = 'Property: ';
+								$('#bathLabel').get(0).innerHTML = 'Baths: ';
+								$('#bedsLabel').get(0).innerHTML = 'Beds: ';
+							    $('#areaLabel').get(0).innerHTML = 'Area: ';
+							    $('#squreLabel').get(0).innerHTML = 'Living Area: ';
+							      $('#moreBtn').get(0).innerHTML = 'More informations';
+							     $('#nearby').get(0).innerHTML = 'Nearby';
+							      }
+
+							   
+							      var url =  'houseMore.html?id='+id+'&anguage='+(lang||'en-US');
+							 
+							       $('#moreBtn').attr('href',url);
+							    
+							    var roi = obj.data.roi;
+							      if(lang == 'zh-CN'){
+							      	    $('#ta').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["est_roi_cash"]+'</font><br><font color="#333333" size="-1">投资回报（全款）</font></div>';
+						
+						 $('#tb').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["ave_roi_cash"]+'</font><br><font color="#333333" size="-1">周边投资回报（全款）</font></div>';
+						
+						 $('#tc').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["est_annual_income_cash"]+'</font><br><font color="#333333" size="-1">年净收入预期（全款）</font></div>';
+						
+						 $('#td').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["ave_annual_income_cash"]+'</font><br><font color="#333333" size="-1">区域平均年净收入（全款）</font></div>';
+						
+							      }else{
+						$('#ta').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["est_roi_cash"]+'</font><br><font color="#333333" size="-1">Westimated ROI(Cash)</font></div>';
+						
+						 $('#tb').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["ave_roi_cash"]+'</font><br><font color="#333333" size="-1">Area ROI(Cash)</font></div>';
+						
+						 $('#tc').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["est_annual_income_cash"]+'</font><br><font color="#333333" size="-1">Area Avg.Net Income(Cash)</font></div>';
+						
+						 $('#td').get(0).innerHTML = '<div align="center"><font color="#AFD25E" size="-2">'+roi["ave_annual_income_cash"]+'</font><br><font color="#333333" size="-1">Net Income(Cash)</font></div>';
+						
+							      }
+						
+						 var recommend_houses =  obj.data.recommend_houses;
+						 for(var i = 0; i< recommend_houses.length;i++){
+						 	var o = recommend_houses[i];
+						 	var html = '<a href="home.html?anguage='+lang+'&id='+o.id+'"><table>';
+						 		html += '<tr>';
+						 		html += '<td width="35%">';
+						 		html += '<img src="'+o.image+'" style="height:100px;width:150px;margin-top:10px;"/>';
+						 		html += '</td>';
+						 		html += '<td width="65%">';
+						 		
+						 		html += '<div style="color:#333333;font-size:12px;margin-top:5px;margin-left:5px;">'+o.name+'</div>';
+						 		
+						 	     html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">'+o.location+'</div>';
+						 								 		
+						 		
+						 		   if(lang == 'zh-CN'){
+						 		   	var desc = '卧室 '+o.no_bedrooms+'| 全卫 '+o.no_full_baths+' 半卫 '+o.no_half_baths+' | 居住面积 '+o.square_feet+'';
+				               	   html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">'+desc+'</div>';
+						 		
+				               }else{
+				               	 	var desc = o.no_bedrooms+'beds '+o.no_full_baths+'.'+o.no_half_baths+'baths '+o.square_feet;
+				               	    html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">'+desc+'</div>';
+						 		
+				               }
+						 		 
+						 	
+				               if(lang == 'zh-CN'){
+				               	  html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">售价:<font color="red">'+o.list_price+'</font></div>';
+						 		
+				               }else{
+				               	  html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">Price:<font color="red">'+o.list_price+'</font></div>';
+						 		
+				               }
+						 		
+						 		html += '</td>';
+						 		html += '</tr>';
+						 	    html += '</table></a>';
+						 	$('#allContail').append(html);
+						 	 $('#allContail').append('<div style="height:1px;background: #f2f2f2;"></div>');
+						 }
+					}
+				},
+				error: function(xhr, textStatus) {
+					console.log('错误')
+					console.log(xhr)
+					console.log(textStatus)
+				},
+				complete: function() {
+					console.log('结束')
+				}
+			})
+		</script>
+	</body>
+
+</html>
