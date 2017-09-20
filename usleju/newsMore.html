@@ -18,6 +18,7 @@
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
+			<script src="layer/layer.js"></script>
 		<script type="text/javascript">
 			$('#backBtn').click(function() {
 				window.history.go(-1);
@@ -33,12 +34,14 @@
 			var id = GetQueryString('id');
 
 			function loadData() {
+				layer.load();
 				$.ajax({
-					url: 'http://api.usleju.cn/catalog/news/get',
+					url: 'http://api.usleju.cn/catalog/news/list',
 					type: 'GET', //GET
 					async: true, //或false,是否异步
 					data: {
-						id: id //'72200884'
+						page_size:50,
+						page: 1 //'72200884'
 					},
 					timeout: 5000, //超时时间
 					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
@@ -48,27 +51,43 @@
 
 					},
 					success: function(data, textStatus, jqXHR) {
+						layer.closeAll('loading');
 						var obj = data;
 						if(obj.code == 200) {
-							//$('#headerTitle').get(0).innerHTML = obj.data.title;
-							 var content = 	obj.data.content;
-							var reg = new RegExp( '<img' , "g" )
-							
-                            var newstr = content.replace( reg , '<img style="width:'+$(window).width()+'px;"' );
+								var objs = obj.data.items;
+							for(var i = 0; i < objs.length; i++) {
+								var o = objs[i];
+								var html = '<a href="news.html?language=' + window.lang + '&id=' + o.id + '"><table>';
+								html += '<tr>';
 
-						  
-							$('#allContail').get(0).innerHTML =newstr;
+								html += '<td width="65%">';
+
+								html += '<div style="color:#333333;font-size:12px;margin-top:5px;margin-left:5px;">' + o.title + '</div>';
+
+								html += '</td>';
+
+								html += '<td width="35%">';
+								html += '<img src="' + o.image + '" style="height:70px;width:135px;margin-right:5px;margin-top:5px;"/>';
+								html += '</td>';
+
+								html += '</tr>';
+								html += '</table></a>';
+								$('#allContail').append(html);
+								$('#allContail').append('<div style="background: #dedede;height: 1px;"></div>');
+							}
 							
 						} else {
 
 						}
 					},
 					error: function(xhr, textStatus) {
+						layer.closeAll('loading');
 						console.log('错误')
 						console.log(xhr)
 						console.log(textStatus)
 					},
 					complete: function() {
+						layer.closeAll('loading');
 						console.log('结束')
 					}
 				});

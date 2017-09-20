@@ -131,7 +131,7 @@
 			window.lang = GetQueryString('language');
 			$('#purchaseBtn').attr('href', 'purchase.html?language=' + window.lang || 'en-US');
 			$('#rentalBtn').attr('href', 'rental.html?language=' + window.lang || 'en-US');
-			$('#newsBtn').attr('href', 'news.html?language=' + window.lang || 'en-US');
+			$('#newsBtn').attr('href', 'newsMore.html?language=' + window.lang || 'en-US');
 			$('#workflowBtn').attr('href', 'workflow.html?language=' + window.lang || 'en-US');
 
 			$('#locationBtn').click(function() {
@@ -259,10 +259,10 @@
 
 								htmla += '<td width="50%">';
 
-								htmla += '<a href="news.html?anguage=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
+								htmla += '<a href="newsMore.html?anguage=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
 							} else {
 
-								htmla += '<a href="news.html?anguage=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Latest news</div></a>';
+								htmla += '<a href="newsMore.html?anguage=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Latest news</div></a>';
 
 								htmla += '</td>';
 
@@ -279,7 +279,7 @@
 							$('#allContail').append('<div style="background: #dedede;height: 1px;"></div>');
 							for(var i = 0; i < objs.length; i++) {
 								var o = objs[i];
-								var html = '<a href="newsMore.html?language=' + window.lang + '&id=' + o.id + '"><table>';
+								var html = '<a href="news.html?language=' + window.lang + '&id=' + o.id + '"><table>';
 								html += '<tr>';
 
 								html += '<td width="65%">';
