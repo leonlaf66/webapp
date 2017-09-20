@@ -12,13 +12,31 @@
 
 	<body style="background: white;">
 		
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop" id="mui-slider">
+
+			</div>
+			
+				<div id="titleDiv" style="height: 44px; position: relative;left: 0px;top: -280px">
+			<table width="100%">
+				<tr>
+					<td width="15%">
+						<a href="#" id="backBtn"><img src="" style="width: 44px;"></a>
+					</td>
+					<td width="85%">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
 
 		<div id="allContail">
 
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
-			<script src="layer/layer.js"></script>
+		<script src="layer/layer.js"></script>
 		<script type="text/javascript">
 			$('#backBtn').click(function() {
 				window.history.go(-1);
@@ -95,6 +113,59 @@
 			}
 
 			loadData();
+			
+			function loadAds(){
+						$.ajax({
+				url: 'http://api.usleju.cn/catalog/news/list-top-banner',
+				type: 'GET', //GET
+				async: true, //或false,是否异步
+				data: {
+					"area_id":"ma"
+				},
+				timeout: 5000, //超时时间
+				dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+				beforeSend: function(request) {
+					request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+					request.setRequestHeader("language", lang);
+
+				},
+				success: function(data, textStatus, jqXHR) {
+					var obj = data;
+
+					if(obj.code == 200) {
+
+						var images = obj.data;
+
+						for(var i = 0; i < images.length; i++) {
+							var o = images[i];
+							if(i == 0) {
+								$('#mui-slider').append('<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="' + o.image + '" /></a></div>');
+							} else {
+								$('#mui-slider').append('<div class="mui-slider-item"><a href="#"><img src="' + o.image + '" /></a></div>');
+							}
+
+						}
+						var gallery = mui('.mui-slider');
+						gallery.slider({
+							interval: 3000 //自动轮播周期，若为0则不自动播放，默认为0；
+						});
+						
+						 	 $('#allContail').append('<div style="height:1px;background: #f2f2f2;"></div>');
+						
+					}
+				},
+				error: function(xhr, textStatus) {
+					console.log('错误')
+					console.log(xhr)
+					console.log(textStatus)
+				},
+				complete: function() {
+					console.log('结束')
+				}
+			})
+				
+			}
+			loadAds();
 		</script>
 	</body>
 
