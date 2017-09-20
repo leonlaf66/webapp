@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<div id="allContail" style="margin-top: 0px;height: 200px;">
+        <img src="images/bag.png" style="width:auto;height: 200px;;" />
+        <table width="100%" style="position: relative;left: 0px;top: -120px;"><tbody>
+		<tr>
+			<td colspan="2">
+				<div align="center"><img src="images/header.png" style="width: 40px;height: 40px;"/></div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+					<div align="right"><div align="center" style="width: 80px;height:35px;background: white;">登录</div></div>
+			</td>
+			<td>
+					<div align="left"><div align="center" style="width: 80px;height:35px;background: white;">注册</div></div>
+			</td>
+		</tr>
+	</tbody>
+        </table>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			 window.lang = GetQueryString('language');
+			 
+			    if(window.lang == 'zh-CN'){
+			    	   
+			    	      
+			    }else{
+			    
+			    }
+
+		</script>
+	</body>
+
+</html>

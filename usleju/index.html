@@ -201,6 +201,7 @@
 					var obj  = one = window.area[key];
 					
 					$('#locationBtn').get(0).innerHTML = obj.name;
+					 window.sessionStorage.setItem('area_id', key);
 					layer.closeAll();
 				});
 			});
@@ -258,10 +259,10 @@
 
 								htmla += '<td width="50%">';
 
-								htmla += '<div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div>';
+								htmla += '<a href="news.html?anguage=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
 							} else {
 
-								htmla += '<div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Latest news</div>';
+								htmla += '<a href="news.html?anguage=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Latest news</div></a>';
 
 								htmla += '</td>';
 
@@ -288,7 +289,7 @@
 								html += '</td>';
 
 								html += '<td width="35%">';
-								html += '<img src="' + o.image + '" style="height:80px;width:150px;"/>';
+								html += '<img src="' + o.image + '" style="height:70px;width:145px;margin-right:5px;margin-top:5px;"/>';
 								html += '</td>';
 
 								html += '</tr>';
@@ -339,10 +340,10 @@
 
 								htmla += '<td width="50%">';
 
-								htmla += '<div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div>';
+								htmla += '<a href="pruchase.html?anguage=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
 							} else {
 
-								htmla += '<div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Recommended</div>';
+								htmla += '<a href="pruchase.html?anguage=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Recommended</div></a>';
 
 								htmla += '</td>';
 
@@ -362,7 +363,7 @@
 								var html = '<a href="home.html?anguage=' + window.lang + '&id=' + o.id + '"><table>';
 								html += '<tr>';
 								html += '<td width="35%">';
-								html += '<img src="' + o.image + '" style="height:100px;width:150px;margin-top:10px;"/>';
+								html += '<img src="' + o.image + '" style="height:100px;width:150px;margin-top:10px;margin-left:5px;"/>';
 								html += '</td>';
 								html += '<td width="65%">';
 
@@ -443,6 +444,20 @@
 						var obj = data;
 						if(obj.code == 200) {
 							window.area = obj.data;
+							
+							
+						var one ;	
+				var i = 0;	
+				for(var key in window.area){
+					if(i == 0){
+						one = window.area[key];
+						one.key = key;
+					}
+					i++;
+					
+				}
+				$('#locationBtn').get(0).innerHTML = one.name;
+				 window.sessionStorage.setItem('area_id', one.key);
 						}
 					},
 					error: function(xhr, textStatus) {
