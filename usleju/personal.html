@@ -10,7 +10,7 @@
 		<link href="css/mui.min.css" rel="stylesheet" />
 	</head>
 
-	<body>
+	<body style="background: white;">
 		<div id="allContail" style="margin-top: 0px;height: 200px;">
         <img src="images/bag.png" style="width:auto;height: 200px;;" />
         <table width="100%" style="position: relative;left: 0px;top: -120px;"><tbody>
@@ -21,15 +21,19 @@
 		</tr>
 		<tr>
 			<td>
-					<div align="right"><div align="center" style="width: 80px;height:35px;background: white;">登录</div></div>
+					<a href="login.html"><div align="right" style="margin-top: 20px;"><div align="center" style="width: 80px;height:33px;border: 1px solid white;font-size: 12px;color:white;padding-top: 5px;" id="loginBtn">登录</div></div></a>
 			</td>
 			<td>
-					<div align="left"><div align="center" style="width: 80px;height:35px;background: white;">注册</div></div>
-			</td>
+					<a href="reg.html"><div align="left" style="margin-top: 20px;"><div align="center" style="width: 80px;height:33px;color:white;border: 1px solid white;font-size: 12px;margin-left: 12px;padding-top:5px;"  id="regBtn">注册</div></div>
+</a>			</td>
 		</tr>
 	</tbody>
         </table>
 		</div>
+		<div style="margin-top: 5px;padding-left: 12px;height: 35px;font-size: 12px;color: #333333;padding-top: 5px;" id="myFav">我的收藏</div>
+		<div style="background: #F2F2F2;height: 1px;margin-left: 12px;"></div>
+		<div style="margin-top: 5px;padding-left: 12px;height: 35px;font-size: 12px;color: #333333;padding-top: 5px;" id="aboutus">关于我们</div>
+		<div style="background: #F2F2F2;height: 1px;margin-left: 12px;"></div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
 		<script type="text/javascript">
@@ -42,10 +46,16 @@
 			 window.lang = GetQueryString('language');
 			 
 			    if(window.lang == 'zh-CN'){
-			    	   
-			    	      
+			    	   $('#loginBtn').get(0).innerHTML = '登录';
+			    	    $('#regBtn').get(0).innerHTML = '注册';
+			    	     $('#myFav').get(0).innerHTML = '我的收藏';
+			    	      $('#aboutus').get(0).innerHTML = '关于我们';
+			    	    
 			    }else{
-			    
+			        $('#loginBtn').get(0).innerHTML = 'LOG IN';
+			    	    $('#regBtn').get(0).innerHTML = 'REGISTER';
+			    	      $('#myFav').get(0).innerHTML = 'My favorites';
+			    	        $('#aboutus').get(0).innerHTML = 'About us';
 			    }
 
 		</script>
