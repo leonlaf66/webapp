@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.yourclass {
+				width: auto;
+			}
+			
+			.mycheck {
+				background: url(images/gou.png) no-repeat;
+			}
+		</style>
+	</head>
+
+	<body style="background: white;">
+		<div style="margin-top: 12px;">
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
+					</td>
+					<td width="50%">
+						<a href="index.html">
+							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div style="background: white;">
+			<div id="typeHeader" style="height: 40px;margin-left: 10px;margin-right: 10px;padding-top: 10px;">
+				
+				
+				<table width="100%">
+					<tr>
+						<td width="90%">
+							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;" id="inputtext"/></div>
+						</td>
+						
+						<td width="10%">
+							<div align="right"><img src="images/searcha.png" style="width: 25px;height: 25px;" id="seatchBtn"></div>
+						</td>
+					</tr>
+				</table>
+				
+				
+			</div>
+		</div>
+
+		<div id="allContail" style="margin-top: 20px;">
+
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="layer/layer.js"></script>
+		<script type="text/javascript">
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			window.lang = GetQueryString('language');
+
+			if(window.lang == 'zh-CN') {
+			
+			} else {
+				
+			}
+			
+			$('#seatchBtn').click(function(){
+				getHouseData();
+			});
+			
+			function getHouseData(){
+				if($('#inputtext').val() &&$('#inputtext').val().length>0){
+					//alert(encodeURI('purchase.html?language='+window.lang+'&q='+$('#inputtext').val()));
+					window.location.href = encodeURI('purchase.html?language='+window.lang+'&q='+encodeURI($('#inputtext').val()));
+				}
+				
+			}
+     function getTypeData(){
+		
+				$.ajax({
+					url: 'http://api.usleju.cn/estate/house/hot-areas',
+					type: 'GET', //GET
+					async: true, //或false,是否异步
+					data: {
+					},
+					timeout: 5000, //超时时间
+					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend: function(request) {
+						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+						request.setRequestHeader("language", window.lang || 'en-US');
+
+					},
+					success: function(data, textStatus, jqXHR) {
+						layer.closeAll('loading');
+						var obj = data;
+						if(obj.code == 200) {
+							var objs = obj.data;
+							for(var key in objs){
+								$('#allContail').append('<div style="font-size:12px;padding-left: 12px;color:#333333;height:35px;padding-top: 5px;" class="fuck" key="'+key+'">'+objs[key]+'</div>');
+								$('#allContail').append('<div style="margin-left: 12px;background:#F2F2F2;height:1px;"></div>');
+							}
+							$('div.fuck').click(function(){
+								var key = $(this).attr('key');
+								window.location.href = 'purchase.html?language='+window.lang+'&key='+key+'&value='+$(this).text();
+							});
+						}
+					},
+					error: function(xhr, textStatus) {
+						layer.closeAll('loading');
+					},
+					complete: function() {
+						layer.closeAll('loading');
+					}
+				})
+
+			}
+getTypeData();
+			
+		</script>
+	</body>
+
+</html>

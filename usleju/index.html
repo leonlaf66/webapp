@@ -73,7 +73,7 @@
 				</table>
 			</div>
 			<div style="background: white;height: 35px; position: relative;left: 10px;top: -90px;margin-right: 20px;border-radius: 3px;">
-				<input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;" />
+				<div type="text" width="100%" height="100%" placeholder="" style="font-size: 12px;padding-left: 12px;padding-top: 5px;"  id="searchText">Search Address,City,or Zip</div>
 			</div>
 			<div style="background: white;height: 80px; position: relative;left: 10px;top: -80px;margin-right: 20px;">
 				<table width="100%">
@@ -133,7 +133,18 @@
 			$('#rentalBtn').attr('href', 'rental.html?language=' + window.lang || 'en-US');
 			$('#newsBtn').attr('href', 'newsMore.html?language=' + window.lang || 'en-US');
 			$('#workflowBtn').attr('href', 'workflow.html?language=' + window.lang || 'en-US');
+//
 
+	if(window.lang == 'zh-CN') {
+		$('#searchText').get(0).innerHTML = '搜索城市，邮编，地址或房源号';
+	}else{
+		$('#searchText').get(0).innerHTML = 'Search Address,City,or Zip';
+			
+	}
+		$('#searchText').click(function(){
+			window.location.href='search.html?language='+window.lang;
+		});
+		
 			$('#locationBtn').click(function() {
 				//mui('.mui-popover').popover('toggle');
 				

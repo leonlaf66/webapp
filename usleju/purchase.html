@@ -91,6 +91,17 @@
 				return null;
 			}
 			window.lang = GetQueryString('language');
+			window.key = GetQueryString('key');
+			window.value = GetQueryString('value');
+			window.q = GetQueryString('q');
+			//alert(window.q);
+			if(window.key && window.value){
+				$('#inputtext').val(window.value);
+			}
+			
+				if(window.q){
+				$('#inputtext').val(decodeURI(window.q));
+			}
 
 			if(window.lang == 'zh-CN') {
 				$('#typea').get(0).innerHTML = '类型';
@@ -961,6 +972,7 @@
 						'square': window.squareV,
 						'beds': window.beds,
 						'page': 1,
+						'city_code':window.key,
 						'q':$('#inputtext').val(),
 						'baths': window.baths,
 						'parking': window.parking,
