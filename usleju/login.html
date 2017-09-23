@@ -120,12 +120,14 @@
 							} else {
 								layer.msg('Login successfully');
 							}
-						}
-						if(window.lang == 'zh-CN') {
+						}else{
+							if(window.lang == 'zh-CN') {
 							layer.msg('登录失败请重新登录');
 						} else {
 							layer.msg('Login failed');
 						}
+						}
+						
 					},
 					error: function(xhr, textStatus) {
 						layer.closeAll('loading');

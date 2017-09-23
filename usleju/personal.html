@@ -11,6 +11,20 @@
 	</head>
 
 	<body style="background: white;">
+		<div style="margin-top: 10px;">
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
+					</td>
+					<td width="50%">
+						<a href="index.html">
+							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
 		<div id="allContail" style="margin-top: 0px;height: 200px;">
         <img src="images/bag.png" style="width:auto;height: 200px;;" />
         <table width="100%" style="position: relative;left: 0px;top: -120px;"><tbody>
@@ -32,7 +46,7 @@
 		</div>
 		<div style="margin-top: 5px;padding-left: 12px;height: 35px;font-size: 12px;color: #333333;padding-top: 5px;" id="myFav">我的收藏</div>
 		<div style="background: #F2F2F2;height: 1px;margin-left: 12px;"></div>
-		<div style="margin-top: 5px;padding-left: 12px;height: 35px;font-size: 12px;color: #333333;padding-top: 5px;" id="aboutus">关于我们</div>
+		<a href="about.html"><div style="margin-top: 5px;padding-left: 12px;height: 35px;font-size: 12px;color: #333333;padding-top: 5px;" id="aboutus">关于我们</div></a>
 		<div style="background: #F2F2F2;height: 1px;margin-left: 12px;"></div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
@@ -57,6 +71,14 @@
 			    	      $('#myFav').get(0).innerHTML = 'My favorites';
 			    	        $('#aboutus').get(0).innerHTML = 'About us';
 			    }
+			    
+			    $('#myFav').click(function(){
+			    	     if(localStorage.token && localStorage.token.length>15){
+			    	     		window.location.href = 'fav.html';
+			    	     }else{
+			    	     	window.location.href = 'login.html';
+			    	     }
+			    });
 
 		</script>
 	</body>

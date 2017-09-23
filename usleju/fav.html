@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body style="background: white;">
+<div style="margin-top: 10px;">
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
+					</td>
+					<td width="50%">
+						<a href="index.html">
+							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+      <div id="allContail">
+      
+      </div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="layer/layer.js"></script>
+		<script type="text/javascript">
+				function GetQueryString(name)
+	   {
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	   }
+			var lang = GetQueryString('language')||'en-US';
+				layer.load();
+		//	alert(localStorage.token);
+			$.ajax({
+				url: 'http://api.usleju.cn/member/favorite/list',
+				type: 'GET', //GET
+				async: true, //或false,是否异步
+				data: {
+					page: 1,
+					page_size:50,
+					'access-token':localStorage.token
+				},
+				timeout: 5000, //超时时间
+				dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+				beforeSend: function(request) {
+					request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+					request.setRequestHeader("language", lang);
+
+				},
+				success: function(data, textStatus, jqXHR) {
+						layer.closeAll();
+					var obj = data;
+					if(obj.code == 200) {
+						 var recommend_houses =  obj.data.items;
+						 for(var i = 0; i< recommend_houses.length;i++){
+						 	var o = recommend_houses[i].house;
+						 	var html = '<a href="home.html?anguage='+lang+'&id='+o.id+'"><table>';
+						 		html += '<tr>';
+						 		html += '<td width="35%">';
+						 		html += '<img src="'+o.image+'" style="height:100px;width:150px;margin-top:10px;margin-left:5px;"/>';
+						 		html += '</td>';
+						 		html += '<td width="65%">';
+						 		
+						 		html += '<div style="color:#333333;font-size:12px;margin-top:5px;margin-left:5px;">'+o.name+'</div>';
+						 		
+						 	     html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">'+o.location+'</div>';
+						 								 		
+						 		
+						 		   if(lang == 'zh-CN'){
+						 		   	var desc = '卧室 '+o.no_bedrooms+'| 全卫 '+o.no_full_baths+' 半卫 '+o.no_half_baths+' | 居住面积 '+o.square_feet+'';
+				               	   html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">'+desc+'</div>';
+						 		
+				               }else{
+				               	 	var desc = o.no_bedrooms+'beds '+o.no_full_baths+'.'+o.no_half_baths+'baths '+o.square_feet;
+				               	    html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">'+desc+'</div>';
+						 		
+				               }
+						 		 
+						 	
+				               if(lang == 'zh-CN'){
+				               	  html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">售价:<font color="red">'+o.list_price+'</font></div>';
+						 		
+				               }else{
+				               	  html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">Price:<font color="red">'+o.list_price+'</font></div>';
+						 		
+				               }
+						 		
+						 		html += '</td>';
+						 		html += '</tr>';
+						 	    html += '</table></a>';
+						 	$('#allContail').append(html);
+						 	 $('#allContail').append('<div style="height:1px;background: #f2f2f2;"></div>');
+						 }
+					}
+				},
+				error: function(xhr, textStatus) {
+					
+						layer.closeAll();
+				},
+				complete: function() {
+						layer.closeAll();
+					
+				}
+			})
+		</script>
+	</body>
+
+</html>

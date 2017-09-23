@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body style="background: white;">
+<div style="margin-top: 10px;">
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
+					</td>
+					<td width="50%">
+						<a href="index.html">
+							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+      <div id="allContail">
+      <img  src="images/aboutmy.png" id="myimg"/>
+      </div>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+				function GetQueryString(name)
+	   {
+	     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+	     var r = window.location.search.substr(1).match(reg);
+	     if(r!=null)return  unescape(r[2]); return null;
+	   }
+			var lang = GetQueryString('language')||'en-US';
+			var widht = $(window).width();
+			
+			$('#myimg').css('width',widht+"px");
+		</script>
+	</body>
+
+</html>
