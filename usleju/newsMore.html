@@ -12,7 +12,7 @@
 
 	<body style="background: white;">
 		
-		<div class="mui-slider">
+		<div class="mui-slider" style="height: 250px;">
 			<div class="mui-slider-group mui-slider-loop" id="mui-slider">
 
 			</div>
@@ -34,7 +34,9 @@
 		</div>
 		</div>
 		</div>
+      <div id="allCategory" style="height: 35px;background: #F2F2F2;">
 
+		</div>
 		<div id="allContail">
 
 		</div>
@@ -55,13 +57,14 @@
 			var lang = GetQueryString('language');
 			var id = GetQueryString('id');
 
-			function loadData() {
+			function loadData(key) {
 				layer.load();
 				$.ajax({
 					url: 'http://api.usleju.cn/catalog/news/list',
 					type: 'GET', //GET
 					async: true, //或false,是否异步
 					data: {
+						type_id:key,
 						page_size:50,
 						page: 1 //'72200884'
 					},
@@ -77,9 +80,13 @@
 						var obj = data;
 						if(obj.code == 200) {
 								var objs = obj.data.items;
+								var as = $('a.myitems');
+								for(var i =0;i< as.length;i++){
+									$(as[i]).remove();
+								}
 							for(var i = 0; i < objs.length; i++) {
 								var o = objs[i];
-								var html = '<a href="news.html?language=' + window.lang + '&id=' + o.id + '"><table>';
+								var html = '<a  class="myitems" href="news.html?language=' + window.lang + '&id=' + o.id + '"><table>';
 								html += '<tr>';
 
 								html += '<td width="65%">';
@@ -157,6 +164,7 @@
 						 	 $('#allContail').append('<div style="height:1px;background: #f2f2f2;"></div>');
 						
 					}
+					loadTypes();
 				},
 				error: function(xhr, textStatus) {
 					console.log('错误')
@@ -170,6 +178,56 @@
 				
 			}
 			loadAds();
+			
+			
+			
+			function loadTypes(){
+						$.ajax({
+				url: 'http://api.usleju.cn/catalog/news/types',
+				type: 'GET', //GET
+				async: true, //或false,是否异步
+				data: {},
+				timeout: 5000, //超时时间
+				dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+				beforeSend: function(request) {
+					request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+					request.setRequestHeader("language", lang);
+
+				},
+				success: function(data, textStatus, jqXHR) {
+					var obj = data;
+
+					if(obj.code == 200) {
+						var datas = obj.data;
+						//allCategory
+						var html = '<table width="100%"><tr>'
+						for(var key in datas){
+							html += '<td><div class="types" align="center" style="font-size:12px;color:#333333;padding-top:10px;" key="'+key+'">'+datas[key]+'</div></td>'
+						}
+						html += '</tr></table>'
+						$('#allCategory').append(html);
+						$('div.types').click(function(){
+							var types = $('div.types');
+							for(var i = 0;i< types.length;i++){
+								$(types[i]).css('color','#333333');
+							}
+							$(this).css('color','#AFD25E');
+							var key = $(this).attr('key');
+							loadData(key);
+						});
+					}
+				},
+				error: function(xhr, textStatus) {
+					console.log('错误')
+					console.log(xhr)
+					console.log(textStatus)
+				},
+				complete: function() {
+					console.log('结束')
+				}
+			})
+				
+			}
 		</script>
 	</body>
 
