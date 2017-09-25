@@ -8,6 +8,7 @@
 		<meta http-equiv="content-security-policy">
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/jquery.autocompleter.css" />
 		<style type="text/css">
 			.yourclass {
 				width: auto;
@@ -41,7 +42,7 @@
 				<table width="100%">
 					<tr>
 						<td width="90%">
-							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;" id="inputtext"/></div>
+							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;z-index: 9999999;" id="inputtext"/></div>
 						</td>
 						
 						<td width="10%">
@@ -77,12 +78,13 @@
 
 		</div>
 
-		<div id="allContail" style="margin-top: 10px;">
+		<div id="allContail" style="margin-top: 10px;z-index: 10;">
 
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="layer/layer.js"></script>
+		<script src="js/jquery.autocompleter.js"></script>
 		<script type="text/javascript">
 			function GetQueryString(name) {
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -997,7 +999,7 @@
 								var html = '<a href="home.html?anguage=' + window.lang + '&id=' + o.id + '"><table>';
 								html += '<tr>';
 								html += '<td width="35%">';
-								html += '<img src="' + o.image + '" style="height:90px;width:140px;margin-top:10px;margin-left:5px;"/>';
+								html += '<img src="' + o.image + '" style="height:90px;width:140px;margin-top:10px;margin-left:5px; "/>';
 								html += '</td>';
 								html += '<td width="65%">';
 
@@ -1043,6 +1045,54 @@
 			}
 
 			getHouseData();
+			
+			
+			
+			
+				
+			function loadKeys(){
+						$.ajax({
+				url: 'http://api.usleju.cn/estate/house/search-options',
+				type: 'GET', //GET
+				async: true, //或false,是否异步
+				data: {},
+				timeout: 5000, //超时时间
+				dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+				beforeSend: function(request) {
+					request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+					request.setRequestHeader("language", lang);
+
+				},
+				success: function(data, textStatus, jqXHR) {
+					var obj = data;
+
+					if(obj.code == 200) {
+						var datas = obj.data;
+					window.keys = [];
+					
+					for(var i = 0;i< datas.length;i++){
+						var o = {'value':datas[i]['title'],'label':datas[i]['desc']};
+						window.keys.push(o);
+					}
+					
+					 $('#inputtext').autocompleter({ source: window.keys });
+					 
+					 
+					}
+				},
+				error: function(xhr, textStatus) {
+					console.log('错误')
+					console.log(xhr)
+					console.log(textStatus)
+				},
+				complete: function() {
+					console.log('结束')
+				}
+			})
+				
+			}
+			
+		//	loadKeys();
 		</script>
 	</body>
 
