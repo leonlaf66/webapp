@@ -60,13 +60,28 @@
 			<div>
 				<img src="images/bg.png" style="width: 100%;" />
 			</div>
-			<div style="height: 45px; position: relative;left: 0px;top: -190px;">
+			<div style="height: 45px; position: relative;left: 0px;top: -200px;">
 				<table width="100%">
 					<tr>
-						<td width="20%">
+						<td width="33.3%">
 							<div id="locationBtn" style="background: url(images/weizhi.png) no-repeat;width: 120px;height: 32px;padding-left: 30px;color: white;font-size: 12px;padding-top: 2px;">波士顿</div>
 						</td>
-						<td width="80%">
+						<td width="33.3%">
+							<div  style="width: 100px;height: 35px;background: white;font-size: 12px;padding-top: 1px;border-radius: 3px;border: 1px solid #F2F2F2;" align="center">
+								<table width="100%">
+									<tr>
+										<td width="50%">
+											<div align="center"  style="height: 31px;" id="enUS"><a href="index.html?language=en-US"><img src="images/usa.png" style="height: 31px;"></a></div>
+											
+										</td>
+										<td  width="50%">
+											<div align="center" id="zhCN" style="height: 31px;"><a href="index.html?language=zh-CN"><img src="images/chinese.png" style="height: 31px;"></a></div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+						<td width="33.3%">
                    <div  align="right" style="padding-right: 12px;"><a href="personal.html"><img src="images/geren.png" style="width: 30px;"></a></div>
 						</td>
 					</tr>
@@ -136,10 +151,13 @@
 //
 
 	if(window.lang == 'zh-CN') {
+		$('#zhCN').css('background','#f2f2f2');
+		$('#enUS').css('background','white');
 		$('#searchText').get(0).innerHTML = '搜索城市，邮编，地址或房源号';
 	}else{
 		$('#searchText').get(0).innerHTML = 'Search Address,City,or Zip';
-			
+			$('#enUS').css('background','#f2f2f2');
+			$('#zhCN').css('background','white');
 	}
 		$('#searchText').click(function(){
 			window.location.href='search.html?language='+window.lang;
