@@ -117,8 +117,10 @@
 							localStorage.email = email;
 							if(window.lang == 'zh-CN') {
 								layer.msg('登录成功');
+								window.location.replace('index.html?language='+window.lang || 'en-US');
 							} else {
 								layer.msg('Login successfully');
+								window.location.replace('index.html?language='+window.lang || 'en-US');
 							}
 						}else{
 							if(window.lang == 'zh-CN') {

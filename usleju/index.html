@@ -67,22 +67,23 @@
 							<div id="locationBtn" style="background: url(images/weizhi.png) no-repeat;width: 120px;height: 32px;padding-left: 30px;color: white;font-size: 12px;padding-top: 2px;">波士顿</div>
 						</td>
 						<td width="33.3%">
-							<div  style="width: 100px;height: 35px;background: white;font-size: 12px;padding-top: 1px;border-radius: 3px;border: 1px solid #F2F2F2;" align="center">
+							
+						</td>
+						<td width="33.3%">
+                   <div  align="right" style="padding-right: 12px;"><div  style="width: 80px;height: 25px;background: white;font-size: 12px;padding-top: 1px;border-radius: 3px;border: 1px solid #F2F2F2;" align="center">
 								<table width="100%">
 									<tr>
 										<td width="50%">
-											<div align="center"  style="height: 31px;" id="enUS"><a href="index.html?language=en-US"><img src="images/usa.png" style="height: 31px;"></a></div>
+											<div align="center"  style="height: 20px;" id="enUS"><a href="index.html?language=en-US"><img src="images/usa.png" style="height: 20px;"></a></div>
 											
 										</td>
 										<td  width="50%">
-											<div align="center" id="zhCN" style="height: 31px;"><a href="index.html?language=zh-CN"><img src="images/chinese.png" style="height: 31px;"></a></div>
+											<div align="center" id="zhCN" style="height: 20px;"><a href="index.html?language=zh-CN"><img src="images/chinese.png" style="height: 20px;"></a></div>
 										</td>
 									</tr>
 								</table>
 							</div>
-						</td>
-						<td width="33.3%">
-                   <div  align="right" style="padding-right: 12px;"><a href="personal.html"><img src="images/geren.png" style="width: 30px;"></a></div>
+							<a href="" id="goperson"><img src="images/geren.png" style="width: 30px;"></a></div>
 						</td>
 					</tr>
 				</table>
@@ -148,6 +149,8 @@
 			$('#rentalBtn').attr('href', 'rental.html?language=' + window.lang || 'en-US');
 			$('#newsBtn').attr('href', 'newsMore.html?language=' + window.lang || 'en-US');
 			$('#workflowBtn').attr('href', 'workflow.html?language=' + window.lang || 'en-US');
+			
+			$('#goperson').attr('href', 'personal.html?language=' + window.lang || 'en-US');
 //
 
 	if(window.lang == 'zh-CN') {
@@ -288,10 +291,10 @@
 
 								htmla += '<td width="50%">';
 
-								htmla += '<a href="newsMore.html?anguage=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
+								htmla += '<a href="newsMore.html?language=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
 							} else {
 
-								htmla += '<a href="newsMore.html?anguage=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Latest news</div></a>';
+								htmla += '<a href="newsMore.html?language=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Latest news</div></a>';
 
 								htmla += '</td>';
 
@@ -369,10 +372,10 @@
 
 								htmla += '<td width="50%">';
 
-								htmla += '<a href="pruchase.html?anguage=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
+								htmla += '<a href="pruchase.html?language=' + window.lang + '"><div align="right" style="color:#AFD25E;font-size:12px;margin-right:5px;">查看更多</div></a>';
 							} else {
 
-								htmla += '<a href="pruchase.html?anguage=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Recommended</div></a>';
+								htmla += '<a href="pruchase.html?language=' + window.lang + '"><div align="left" style="color:#333333;font-size:14px;margin-left:5px;">Recommended</div></a>';
 
 								htmla += '</td>';
 
@@ -389,7 +392,7 @@
 							$('#allContail').append('<div style="background: #dedede;height: 1px;"></div>');
 							for(var i = 0; i < objs.length; i++) {
 								var o = objs[i];
-								var html = '<a href="home.html?anguage=' + window.lang + '&id=' + o.id + '"><table>';
+								var html = '<a href="home.html?language=' + window.lang + '&id=' + o.id + '"><table>';
 								html += '<tr>';
 								html += '<td width="35%">';
 								html += '<img src="' + o.image + '" style="height:100px;width:150px;margin-top:10px;margin-left:5px;"/>';
