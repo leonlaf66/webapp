@@ -25,7 +25,7 @@
 						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
 					</td>
 					<td width="50%">
-						<a href="index.html">
+						<a href="index.html" id="indexhome">
 							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
 						</a>
 					</td>
@@ -56,7 +56,8 @@
 			}
 			var lang = GetQueryString('language');
 			var id = GetQueryString('id');
-
+			window.lang = lang;
+$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 			function loadData(key) {
 				layer.load();
 				$.ajax({

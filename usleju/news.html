@@ -11,9 +11,22 @@
 	</head>
 
 	<body style="background: white;">
-		
+		<div style="margin-top: 10px;">
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
+					</td>
+					<td width="50%">
+						<a href="index.html" id="indexhome">
+							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
 
-		<div id="allContail">
+		<div id="allContail" style="padding-left: 5px;padding-right: 5px;">
 
 		</div>
 		<script src="js/mui.min.js"></script>
@@ -31,7 +44,7 @@
 			}
 			var lang = GetQueryString('language');
 			var id = GetQueryString('id');
-
+	$('#indexhome').attr('href', 'index.html?language=' + lang || 'en-US');
 			function loadData() {
 				$.ajax({
 					url: 'http://api.usleju.cn/catalog/news/get',
@@ -54,7 +67,7 @@
 							 var content = 	obj.data.content;
 							var reg = new RegExp( '<img' , "g" )
 							
-                            var newstr = content.replace( reg , '<img style="width:'+$(window).width()+'px;"' );
+                            var newstr = content.replace( reg , '<img style="width:'+($(window).width()-20)+'px;"' );
 
 						  
 							$('#allContail').get(0).innerHTML =newstr;

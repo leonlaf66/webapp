@@ -27,7 +27,7 @@
 						<div align="left"><img src="images/alogo.png" style="width: 80px;margin-left: 12px;"></div>
 					</td>
 					<td width="50%">
-						<a href="index.html">
+						<a href="index.html" id="indexhome">
 							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
 						</a>
 					</td>
@@ -91,7 +91,7 @@
 				return null;
 			}
 			window.lang = GetQueryString('language');
-
+$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 			if(window.lang == 'zh-CN') {
 				$('#typea').get(0).innerHTML = '类型';
 				$('#pricea').get(0).innerHTML = '价格';
