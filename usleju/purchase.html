@@ -98,9 +98,9 @@
 			window.q = GetQueryString('q');
 			
 			$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
-			//alert(window.q);
+		
 			if(window.key && window.value){
-				$('#inputtext').val(window.value);
+				$('#inputtext').val(decodeURI(window.value));
 			}
 			
 				if(window.q){

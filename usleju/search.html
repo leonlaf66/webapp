@@ -112,7 +112,8 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 							}
 							$('div.fuck').click(function(){
 								var key = $(this).attr('key');
-								window.location.href = 'purchase.html?language='+window.lang+'&key='+key+'&value='+$(this).text();
+								var v= encodeURI($(this).text());
+								window.location.href = encodeURI('purchase.html?language='+window.lang+'&key='+key+'&value='+v);
 							});
 						}
 					},
