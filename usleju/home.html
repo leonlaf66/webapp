@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title id="myTitles"></title>
 		<meta http-equiv="Access-Control-Allow-Origin" content="*">
 		<meta http-equiv="content-security-policy">
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -28,9 +28,12 @@
 						<a href="index.html" id="indexhome">
 							<div align="right"><img src="images/home.png" style="width: 30px;margin-right: 12px;"></div>
 						</a>
+						
+						
 					</td>
 				</tr>
 			</table>
+			<div align="right"><div style="background: none;width: 50px;height: 40px;"  class="-mob-share-ui-button -mob-share-open" align="center"><img src="images/share.png" style="width: 20px;margin-right: 20px;"/></div></div>
 		</div>
 		</div>
 		</div>
@@ -92,6 +95,25 @@
       		 </table>
       	</div>
       </div>
+      
+      
+     
+<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+    	    <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+          <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-google"><p>Google</p></li>
+        
+    </ul>
+    <div class="-mob-share-close" id="mycancel">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=185b3576c3ffe"></script>
+      
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
 		<script type="text/javascript">
@@ -110,6 +132,15 @@
 			$('#backBtn').click(function() {
 				window.history.go(-1);
 			});
+			
+			 if(lang == 'zh-CN'){
+			 	 $('#mycancel').get(0).innerHTML = '取消';
+			 	
+			 }else{
+			 	 $('#mycancel').get(0).innerHTML = 'CANCEL';
+			 	
+			 }
+			
 			$.ajax({
 				url: 'http://api.usleju.cn/estate/house/get',
 				type: 'GET', //GET
@@ -148,6 +179,9 @@
 						       $('#locationDiv').get(0).innerHTML = obj.data.location;
 						
 						      $('#priceDiv').get(0).innerHTML = obj.data.list_price;
+						      
+						       $('#myTitles').get(0).innerHTML = obj.data.prop_type_name +'('+obj.data.list_price+')' +'_'+obj.data.location;
+						      
 						
 							   $('#typeValue').get(0).innerHTML = obj.data.prop_type_name;
 								$('#bathValue').get(0).innerHTML = obj.data.no_full_baths;

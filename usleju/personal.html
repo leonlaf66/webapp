@@ -26,7 +26,7 @@
 			</table>
 		</div>
 		<div id="allContail" style="margin-top: 0px;height: 200px;">
-			<img src="images/bag.png" style="width:auto;height: 200px;;" />
+			<img src="images/bag.png" style="width:auto;height: 200px;"  id="bgIMg"/>
 			<div style="position: relative;left: 0px;top: -120px;">
 				<table width="100%">
 					<tbody>
@@ -61,6 +61,8 @@
 			}
 			window.lang = GetQueryString('language');
 $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
+
+$('#bgIMg').css('width',$(window).width() + 'px');
 			if(window.lang == 'zh-CN') {
 				// $('#loginBtn').get(0).innerHTML = '登录';
 				// $('#regBtn').get(0).innerHTML = '注册';
