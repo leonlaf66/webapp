@@ -8,6 +8,7 @@
 		<meta http-equiv="content-security-policy">
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/jquery.autocompleter.css" />
 		<style type="text/css">
 			.yourclass {
 				width: auto;
@@ -36,23 +37,21 @@
 		</div>
 		<div style="background: white;">
 			<div id="typeHeader" style="height: 40px;margin-left: 10px;margin-right: 10px;padding-top: 10px;">
-				
-				
+
 				<table width="100%">
 					<tr>
 						<td width="90%">
-							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;" id="inputtext"/></div>
+							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;z-index: 9999999;" id="inputtext" /></div>
 						</td>
-						
+
 						<td width="10%">
 							<div align="right"><img src="images/searcha.png" style="width: 25px;height: 25px;" id="seatchBtn"></div>
 						</td>
 					</tr>
 				</table>
-				
-				
+
 			</div>
-			
+
 			<div id="typeHeader" style="height: 35px;margin-top: 20px;background: white;">
 				<table width="100%">
 					<tr>
@@ -77,12 +76,13 @@
 
 		</div>
 
-		<div id="allContail" style="margin-top: 10px;">
+		<div id="allContail" style="margin-top: 10px;z-index: 10;">
 
 		</div>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery.js"></script>
 		<script src="layer/layer.js"></script>
+		<script src="js/jquery.autocompleter.js"></script>
 		<script type="text/javascript">
 			function GetQueryString(name) {
 				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -91,7 +91,20 @@
 				return null;
 			}
 			window.lang = GetQueryString('language');
-$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
+			window.key = GetQueryString('key');
+			window.value = GetQueryString('value');
+			window.q = GetQueryString('q');
+
+			$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
+
+			if(window.key && window.value) {
+				$('#inputtext').val(decodeURI(window.value));
+			}
+
+			if(window.q) {
+				$('#inputtext').val(decodeURI(window.q));
+			}
+
 			if(window.lang == 'zh-CN') {
 				$('#typea').get(0).innerHTML = '类型';
 				$('#pricea').get(0).innerHTML = '价格';
@@ -105,8 +118,8 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 				$('#bedsa').get(0).innerHTML = 'Beds';
 				$('#morea').get(0).innerHTML = 'More';
 			}
-			
-			$('#seatchBtn').click(function(){
+
+			$('#seatchBtn').click(function() {
 				getHouseData();
 			});
 
@@ -116,181 +129,72 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 				var type = $(this).attr('typec');
 				var widht = $(window).width();
 				if(type == 'type') {
-					var ds;
-					if(window.lang == 'zh-CN') {
-						ds = [{
-								"title": "独栋别墅",
-								"value": "SF"
-							},
-							{
-								"title": "多家庭",
-								"value": "MF"
-							},
-							{
-								"title": "公寓",
-								"value": "CC"
-							},
-							{
-								"title": "商业用房",
-								"value": "CI"
-							},
-							{
-								"title": "营业用房",
-								"value": "BU"
-							},
-							{
-								"title": "土地",
-								"value": "LD"
-							}
-						];
-					} else {
-						ds = [{
-								"title": "Single Family",
-								"value": "SF"
-							},
-							{
-								"title": "Multi Family",
-								"value": "MF"
-							},
-							{
-								"title": "Condominium",
-								"value": "CC"
-							},
-							{
-								"title": "Commercial",
-								"value": "CI"
-							},
-							{
-								"title": "Business Oportunty",
-								"value": "BU"
-							},
-							{
-								"title": "Land",
-								"value": "LD"
-							}
-						];
-
-					}
-					var html = '';
-					for(var i = 0; i < ds.length; i++) {
-						var o = ds[i];
-						html += '<table width="100%" cid="' + o.value + '" class="items"><tr><td width="85%">'
-						html += '<div style="height:35px;padding-left:12px;color:#333333;font-size:13px;padding-top:7px;" id="' + o.value + '_d" valuec="' + o.value + '">' + o.title + '</div>';
-						html += '</td><td width="15%">'
-
-						html += '<div align="right" style="padding-right:12px;"><div style="width:20px;height:20px;border-radius:3px;border:1px solid #f2f2f2;"  value="' + o.value + '" id="' + o.value + '_c" ></div></div>'
-
-						html += '</td></tr></table>'
-						html += '<div style="height:1px;margin-left:12px;color:#333333;background:#f2f2f2;"></div>';
-					}
-					if(window.lang == 'zh-CN') {
-						html += '<div id="okbtn" style="height:35px;margin-left:12px;color:white;background:#AFD25E;margin-right:12px;border-radius:3px;padding-top:6px;margin-top:15px;" align="center">确定</div>';
-					} else {
-						html += '<div id="okbtn" style="height:35px;margin-left:12px;color:white;background:#AFD25E;margin-right:12px;border-radius:3px;padding-top:6px;margin-top:15px;" align="center">OK</div>';
-					}
-
-					layer.open({
-						type: 1,
-						title: false,
-						closeBtn: 0,
-						area: [widht + 'px', '300px'],
-						offset: ['150px', '0px'],
-						shadeClose: true,
-						skin: 'yourclass',
-						content: html
-					});
-
-					for(var j = 0; j < window.types.length; j++) {
-						var v = window.types[j];
-						$('#' + v + '_c').addClass('mycheck');
-					}
-
-					$('table.items').click(function() {
-						var chek = $('#' + $(this).attr('cid') + '_c');
-
-						if(chek.hasClass('mycheck')) {
-							chek.removeClass('mycheck');
-						} else {
-							chek.addClass('mycheck');
-						}
-					});
-
-					$('#okbtn').click(function() {
-						var cs = $('div.mycheck');
-						window.types = [];
-						for(var i = 0; i < cs.length; i++) {
-							var odiv = cs[i];
-							window.types.push($(odiv).attr('value'));
-						}
-						layer.closeAll();
-						getHouseData();
-
-					});
+					
 				} else if(type == 'price') {
 					if(window.lang == 'zh-CN') {
 						ds = [{
-								"title": "0-50万美元",
+								"title": "0-1000美元",
 								"tag": "1",
 								"value": {
 									"from": "0",
-									"to": "500000"
+									"to": "1000"
 								}
 							},
 							{
-								"title": "50万-80万美元",
+								"title": "1000-2000美元",
 								"tag": "2",
 								"value": {
-									"from": "500000",
-									"to": "800000"
+									"from": "1000",
+									"to": "2000"
 								}
 							},
 							{
-								"title": "80万-120万美元",
+								"title": "2000-3000美元",
 								"tag": "3",
 								"value": {
-									"from": "800000",
-									"to": "1200000"
+									"from": "2000",
+									"to": "3000"
 								}
 							},
 							{
-								"title": "120万美元+",
+								"title": "3000美元+",
 								"tag": "4",
 								"value": {
-									"from": "1200000"
+									"from": "3000"
 								}
 							}
 						];
 					} else {
 
 						ds = [{
-								"title": "$0-$500000",
+								"title": "$0-$1000",
 								"tag": "1",
 								"value": {
 									"from": "0",
-									"to": "500000"
+									"to": "1000"
 								}
 							},
 							{
-								"title": "$500000-$800000",
+								"title": "1000-2000",
 								"tag": "2",
 								"value": {
-									"from": "500000",
-									"to": "800000"
+									"from": "1000",
+									"to": "2000"
 								}
 							},
 							{
-								"title": "$800000-$1200000",
+								"title": "2000-3000",
 								"tag": "3",
 								"value": {
-									"from": "800000",
-									"to": "1200000"
+									"from": "2000",
+									"to": "3000"
 								}
 							},
 							{
-								"title": "$1200000+",
+								"title": "3000+",
 								"tag": "4",
 								"value": {
-									"from": "1200000"
+									"from": "3000"
 								}
 							}
 						];
@@ -312,7 +216,7 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 						type: 1,
 						title: false,
 						closeBtn: 0,
-						area: [widht + 'px', '210px'],
+						area: [widht + 'px', '250px'],
 						offset: ['150px', '0px'],
 						shadeClose: true,
 						skin: 'yourclass',
@@ -419,7 +323,7 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 						type: 1,
 						title: false,
 						closeBtn: 0,
-						area: [widht + 'px', '180px'],
+						area: [widht + 'px', '250px'],
 						offset: ['150px', '0px'],
 						shadeClose: true,
 						skin: 'yourclass',
@@ -450,68 +354,68 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 				} else if(type == 'price') {
 					if(window.lang == 'zh-CN') {
 						ds = [{
-								"title": "0-50万美元",
+								"title": "0-1000美元",
 								"tag": "1",
 								"value": {
 									"from": "0",
-									"to": "500000"
+									"to": "1000"
 								}
 							},
 							{
-								"title": "50万-80万美元",
+								"title": "1000-2000美元",
 								"tag": "2",
 								"value": {
-									"from": "500000",
-									"to": "800000"
+									"from": "1000",
+									"to": "2000"
 								}
 							},
 							{
-								"title": "80万-120万美元",
+								"title": "2000-3000美元",
 								"tag": "3",
 								"value": {
-									"from": "800000",
-									"to": "1200000"
+									"from": "2000",
+									"to": "3000"
 								}
 							},
 							{
-								"title": "120万美元+",
+								"title": "3000美元+",
 								"tag": "4",
 								"value": {
-									"from": "1200000"
+									"from": "3000"
 								}
 							}
 						];
 					} else {
 
 						ds = [{
-								"title": "$0-$500000",
+								"title": "$0-1000",
 								"tag": "1",
 								"value": {
 									"from": "0",
-									"to": "500000"
+									"to": "1000"
 								}
 							},
 							{
-								"title": "$500000-$800000",
+								"title": "1000-2000",
 								"tag": "2",
 								"value": {
-									"from": "500000",
-									"to": "800000"
+									"from": "1000",
+									"to": "2000"
 								}
 							},
 							{
-								"title": "$800000-$1200000",
+								"title": "2000-3000",
 								"tag": "3",
 								"value": {
-									"from": "800000",
-									"to": "1200000"
+									"from": "2000",
+									"to": "3000"
 								}
 							},
 							{
-								"title": "$1200000+",
+								"title": "3000+",
 								"tag": "4",
 								"value": {
-									"from": "1200000"
+									"from": "3000"
 								}
 							}
 						];
@@ -533,7 +437,7 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 						type: 1,
 						title: false,
 						closeBtn: 0,
-						area: [widht + 'px', '210px'],
+						area: [widht + 'px', '250px'],
 						offset: ['150px', '0px'],
 						shadeClose: true,
 						skin: 'yourclass',
@@ -916,21 +820,21 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 				if(window.price == 1) {
 					window.listPirce = {
 						"from": "0",
-						"to": "500000"
+						"to": "1000"
 					};
 				} else if(window.price == 2) {
 					window.listPirce = {
-						"from": "500000",
-						"to": "800000"
+						"from": "1000",
+						"to": "2000"
 					}
 				} else if(window.price == 3) {
 					window.listPirce = {
-						"from": "800000",
-						"to": "1200000"
+						"from": "2000",
+						"to": "3000"
 					}
 				} else if(window.price == 4) {
 					window.listPirce = {
-						"from": "1200000"
+						"from": "3000"
 					}
 				}
 
@@ -949,23 +853,48 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 						"from": "3000"
 					}
 				}
+				var param = {
+					type: 'lease',
+					'page_size': 150,
+					'q': $('#inputtext').val(),
+					'page': 1
+				};
+				if(window.types) {
+					//param['filters[prop-type]'] = window.types;
+				}
+				if(window.listPirce) {
+					param['filters[list_price]'] = window.listPirce;
+				}
+
+				if(window.squareV) {
+					param['filters[square]'] = window.squareV;
+				}
+
+				if(window.beds) {
+					param['filters[beds]'] = window.beds;
+				}
+
+				if(window.key) {
+					param['filters[city_code]'] = window.key;
+				}
+
+				if(window.baths) {
+					param['filters[baths]'] = window.baths;
+				}
+
+				if(window.parking) {
+					param['filters[parking]'] = window.parking;
+				}
+
+				if(window.market) {
+					param['filters[market]'] = window.market;
+				}
+
 				$.ajax({
 					url: 'http://api.usleju.cn/estate/house/search',
 					type: 'GET', //GET
 					async: true, //或false,是否异步
-					data: {
-						type: 'lease',
-						'filters[prop-type]': window.types,
-						'list_price': window.listPirce,
-						'page_size': 150,
-						'square': window.squareV,
-						'beds': window.beds,
-						'page': 1,
-						'q':$('#inputtext').val(),
-						'baths': window.baths,
-						'parking': window.parking,
-						'market-days': window.market
-					},
+					data: param,
 					timeout: 5000, //超时时间
 					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
 					beforeSend: function(request) {
@@ -985,7 +914,7 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 								var html = '<a href="home.html?language=' + window.lang + '&id=' + o.id + '"><table>';
 								html += '<tr>';
 								html += '<td width="35%">';
-								html += '<img src="' + o.image + '" style="height:90px;width:140px;margin-top:10px;margin-left:5px;"/>';
+								html += '<img src="' + o.image + '" style="height:90px;width:140px;margin-top:10px;margin-left:5px; "/>';
 								html += '</td>';
 								html += '<td width="65%">';
 
@@ -1002,6 +931,18 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 									html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">' + desc + '</div>';
 
 								}
+								
+									 html += '<div style="color:#333333;font-size:10px;margin-top:5px;"><table width="100%"><tr>';
+								    
+								       html +='<td width="50%"><div align="left">';
+								       html+='<div style="border: 1px solid red;border-radius: 4px;width:60px;height:25px;color:red;margin-left:5px;" align="center">'+o.status_name+'</div>';
+								       html +='</div></td>';
+								       
+								         html +='<td width="50%"><div align="right">';
+								          html+='<div style="border: 1px solid #AFD25E;border-radius: 4px;width:100px;height:25px;color:#AFD25E;margin-right:5px;" align="center">'+o.list_days_description+'</div>';
+								         html +='</div></td>';
+								    
+								     html +='</tr></table></div>';
 
 								if(lang == 'zh-CN') {
 									html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">售价:<font color="red">' + o.list_price + '</font></div>';
@@ -1010,6 +951,7 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 									html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">Price:<font color="red">' + o.list_price + '</font></div>';
 
 								}
+							
 
 								html += '</td>';
 								html += '</tr>';
@@ -1031,6 +973,54 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 			}
 
 			getHouseData();
+
+			function loadKeys() {
+				$.ajax({
+					url: 'http://api.usleju.cn/estate/house/search-options',
+					type: 'GET', //GET
+					async: true, //或false,是否异步
+					data: {},
+					timeout: 5000, //超时时间
+					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend: function(request) {
+						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+						request.setRequestHeader("language", lang);
+
+					},
+					success: function(data, textStatus, jqXHR) {
+						var obj = data;
+
+						if(obj.code == 200) {
+							var datas = obj.data;
+							window.keys = [];
+
+							for(var i = 0; i < datas.length; i++) {
+								var o = {
+									'value': datas[i]['title'],
+									'label': datas[i]['desc']
+								};
+								window.keys.push(o);
+							}
+
+							$('#inputtext').autocompleter({
+								source: window.keys
+							});
+
+						}
+					},
+					error: function(xhr, textStatus) {
+						console.log('错误')
+						console.log(xhr)
+						console.log(textStatus)
+					},
+					complete: function() {
+						console.log('结束')
+					}
+				})
+
+			}
+
+			//	loadKeys();
 		</script>
 	</body>
 

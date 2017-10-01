@@ -37,23 +37,21 @@
 		</div>
 		<div style="background: white;">
 			<div id="typeHeader" style="height: 40px;margin-left: 10px;margin-right: 10px;padding-top: 10px;">
-				
-				
+
 				<table width="100%">
 					<tr>
 						<td width="90%">
-							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;z-index: 9999999;" id="inputtext"/></div>
+							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;z-index: 9999999;" id="inputtext" /></div>
 						</td>
-						
+
 						<td width="10%">
 							<div align="right"><img src="images/searcha.png" style="width: 25px;height: 25px;" id="seatchBtn"></div>
 						</td>
 					</tr>
 				</table>
-				
-				
+
 			</div>
-			
+
 			<div id="typeHeader" style="height: 35px;margin-top: 20px;background: white;">
 				<table width="100%">
 					<tr>
@@ -96,14 +94,14 @@
 			window.key = GetQueryString('key');
 			window.value = GetQueryString('value');
 			window.q = GetQueryString('q');
-			
+
 			$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
-		
-			if(window.key && window.value){
+
+			if(window.key && window.value) {
 				$('#inputtext').val(decodeURI(window.value));
 			}
-			
-				if(window.q){
+
+			if(window.q) {
 				$('#inputtext').val(decodeURI(window.q));
 			}
 
@@ -120,8 +118,8 @@
 				$('#bedsa').get(0).innerHTML = 'Beds';
 				$('#morea').get(0).innerHTML = 'More';
 			}
-			
-			$('#seatchBtn').click(function(){
+
+			$('#seatchBtn').click(function() {
 				getHouseData();
 			});
 
@@ -964,24 +962,48 @@
 						"from": "3000"
 					}
 				}
+				var param = {
+					type: 'purchase',
+					'page_size': 150,
+					'q': $('#inputtext').val(),
+					'page': 1
+				};
+				if(window.types) {
+					param['filters[prop-type]'] = window.types;
+				}
+				if(window.listPirce) {
+					param['filters[list_price]'] = window.listPirce;
+				}
+
+				if(window.squareV) {
+					param['filters[square]'] = window.squareV;
+				}
+
+				if(window.beds) {
+					param['filters[beds]'] = window.beds;
+				}
+
+				if(window.key) {
+					param['filters[city_code]'] = window.key;
+				}
+
+				if(window.baths) {
+					param['filters[baths]'] = window.baths;
+				}
+
+				if(window.parking) {
+					param['filters[parking]'] = window.parking;
+				}
+
+				if(window.market) {
+					param['filters[market]'] = window.market;
+				}
+
 				$.ajax({
 					url: 'http://api.usleju.cn/estate/house/search',
 					type: 'GET', //GET
 					async: true, //或false,是否异步
-					data: {
-						type: 'purchase',
-						'filters[prop-type]': window.types,
-						'list_price': window.listPirce,
-						'page_size': 150,
-						'square': window.squareV,
-						'beds': window.beds,
-						'page': 1,
-						'city_code':window.key,
-						'q':$('#inputtext').val(),
-						'baths': window.baths,
-						'parking': window.parking,
-						'market-days': window.market
-					},
+					data: param,
 					timeout: 5000, //超时时间
 					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
 					beforeSend: function(request) {
@@ -1018,6 +1040,18 @@
 									html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">' + desc + '</div>';
 
 								}
+								
+									 html += '<div style="color:#333333;font-size:10px;margin-top:5px;"><table width="100%"><tr>';
+								    
+								       html +='<td width="50%"><div align="left">';
+								       html+='<div style="border: 1px solid red;border-radius: 4px;width:60px;height:25px;color:red;margin-left:5px;" align="center">'+o.status_name+'</div>';
+								       html +='</div></td>';
+								       
+								         html +='<td width="50%"><div align="right">';
+								          html+='<div style="border: 1px solid #AFD25E;border-radius: 4px;width:100px;height:25px;color:#AFD25E;margin-right:5px;" align="center">'+o.list_days_description+'</div>';
+								         html +='</div></td>';
+								    
+								     html +='</tr></table></div>';
 
 								if(lang == 'zh-CN') {
 									html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">售价:<font color="red">' + o.list_price + '</font></div>';
@@ -1026,6 +1060,7 @@
 									html += '<div style="color:#333333;font-size:10px;margin-top:5px;margin-left:5px;">Price:<font color="red">' + o.list_price + '</font></div>';
 
 								}
+							
 
 								html += '</td>';
 								html += '</tr>';
@@ -1047,54 +1082,54 @@
 			}
 
 			getHouseData();
-			
-			
-			
-			
-				
-			function loadKeys(){
-						$.ajax({
-				url: 'http://api.usleju.cn/estate/house/search-options',
-				type: 'GET', //GET
-				async: true, //或false,是否异步
-				data: {},
-				timeout: 5000, //超时时间
-				dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
-				beforeSend: function(request) {
-					request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
-					request.setRequestHeader("language", lang);
 
-				},
-				success: function(data, textStatus, jqXHR) {
-					var obj = data;
+			function loadKeys() {
+				$.ajax({
+					url: 'http://api.usleju.cn/estate/house/search-options',
+					type: 'GET', //GET
+					async: true, //或false,是否异步
+					data: {},
+					timeout: 5000, //超时时间
+					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend: function(request) {
+						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+						request.setRequestHeader("language", lang);
 
-					if(obj.code == 200) {
-						var datas = obj.data;
-					window.keys = [];
-					
-					for(var i = 0;i< datas.length;i++){
-						var o = {'value':datas[i]['title'],'label':datas[i]['desc']};
-						window.keys.push(o);
+					},
+					success: function(data, textStatus, jqXHR) {
+						var obj = data;
+
+						if(obj.code == 200) {
+							var datas = obj.data;
+							window.keys = [];
+
+							for(var i = 0; i < datas.length; i++) {
+								var o = {
+									'value': datas[i]['title'],
+									'label': datas[i]['desc']
+								};
+								window.keys.push(o);
+							}
+
+							$('#inputtext').autocompleter({
+								source: window.keys
+							});
+
+						}
+					},
+					error: function(xhr, textStatus) {
+						console.log('错误')
+						console.log(xhr)
+						console.log(textStatus)
+					},
+					complete: function() {
+						console.log('结束')
 					}
-					
-					 $('#inputtext').autocompleter({ source: window.keys });
-					 
-					 
-					}
-				},
-				error: function(xhr, textStatus) {
-					console.log('错误')
-					console.log(xhr)
-					console.log(textStatus)
-				},
-				complete: function() {
-					console.log('结束')
-				}
-			})
-				
+				})
+
 			}
-			
-		//	loadKeys();
+
+			//	loadKeys();
 		</script>
 	</body>
 
