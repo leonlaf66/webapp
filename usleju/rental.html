@@ -17,10 +17,56 @@
 			.mycheck {
 				background: url(images/gou.png) no-repeat;
 			}
+			
+			#word{
+		position: absolute;
+		z-index: 9999999;
+		width: 100%;
+		height: auto;
+		margin-top: 90px;
+		background-color: white;
+	
+		display: none;
+	}
+	#mybg{
+		position: absolute;
+		z-index: 999999;
+		width: 100%;
+		height: 1900px;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.4;
+		opacity: 0.4;
+		margin-top: 90px;
+		background-color: black;
+	
+		display: none;
+	}
+	.click_work{
+		padding-bottom: 8px;
+		font-weight:lighter;
+		font-size: 13px;
+		cursor:pointer;/*鼠标放上变成小手*/
+	}
+	.click_work:hover{
+		color: orange;
+		background-color: gray;
+	}
+	.error{
+		color: gray;
+		cursor:pointer;/*鼠标放上变成小手*/
+	}
 		</style>
 	</head>
 
 	<body style="background: white;">
+		
+		<div id="word" style="color: #3333;font-size: 12px;">
+						
+						</div>
+						
+		<div id="mybg" style="color: #3333;font-size: 12px;">
+						
+						</div>
 		<div style="margin-top: 12px;">
 			<table width="100%">
 				<tr>
@@ -42,6 +88,7 @@
 					<tr>
 						<td width="90%">
 							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;z-index: 9999999;" id="inputtext" /></div>
+						
 						</td>
 
 						<td width="10%">
@@ -96,6 +143,73 @@
 			window.q = GetQueryString('q');
 
 			$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
+			
+			$('#mybg').click(function(){
+				$('#mybg').hide();	
+				$('#word').hide();
+			});
+			
+			$('#inputtext').keyup(function(){
+				var text = $('#inputtext').val().trim();
+				if(text.length > 0){
+					$('#word').show();
+					$('#mybg').show();
+					
+					var is  = $('#word').children();
+					for(var m = 0;m < is.length;m++){
+						$(is[m]).remove();
+					}
+					
+					var j = 0;
+					for(var i=0;i< window.keys.length;i++){
+						var o = window.keys[i];
+					
+						if(o.title.indexOf(text) != -1){
+							
+							var html = '<div class="myjiji" otitle="'+o.title+'" style="height:30px;padding-top: 5px;"><table width="100%"><tr>';
+							
+							html += '<td>';
+							html += '<div align="left" style="margin-left:12px;">'+o.title+'</div>';
+							html += '</td>';
+							
+								
+							html += '<td>';
+							
+							html += '<td>';
+							html += '<div align="right" style="margin-right:12px;">'+o.desc+'</div>';
+							html += '</td>';
+							
+							html += '</td>';
+							
+							html += '</tr></table></div>';
+							
+							$('#word').append(html);
+						    $('#word').append('<div   style="height: 1px;margin-left: 12px;background: #F2F2F2;"></div>');
+						   j++;
+						   if(j == 8){
+						   	break;
+						   }
+						}
+						
+						
+					}
+					$('div.myjiji').click(function(){
+							var key = $(this).attr('otitle');
+							$('#word').hide();
+					       $('#mybg').hide();
+					      $('#inputtext').val(key);
+					       getHouseData();
+						});
+				}else{
+					$('#word').hide();
+					$('#mybg').hide();
+					var is  = $('#word').children();
+					for(var m = 0;m < is.length;m++){
+						$(is[m]).remove();
+					}
+				}
+				
+			});
 
 			if(window.key && window.value) {
 				$('#inputtext').val(decodeURI(window.value));
@@ -130,120 +244,7 @@
 				var widht = $(window).width();
 				if(type == 'type') {
 					
-				} else if(type == 'price') {
-					if(window.lang == 'zh-CN') {
-						ds = [{
-								"title": "0-1000美元",
-								"tag": "1",
-								"value": {
-									"from": "0",
-									"to": "1000"
-								}
-							},
-							{
-								"title": "1000-2000美元",
-								"tag": "2",
-								"value": {
-									"from": "1000",
-									"to": "2000"
-								}
-							},
-							{
-								"title": "2000-3000美元",
-								"tag": "3",
-								"value": {
-									"from": "2000",
-									"to": "3000"
-								}
-							},
-							{
-								"title": "3000美元+",
-								"tag": "4",
-								"value": {
-									"from": "3000"
-								}
-							}
-						];
-					} else {
-
-						ds = [{
-								"title": "$0-$1000",
-								"tag": "1",
-								"value": {
-									"from": "0",
-									"to": "1000"
-								}
-							},
-							{
-								"title": "1000-2000",
-								"tag": "2",
-								"value": {
-									"from": "1000",
-									"to": "2000"
-								}
-							},
-							{
-								"title": "2000-3000",
-								"tag": "3",
-								"value": {
-									"from": "2000",
-									"to": "3000"
-								}
-							},
-							{
-								"title": "3000+",
-								"tag": "4",
-								"value": {
-									"from": "3000"
-								}
-							}
-						];
-
-					}
-					var html = '';
-					for(var i = 0; i < ds.length; i++) {
-						var o = ds[i];
-						html += '<div class="pricediv" style="height:35px;padding-left:12px;color:#333333;font-size:13px;padding-top:7px;"  valuec="' + o.tag + '">' + o.title + '</div>';
-						html += '<div style="height:1px;margin-left:12px;color:#333333;background:#f2f2f2;"></div>';
-					}
-					if(window.lang == 'zh-CN') {
-						html += '<div id="pokbtn" style="height:35px;margin-left:12px;color:white;background:#AFD25E;margin-right:12px;border-radius:3px;padding-top:6px;margin-top:15px;" align="center">确定</div>';
-					} else {
-						html += '<div id="pokbtn" style="height:35px;margin-left:12px;color:white;background:#AFD25E;margin-right:12px;border-radius:3px;padding-top:6px;margin-top:15px;" align="center">OK</div>';
-					}
-
-					layer.open({
-						type: 1,
-						title: false,
-						closeBtn: 0,
-						area: [widht + 'px', '250px'],
-						offset: ['150px', '0px'],
-						shadeClose: true,
-						skin: 'yourclass',
-						content: html
-					});
-
-					if(window.price) {
-						$('div[valuec=' + window.price + ']').css('color', '#AFD25E');
-					}
-
-					$('div.pricediv').click(function() {
-
-						var ps = $('div.pricediv');
-						for(var m = 0; m < ps.length; m++) {
-							$(ps[m]).css('color', '#333333');
-						}
-						$(this).css('color', '#AFD25E');
-						window.price = $(this).attr('valuec');
-					});
-
-					$('#pokbtn').click(function() {
-
-						layer.closeAll();
-						getHouseData();
-
-					});
-				} else if(type == 'square') {
+				}  else if(type == 'square') {
 
 					if(window.lang == 'zh-CN') {
 						ds = [{
@@ -820,21 +821,21 @@
 				if(window.price == 1) {
 					window.listPirce = {
 						"from": "0",
-						"to": "1000"
+						"to": "500000"
 					};
 				} else if(window.price == 2) {
 					window.listPirce = {
-						"from": "1000",
-						"to": "2000"
+						"from": "500000",
+						"to": "800000"
 					}
 				} else if(window.price == 3) {
 					window.listPirce = {
-						"from": "2000",
-						"to": "3000"
+						"from": "800000",
+						"to": "1200000"
 					}
 				} else if(window.price == 4) {
 					window.listPirce = {
-						"from": "3000"
+						"from": "1200000"
 					}
 				}
 
@@ -860,7 +861,7 @@
 					'page': 1
 				};
 				if(window.types) {
-					//param['filters[prop-type]'] = window.types;
+				//	param['filters[prop-type]'] = window.types;
 				}
 				if(window.listPirce) {
 					param['filters[list_price]'] = window.listPirce;
@@ -995,32 +996,25 @@
 							window.keys = [];
 
 							for(var i = 0; i < datas.length; i++) {
-								var o = {
-									'value': datas[i]['title'],
-									'label': datas[i]['desc']
-								};
-								window.keys.push(o);
+								window.keys.push(datas[i]);
+								
 							}
 
-							$('#inputtext').autocompleter({
-								source: window.keys
-							});
+							
 
 						}
 					},
 					error: function(xhr, textStatus) {
-						console.log('错误')
-						console.log(xhr)
-						console.log(textStatus)
+						
 					},
 					complete: function() {
-						console.log('结束')
+						
 					}
 				})
 
 			}
 
-			//	loadKeys();
+				loadKeys();
 		</script>
 	</body>
 

@@ -17,10 +17,56 @@
 			.mycheck {
 				background: url(images/gou.png) no-repeat;
 			}
+			
+			#word{
+		position: absolute;
+		z-index: 9999999;
+		width: 100%;
+		height: auto;
+		margin-top: 90px;
+		background-color: white;
+	
+		display: none;
+	}
+	#mybg{
+		position: absolute;
+		z-index: 999999;
+		width: 100%;
+		height: 1900px;
+		filter:alpha(Opacity=80);
+		-moz-opacity:0.4;
+		opacity: 0.4;
+		margin-top: 90px;
+		background-color: black;
+	
+		display: none;
+	}
+	.click_work{
+		padding-bottom: 8px;
+		font-weight:lighter;
+		font-size: 13px;
+		cursor:pointer;/*鼠标放上变成小手*/
+	}
+	.click_work:hover{
+		color: orange;
+		background-color: gray;
+	}
+	.error{
+		color: gray;
+		cursor:pointer;/*鼠标放上变成小手*/
+	}
 		</style>
 	</head>
 
 	<body style="background: white;">
+		
+		<div id="word" style="color: #3333;font-size: 12px;">
+						
+						</div>
+						
+		<div id="mybg" style="color: #3333;font-size: 12px;">
+						
+						</div>
 		<div style="margin-top: 12px;">
 			<table width="100%">
 				<tr>
@@ -42,6 +88,7 @@
 					<tr>
 						<td width="90%">
 							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;z-index: 9999999;" id="inputtext" /></div>
+						
 						</td>
 
 						<td width="10%">
@@ -96,6 +143,73 @@
 			window.q = GetQueryString('q');
 
 			$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
+			
+			$('#mybg').click(function(){
+				$('#mybg').hide();	
+				$('#word').hide();
+			});
+			
+			$('#inputtext').keyup(function(){
+				var text = $('#inputtext').val().trim();
+				if(text.length > 0){
+					$('#word').show();
+					$('#mybg').show();
+					
+					var is  = $('#word').children();
+					for(var m = 0;m < is.length;m++){
+						$(is[m]).remove();
+					}
+					
+					var j = 0;
+					for(var i=0;i< window.keys.length;i++){
+						var o = window.keys[i];
+					
+						if(o.title.indexOf(text) != -1){
+							
+							var html = '<div class="myjiji" otitle="'+o.title+'" style="height:30px;padding-top: 5px;"><table width="100%"><tr>';
+							
+							html += '<td>';
+							html += '<div align="left" style="margin-left:12px;">'+o.title+'</div>';
+							html += '</td>';
+							
+								
+							html += '<td>';
+							
+							html += '<td>';
+							html += '<div align="right" style="margin-right:12px;">'+o.desc+'</div>';
+							html += '</td>';
+							
+							html += '</td>';
+							
+							html += '</tr></table></div>';
+							
+							$('#word').append(html);
+						    $('#word').append('<div   style="height: 1px;margin-left: 12px;background: #F2F2F2;"></div>');
+						   j++;
+						   if(j == 8){
+						   	break;
+						   }
+						}
+						
+						
+					}
+					$('div.myjiji').click(function(){
+							var key = $(this).attr('otitle');
+							$('#word').hide();
+					       $('#mybg').hide();
+					      $('#inputtext').val(key);
+					       getHouseData();
+						});
+				}else{
+					$('#word').hide();
+					$('#mybg').hide();
+					var is  = $('#word').children();
+					for(var m = 0;m < is.length;m++){
+						$(is[m]).remove();
+					}
+				}
+				
+			});
 
 			if(window.key && window.value) {
 				$('#inputtext').val(decodeURI(window.value));
@@ -1104,32 +1218,25 @@
 							window.keys = [];
 
 							for(var i = 0; i < datas.length; i++) {
-								var o = {
-									'value': datas[i]['title'],
-									'label': datas[i]['desc']
-								};
-								window.keys.push(o);
+								window.keys.push(datas[i]);
+								
 							}
 
-							$('#inputtext').autocompleter({
-								source: window.keys
-							});
+							
 
 						}
 					},
 					error: function(xhr, textStatus) {
-						console.log('错误')
-						console.log(xhr)
-						console.log(textStatus)
+						
 					},
 					complete: function() {
-						console.log('结束')
+						
 					}
 				})
 
 			}
 
-			//	loadKeys();
+				loadKeys();
 		</script>
 	</body>
 
