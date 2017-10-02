@@ -284,7 +284,7 @@
 							$('#nearby').get(0).innerHTML = 'Nearby';
 						}
 
-						var url = 'houseMore.html?id=' + id + '&anguage=' + (lang || 'en-US');
+						var url = 'houseMore.html?id=' + id + '&language=' + (lang || 'en-US');
 
 						$('#moreBtn').attr('href', url);
 
@@ -312,7 +312,7 @@
 						var recommend_houses = obj.data.recommend_houses;
 						for(var i = 0; i < recommend_houses.length; i++) {
 							var o = recommend_houses[i];
-							var html = '<a href="home.html?anguage=' + lang + '&id=' + o.id + '"><table>';
+							var html = '<a href="home.html?language=' + lang + '&id=' + o.id + '"><table>';
 							html += '<tr>';
 							html += '<td width="35%">';
 							html += '<img src="' + o.image + '" style="height:100px;width:150px;margin-top:10px;margin-left:5px;"/>';
