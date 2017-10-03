@@ -16,10 +16,61 @@
 			.mycheck {
 				background: url(images/gou.png) no-repeat;
 			}
+			
+			#word {
+				position: absolute;
+				z-index: 9999999;
+				width: 100%;
+				height: auto;
+				margin-top: 90px;
+				background-color: white;
+				display: none;
+			}
+			
+			#mybg {
+				position: absolute;
+				z-index: 999999;
+				width: 100%;
+				height: 1900px;
+				filter: alpha(Opacity=80);
+				-moz-opacity: 0.4;
+				opacity: 0.4;
+				margin-top: 90px;
+				background-color: black;
+				display: none;
+			}
+			
+			.click_work {
+				padding-bottom: 8px;
+				font-weight: lighter;
+				font-size: 13px;
+				cursor: pointer;
+				/*鼠标放上变成小手*/
+			}
+			
+			.click_work:hover {
+				color: orange;
+				background-color: gray;
+			}
+			
+			.error {
+				color: gray;
+				cursor: pointer;
+				/*鼠标放上变成小手*/
+			}
 		</style>
 	</head>
 
 	<body style="background: white;">
+
+		<div id="word" style="color: #3333;font-size: 12px;">
+
+		</div>
+
+		<div id="mybg" style="color: #3333;font-size: 12px;">
+
+		</div>
+
 		<div style="margin-top: 12px;">
 			<table width="100%">
 				<tr>
@@ -36,21 +87,19 @@
 		</div>
 		<div style="background: white;">
 			<div id="typeHeader" style="height: 40px;margin-left: 10px;margin-right: 10px;padding-top: 10px;">
-				
-				
+
 				<table width="100%">
 					<tr>
 						<td width="90%">
-							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;" id="inputtext"/></div>
+							<div align="left"><input type="text" width="100%" height="100%" placeholder="Search Address,City,or Zip" style="font-size: 12px;" id="inputtext" /></div>
 						</td>
-						
+
 						<td width="10%">
 							<div align="right"><img src="images/searcha.png" style="width: 25px;height: 25px;" id="seatchBtn"></div>
 						</td>
 					</tr>
 				</table>
-				
-				
+
 			</div>
 		</div>
 
@@ -68,32 +117,92 @@
 				return null;
 			}
 			window.lang = GetQueryString('language');
-$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
-			if(window.lang == 'zh-CN') {
-			
-			} else {
-				
-			}
-			
-			$('#seatchBtn').click(function(){
+			$('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
+			$('#mybg').click(function() {
+				$('#mybg').hide();
+				$('#word').hide();
+			});
+
+			$('#inputtext').keyup(function() {
+				var text = $('#inputtext').val().trim();
+				if(text.length > 0) {
+					$('#word').show();
+					$('#mybg').show();
+
+					var is = $('#word').children();
+					for(var m = 0; m < is.length; m++) {
+						$(is[m]).remove();
+					}
+
+					var j = 0;
+					for(var i = 0; i < window.keys.length; i++) {
+						var o = window.keys[i];
+
+						if(o.title.indexOf(text) != -1) {
+
+							var html = '<div class="myjiji" otitle="' + o.title + '" style="height:30px;padding-top: 5px;color:black;"><table width="100%"><tr>';
+
+							html += '<td>';
+							html += '<div align="left" style="margin-left:12px;">' + o.title + '</div>';
+							html += '</td>';
+
+							html += '<td>';
+
+							html += '<td>';
+							html += '<div align="right" style="margin-right:12px;">' + o.desc + '</div>';
+							html += '</td>';
+
+							html += '</td>';
+
+							html += '</tr></table></div>';
+
+							$('#word').append(html);
+							$('#word').append('<div   style="height: 1px;margin-left: 12px;background: #F2F2F2;"></div>');
+							j++;
+							if(j == 8) {
+								break;
+							}
+						}
+
+					}
+					$('div.myjiji').click(function() {
+						var key = $(this).attr('otitle');
+						$('#word').hide();
+						$('#mybg').hide();
+						$('#inputtext').val(key);
+						var v = encodeURI(key);
+						window.location.href = encodeURI('purchase.html?language=' + window.lang  + '&q=' + v);
+					});
+				} else {
+					$('#word').hide();
+					$('#mybg').hide();
+					var is = $('#word').children();
+					for(var m = 0; m < is.length; m++) {
+						$(is[m]).remove();
+					}
+				}
+
+			});
+
+			$('#seatchBtn').click(function() {
 				getHouseData();
 			});
-			
-			function getHouseData(){
-				if($('#inputtext').val() &&$('#inputtext').val().length>0){
+
+			function getHouseData() {
+				if($('#inputtext').val() && $('#inputtext').val().length > 0) {
 					//alert(encodeURI('purchase.html?language='+window.lang+'&q='+$('#inputtext').val()));
-					window.location.href = encodeURI('purchase.html?language='+window.lang+'&q='+encodeURI($('#inputtext').val()));
+					window.location.href = encodeURI('purchase.html?language=' + window.lang + '&q=' + encodeURI($('#inputtext').val()));
 				}
-				
+
 			}
-     function getTypeData(){
-		
+
+			function getTypeData() {
+
 				$.ajax({
 					url: 'http://api.usleju.cn/estate/house/hot-areas',
 					type: 'GET', //GET
 					async: true, //或false,是否异步
-					data: {
-					},
+					data: {},
 					timeout: 5000, //超时时间
 					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
 					beforeSend: function(request) {
@@ -106,14 +215,14 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 						var obj = data;
 						if(obj.code == 200) {
 							var objs = obj.data;
-							for(var key in objs){
-								$('#allContail').append('<div style="font-size:12px;padding-left: 12px;color:#333333;height:35px;padding-top: 5px;" class="fuck" key="'+key+'">'+objs[key]+'</div>');
+							for(var key in objs) {
+								$('#allContail').append('<div style="font-size:12px;padding-left: 12px;color:#333333;height:35px;padding-top: 5px;" class="fuck" key="' + key + '">' + objs[key] + '</div>');
 								$('#allContail').append('<div style="margin-left: 12px;background:#F2F2F2;height:1px;"></div>');
 							}
-							$('div.fuck').click(function(){
+							$('div.fuck').click(function() {
 								var key = $(this).attr('key');
-								var v= encodeURI($(this).text());
-								window.location.href = encodeURI('purchase.html?language='+window.lang+'&key='+key+'&value='+v);
+								var v = encodeURI($(this).text());
+								window.location.href = encodeURI('purchase.html?language=' + window.lang + '&key=' + key + '&value=' + v);
 							});
 						}
 					},
@@ -126,8 +235,49 @@ $('#indexhome').attr('href', 'index.html?language=' + window.lang || 'en-US');
 				})
 
 			}
-getTypeData();
+			getTypeData();
 			
+			
+			function loadKeys() {
+				$.ajax({
+					url: 'http://api.usleju.cn/estate/house/search-options',
+					type: 'GET', //GET
+					async: true, //或false,是否异步
+					data: {},
+					timeout: 5000, //超时时间
+					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend: function(request) {
+						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+						request.setRequestHeader("language", lang);
+
+					},
+					success: function(data, textStatus, jqXHR) {
+						var obj = data;
+
+						if(obj.code == 200) {
+							var datas = obj.data;
+							window.keys = [];
+
+							for(var i = 0; i < datas.length; i++) {
+								window.keys.push(datas[i]);
+								
+							}
+
+							
+
+						}
+					},
+					error: function(xhr, textStatus) {
+						
+					},
+					complete: function() {
+						
+					}
+				})
+
+			}
+
+				loadKeys();
 		</script>
 	</body>
 
