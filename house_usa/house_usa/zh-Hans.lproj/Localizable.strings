@@ -1,0 +1,143 @@
+/* 
+  Localizable.strings
+  house_usa
+
+  Created by 林 建军 on 27/06/2017.
+  Copyright © 2017 yl. All rights reserved.
+*/
+
+//首页
+"homeSearchPlaceHolder" = "搜索城市，邮编，地址或房源号。";
+
+"tab_home" = "首页";
+
+"tab_search" = "找房";
+
+"tab_service" = "服务";
+
+"tab_me" = "我";
+
+
+
+"nearbyLabel" = "查看周边";
+
+"newsLabel" = "新闻资讯";
+
+"servicesLabel" = "房管中心";
+
+"flowLabel" = "购房流程";
+
+"mapLabel" = "地图找房";
+
+"buyBtn" = "我要买房";
+
+"rentalBtn" = "我要租房";
+"workFlow" = "购房流程";
+
+
+
+
+"Latestnews" = "最新资讯";
+"more" = "查看更多";
+
+"houseRecommended" = "推荐房源";
+
+"businessRecommended" = "商家推荐";
+
+
+
+/////房管中心
+"proServiceTitle" = "房管中心";
+
+/////最新资讯
+"latestNewsTitle" = "最新资讯";
+
+/////周边房源
+"nearbyTitle" = "周边房源";
+
+
+////房屋详情
+"houseDetail" = "房屋详情";
+"roi" = "投资回报率";
+"moreInformation" = "更多房源信息";
+"like" = "收藏";
+"share" = "分享";
+
+//房屋类型
+
+"SF" = "独栋别墅";
+"MF" = "多家庭";
+"CC" = "公寓";
+"CI" = "商业用房";
+"BU" = "营业用房";
+"LD" = "土地";
+
+
+
+/////地图
+"mapTitle" = "地图找房";
+"map" = " 地图";
+"price" = "售价";
+
+"Type" = "类型";
+"Price" = "价格";
+"LivingArea" = "面积";
+"Beds" = "卧室";
+"More" = "更多";
+
+///排序呢
+"defaultSort" = "默认排序";
+"daysSort" = "新上市";
+"pricea" = "价格从高到底";
+"priceb" = "价格从低到高";
+
+"bedssorta" = "卧室从多到少";
+"bedssortb" = "卧室从少到多";
+
+"sortLabel" = "排序";
+
+"resetLabel" = "重置";
+
+"searchLabel" = "查询";
+
+"beweenLabel" = "自定义区间:";
+
+"okLabel" = "确定";
+"minLabel" = "最小值";
+"maxLabel" = "最大值";
+
+/**
+ *  下拉刷新
+ */
+
+"MJRefreshHeaderIdleText" = "下拉刷新";
+"MJRefreshHeaderPullingText" = "释放立即刷新";
+"MJRefreshHeaderRefreshingText" = "正在刷新数据...";
+
+"MJRefreshAutoFooterIdleText" = "上拉加载更多";
+"MJRefreshAutoFooterRefreshingText" = "加载更多的数据...";
+"MJRefreshAutoFooterNoMoreDataText" = "已经全部加载完毕";
+
+"MJRefreshBackFooterIdleText" = "上拉加载更多";
+"MJRefreshBackFooterPullingText" = "松开加载更多";
+"MJRefreshBackFooterRefreshingText" = "加载更多的数据...";
+"MJRefreshBackFooterNoMoreDataText" = "已经全部加载完毕";
+"lastupdate" = "最后更新";
+"norecord" = "无记录";
+
+
+"loginin" = "登录";
+"loginout" = "登出";
+"loginoutstatus" = "注销成功";
+
+"contactInfo" = "答疑";
+"mortgage" = "房贷";
+"scheduleTour" = "看房";
+
+"mortgagen" = "房贷计算器";
+"serviceTtile" = "米乐居客服";
+"emailLabel" = "电子邮件:contact@usleju.com";
+"wxLabel" = "微信:woniuusa";
+
+"onlineServiceLabel" = "在线客服";
+

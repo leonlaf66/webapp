@@ -1,0 +1,24 @@
+//
+//  Prefix.pch
+//  house_usa
+//
+//  Created by 林 建军 on 26/05/2017.
+//  Copyright © 2017 yl. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+
+#import "DaoDefines.h"
+#import "Config.h"
+#import "Precompile.h"
+#import "UIColor+XTExtension.h"
+#import "NSString+XTExtension.h"
+#import "NSObject+XTConversion.h"
+#import "TKAlertCenter.h"
+#import "UIImageView+WebCache.h"
+#import "UPDao+UserTime.h"
+
+#endif /* Prefix_pch */

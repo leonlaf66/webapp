@@ -1,0 +1,1318 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05482882E68FAAC354850E64973B1BA8 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BCA55D4ECC676D3B7119E2993FDC284 /* JGProgressHUDIndeterminateIndicatorView.m */; };
+		05D3AF2D70A38F500E15827A84155ECC /* JGProgressHUDErrorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = F7299EF075E7E7B525D4ECD9A7EEF5C1 /* JGProgressHUDErrorIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1341A7AC2439CB63D459D32EF985A414 /* UIImage+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FCC2364E76AD2F54AD193DC82B73F39 /* UIImage+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2012864C735C3DD88ECE425F6C981F6B /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = C3EB21AC0E15B540A6805B10C8B6A1A2 /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2532545CA3B8C53A39E5730D7192BB1E /* JGProgressHUDPieIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4392430EF306EF98E77400EBA344651B /* JGProgressHUDPieIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2579663181BFA8F7DA4B5D7CF8537FC0 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FCFDCC0E5AF00AA8E4BB191C8D5EF8D5 /* UIActivityIndicatorView+AFNetworking.m */; };
+		2843898C40D365BC1361BF1CD832E9B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04E0E26225176563DA09F9A3EDFAFC0 /* CoreGraphics.framework */; };
+		29B9B704A68D466390484447A206876E /* JGProgressHUDAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = B302F1D56BF13C4920F797838750385B /* JGProgressHUDAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EBAA518CB8B2DAF89A63637091D4615 /* UIButton+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B496434F1F4426A193AEC3D2E5494A2 /* UIButton+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31ED9BD97AF9E62874AF3CDF2F8090CF /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 906C7B70A53EE8C7AD5A45E6A23B09C5 /* AFNetworkActivityIndicatorManager.m */; };
+		38E214F5610265E2C503CFA8CA606A4E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE1D6F61E1F17C4559FDB019A745D31C /* UIKit.framework */; };
+		398A5C11EFB816892FD5E18AD24F03D4 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = CCFD5B590F37787706FDB3059F3C68D2 /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46401F3C7FF0B0CFE2E9B14914780835 /* AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE427C23A5B0F049611A40053CBD436 /* AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A412BCDE9FB41C8ACCEEEA8E802B2CA /* JGProgressHUDPieIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B083C5EF91FA75F4D90083397F61E44 /* JGProgressHUDPieIndicatorView.m */; };
+		4ACCF7B339E9034FDBE4B9970FFBCCA4 /* JGProgressHUDIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = C6ACC794C8D5800AFF68706230E5C7F8 /* JGProgressHUDIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4B3B2EABA01FE0065CA6693CEE33CA92 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 807D41F28D84BDB74C28723CD317F1EC /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4CC8511A4FE51A4737F97BCBBA222B65 /* JGProgressHUDRingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C68E9AA12761F54FC8F29288D013D8 /* JGProgressHUDRingIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D26972AF6F07DDD067BCF390C5EC7D8 /* JGProgressHUDFadeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = C9022A7A6C648EA910E092C312EDFE3D /* JGProgressHUDFadeAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DB541C1C41B1C597EC36CDAB5243D1A /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F21E0F12222F67BCC7E0B71D588B194D /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5181241B1ABB612075EA45059774706D /* JGProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE8C3BB3E39992A46360105019D959A /* JGProgressHUD.m */; };
+		519F1ACB6AD0BACC76B373A3C6219596 /* JGProgressHUDRingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0341E550D6398069F13C3897A28E542 /* JGProgressHUDRingIndicatorView.m */; };
+		5719F06B809080CDEF7E6BC75DEA1A3C /* UIKit+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 58AAD9DD5ED337C6251D17F605AD41E3 /* UIKit+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5945033488F9995134DBB7014DE2412F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 3295383E521D1D889DB94003077A068F /* AFURLRequestSerialization.m */; };
+		5C0696B2AD1DC23F6473F5A19FAB6296 /* AFImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = BD17B67C454E50626B3BA7115EA9051D /* AFImageDownloader.m */; };
+		6199817CB29DADBC9AB1D4C44E52F5BA /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B96741795927116D777B0F424C166C1 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		64EDB376BBA17EF96FA163E9757162EE /* JGProgressHUDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72CD69DE061596E8131162F0C6CA1D5E /* JGProgressHUDAnimation.m */; };
+		66635EAAE52FF5571DBCDC626FB8CA86 /* AFURLResponseSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = F7F0C83B4D0B66BDB573AD6B0FA97AE1 /* AFURLResponseSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		668F4A04170275CC2003594BBB8D1332 /* JGProgressHUDIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9934814E4CB3ABD931A839203F42AD0 /* JGProgressHUDIndicatorView.m */; };
+		66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4777835FC6268C2DED5C8671DAD483 /* AFSecurityPolicy.m */; };
+		682B0E603612B6ADBCCF30580F9A4B09 /* UIActivityIndicatorView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = CA290F902D8B05E23BC0F108E07E20E7 /* UIActivityIndicatorView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B0FAC1299D612C7019E28B8220664AA /* JGProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 6009805469E9B6CCB098D454898C97AB /* JGProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B71CE5BA32574F407349C1DA20605B4 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D96D4822A04F5E3C3C010B55A731516F /* AFHTTPSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D06226E4854E2E8B95AB0640740E61E /* JGProgressHUDImageIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6933262AFDB4914AB31F3CA4D4714CF5 /* JGProgressHUDImageIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		707E818332E5033501DF2D7826C639DF /* AFImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 44F276B04CE5F431C26D02A05C3EA189 /* AFImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71807C8F559F2AD181BFDC7A11250B23 /* JGProgressHUDSuccessIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B61A95CE874902A1D0069ACC67378A /* JGProgressHUDSuccessIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAB19B8F0418ED436E93A4471123294E /* AFHTTPSessionManager.m */; };
+		73BD7DCFA50B1D040C91CDC21D8C8ED0 /* Pods-house_usa-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0F2BC3ACC4A816C1687EFB1F797B9D /* Pods-house_usa-dummy.m */; };
+		775CE7A8107457BDE59F113D40020839 /* AFAutoPurgingImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE0ED18AFFFBEC9E7FF935E17D4A4D4 /* AFAutoPurgingImageCache.m */; };
+		7E91BC4A442B0E348F72E9E93FBE0083 /* JGProgressHUDFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9E982B46D711FFD07D8BCAD3A9FB2A /* JGProgressHUDFadeAnimation.m */; };
+		8021697A1557D425AC130472DA1317CC /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 343DA5C1BDEF39874B605F96E59ACDC4 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		85D30678FF4F0AB306399A368EAA46B2 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 97321323010894E622271FE37A6AD102 /* AFURLResponseSerialization.m */; };
+		889D48A9B81ADF617C1D4E4E9473E3A9 /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C08901FD71E053FE811B7273640D254 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		890A683F3E53F6D7B1E81D6F3619D84D /* JGProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4644148CD2EEAA64ACE3CCEB871851 /* JGProgressHUD-dummy.m */; };
+		8958F2453EEBAF71BFEBD78FB48986EC /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 484A634E878D84A559A633CBDA49EB1F /* UIWebView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B1E1A45E0B423395CE2A513BB1B1010 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7DB0E1C1232B45E420C2D2EC166699 /* MobileCoreServices.framework */; };
+		8C8FE823FB0DA31FA72637BBBA637026 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220F32386B93FEA67395A11B86A15E4D /* Foundation.framework */; };
+		8D221D393D771F77A56E01E007AB7E5B /* JGProgressHUDIndeterminateIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7433A2B36F35064C86DF37B66C89102B /* JGProgressHUDIndeterminateIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91E7BA397D538FC3A3770401C99F0224 /* JGProgressHUD-Defines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8298A9442FA45680DFC75B373E4AF1 /* JGProgressHUD-Defines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9451F2FCD27610D7CA3DA9CEA05789B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220F32386B93FEA67395A11B86A15E4D /* Foundation.framework */; };
+		97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE2F180A372DC524BD9989497852368 /* AFNetworking-dummy.m */; };
+		98ABF277A45F1AB72A8D02D53FFE67BF /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3517CB796AD50EA276D37496E9AA1AAA /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		99714143FA44A34F87D1F2AA6D254177 /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 454A52CBF88E7C5CA3D4CC0FE85A515A /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D7FB46172C93670F81BEBD3F70821C /* AFURLSessionManager.m */; };
+		A277AD9070E44BED5A7DE0B1D64D6F15 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 461974E81B5B4425D984AD1E887F49DE /* UIImageView+AFNetworking.m */; };
+		A7F7FDCD36E2DD8D8E346DB19452CC03 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F950296842E89B2B3FA35B0BE204749 /* UIWebView+AFNetworking.m */; };
+		AFD0634B4D580C7C585C242BE0008A0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220F32386B93FEA67395A11B86A15E4D /* Foundation.framework */; };
+		B40756412613B53C80EE77C4C223990F /* UIProgressView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C99C7E3BF4E2883D447676D5B74D16 /* UIProgressView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4B8137A972039426B43144E5EF9FC56 /* JGProgressHUDSuccessIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBB021A8E1A437621EF30F7579C8D2B3 /* JGProgressHUDSuccessIndicatorView.m */; };
+		B84CD33084C9867E67BD56E47B7BFC04 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E44C34730EF4683DADA7D87D58E9BD /* UIRefreshControl+AFNetworking.m */; };
+		C1C0D7C93BF3DE14A26757273598D0FA /* AFURLRequestSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = 4182DA4164DFAB093E055919361607FA /* AFURLRequestSerialization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C40CFE1274D588CA1A9DF9394BF76EAE /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C069463D1CA74109358D80C1C2DB879F /* FMDB-dummy.m */; };
+		C50C22D80519D29F50377B2A4A294B02 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B022B5ABBB5BCDF786884DF7B1525E87 /* QuartzCore.framework */; };
+		D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D64968CB0BE0C77CCCB4F9919106508 /* UIButton+AFNetworking.m */; };
+		D4896F43640969DF6AC0C1E4BFDFEBE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220F32386B93FEA67395A11B86A15E4D /* Foundation.framework */; };
+		D4AA4704CA7863CC86E22AAF88635836 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A37BEDBDBDD3BE36D4C3B14A91B50A5 /* UIProgressView+AFNetworking.m */; };
+		D59FC98A74E440C4725B6FDC28F5951E /* AFSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A3F632FEB4AB02C93453FA15BF818DC /* AFSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5CB999FB5FC80FC126A38AB4DF12227 /* UIImageView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 9570167424D66DEE34A2889DD10D6084 /* UIImageView+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6661D944DA4B5402DA6B57914542DF9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4304D0494C657A7E16CB2A5EA3E379D1 /* Security.framework */; };
+		D852415DFD46E85C293E0DDE01868EA2 /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 051493679A581BC5FD68A92717F8CAD5 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAE7265D0053E08E6203453853A82E3A /* JGProgressHUDFadeZoomAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EEA2171E2DEDE3F6DA723BFC54B28F4 /* JGProgressHUDFadeZoomAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE31BBF6A7963C5871A19655EF5532BE /* AFNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 76A1202F6B6E127F7A5BD8FA47131D64 /* AFNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E0EF330DB2D3521ED26E67B2E8687A2E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C30A34EAEF609AF867E085ED30744F /* AFNetworkReachabilityManager.m */; };
+		E738C16AF8020F2D6948D867AA7109EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C63DA6F3500BF33D28BAF26943BC849 /* SystemConfiguration.framework */; };
+		E7B0270BEDCBE116DDD853F76E27B0BA /* AFNetworkActivityIndicatorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E92C3F9221A073197645269E196F50F8 /* AFNetworkActivityIndicatorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA9AD894CD4A20184FA22280949C5242 /* JGProgressHUDErrorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1E93B4A633F780FF6BF2FC8E6CAA26 /* JGProgressHUDErrorIndicatorView.m */; };
+		F00CCFAB93A4F18419CD91217B1D5F66 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D6FC787DE7DFD1336122D1880BF2CA0 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F099E5987DD80E8D78E909AF81D3C587 /* UIRefreshControl+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D6FD001464AFE59D1EBA8A312E83735 /* UIRefreshControl+AFNetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1F93EE1AA5E870F2CE81325CE9EB643 /* AFAutoPurgingImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2591AD84BFC6FE969AB42C3EF62F02EB /* AFAutoPurgingImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5CC06F3E0C232483A72DCCFAF393BE0 /* AFURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 369BEA5D3B00A01B7521C56DF4141E7F /* AFURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F98386E44ECCB02E521224B917F2B818 /* JGProgressHUDFadeZoomAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D972D9F06F5D3BB9CB1765F2FCA91 /* JGProgressHUDFadeZoomAnimation.m */; };
+		FABB4FF076D17A67A35458901DF2EA6A /* JGProgressHUDImageIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5673BEE32631264B970B78E5B7AA0CD8 /* JGProgressHUDImageIndicatorView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		111012C157659CEF024D325BC7C16EB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8642CC820CE8C5B88C113D7F47AF4BC3;
+			remoteInfo = FMDB;
+		};
+		B7323A2E2342CB8F06E5D4F91E063697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E033EDB5EC0819481B0546434FA577B;
+			remoteInfo = AFNetworking;
+		};
+		E90F30E6AE7771AE62D7A6288640D1A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAFE1E212EB266EC7F5190DB78A8C0E7;
+			remoteInfo = JGProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		022772D995CFB8E40B9F5DAA624D2704 /* BMKGeocodeSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeSearch.h; sourceTree = "<group>"; };
+		051493679A581BC5FD68A92717F8CAD5 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		092AFD214CF3698A7857716F510F1668 /* BMKSuggestionSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearch.h; sourceTree = "<group>"; };
+		0AE427C23A5B0F049611A40053CBD436 /* AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		0BCA55D4ECC676D3B7119E2993FDC284 /* JGProgressHUDIndeterminateIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndeterminateIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.m; sourceTree = "<group>"; };
+		0CDCC75E8AA6086F06E0EFB052B9181F /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		0CE2F180A372DC524BD9989497852368 /* AFNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AFNetworking-dummy.m"; sourceTree = "<group>"; };
+		0CF72308FA2867B13C9FFCE0EE5AFB35 /* BMKRadarVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarVersion.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarVersion.h; sourceTree = "<group>"; };
+		0D24C745A970C6DACC24A7F6047DFDE5 /* Pods-house_usa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-house_usa.release.xcconfig"; sourceTree = "<group>"; };
+		0E4644148CD2EEAA64ACE3CCEB871851 /* JGProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		0EEA2171E2DEDE3F6DA723BFC54B28F4 /* JGProgressHUDFadeZoomAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeZoomAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.h; sourceTree = "<group>"; };
+		111D972D9F06F5D3BB9CB1765F2FCA91 /* JGProgressHUDFadeZoomAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeZoomAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeZoomAnimation.m; sourceTree = "<group>"; };
+		12C6E63CA8932E581EEA2FEF37371481 /* BaiduMapAPI_Search.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Search.framework; path = BaiduMapKit/BaiduMapAPI_Search.framework; sourceTree = "<group>"; };
+		136164E05AFB4893C06581101983F58D /* BMKOpenPanorama.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPanorama.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPanorama.h; sourceTree = "<group>"; };
+		13C68E9AA12761F54FC8F29288D013D8 /* JGProgressHUDRingIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDRingIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.h; sourceTree = "<group>"; };
+		15BB6BE6F60983D81D7A1F5C11466D55 /* BMKShape.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShape.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKShape.h; sourceTree = "<group>"; };
+		162EFCCA1E1AE03C958873C9B1673C24 /* BMKGeometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeometry.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKGeometry.h; sourceTree = "<group>"; };
+		188D786C9BDB4C60A97197D48F1D5052 /* BMKRadarComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarComponent.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarComponent.h; sourceTree = "<group>"; };
+		1BE0ED18AFFFBEC9E7FF935E17D4A4D4 /* AFAutoPurgingImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFAutoPurgingImageCache.m; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.m"; sourceTree = "<group>"; };
+		1EC392486294E415256A1C7B75DEF986 /* BMKBaseIndoorMapInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBaseIndoorMapInfo.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKBaseIndoorMapInfo.h; sourceTree = "<group>"; };
+		220F32386B93FEA67395A11B86A15E4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		22CCAA20DBC4ECA9EBCAF65B09ACC314 /* BMKLocationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationService.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationService.h; sourceTree = "<group>"; };
+		250CB640472F70E4580DA49FAF81F85E /* Pods-house_usa-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-house_usa-frameworks.sh"; sourceTree = "<group>"; };
+		2591AD84BFC6FE969AB42C3EF62F02EB /* AFAutoPurgingImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFAutoPurgingImageCache.h; path = "UIKit+AFNetworking/AFAutoPurgingImageCache.h"; sourceTree = "<group>"; };
+		266CEE02F68A51ACD9A1D212161BF464 /* BMKBusLineSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBusLineSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKBusLineSearch.h; sourceTree = "<group>"; };
+		27935C017A722971C6C3DD15EDB6A83E /* BMKUtilsComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUtilsComponent.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKUtilsComponent.h; sourceTree = "<group>"; };
+		29D7FB46172C93670F81BEBD3F70821C /* AFURLSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		2A4777835FC6268C2DED5C8671DAD483 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		2A49B9AB9E837A257C50DCF2718B11EC /* BMKUtilsVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUtilsVersion.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKUtilsVersion.h; sourceTree = "<group>"; };
+		2A7DB0E1C1232B45E420C2D2EC166699 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		2A947BF45B8CBEAE6AB481D75241827A /* BMKAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKAnnotationView.h; sourceTree = "<group>"; };
+		2BE8C3BB3E39992A46360105019D959A /* JGProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUD.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.m; sourceTree = "<group>"; };
+		2C08901FD71E053FE811B7273640D254 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		2C227148CBFA252F39F9223AD216B521 /* JGProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGProgressHUD.xcconfig; sourceTree = "<group>"; };
+		2F8298A9442FA45680DFC75B373E4AF1 /* JGProgressHUD-Defines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "JGProgressHUD-Defines.h"; path = "JGProgressHUD/JGProgressHUD/JGProgressHUD-Defines.h"; sourceTree = "<group>"; };
+		3295383E521D1D889DB94003077A068F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		331D40F03988E6DC16AB011D678AA84B /* BMKLocationVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationVersion.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationVersion.h; sourceTree = "<group>"; };
+		33EE5870ED7B046278A6A6B8E6A1B09E /* BMKPinAnnotationView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPinAnnotationView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPinAnnotationView.h; sourceTree = "<group>"; };
+		343DA5C1BDEF39874B605F96E59ACDC4 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		34471B96AC5B80E05AC3AF5368D383DA /* BMKGeocodeType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeType.h; sourceTree = "<group>"; };
+		344DA22BB128C7D0ABE3C61CE3CBBFC0 /* BMKCloudPOIList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudPOIList.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudPOIList.h; sourceTree = "<group>"; };
+		3517CB796AD50EA276D37496E9AA1AAA /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		369BEA5D3B00A01B7521C56DF4141E7F /* AFURLSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		392DF1FBF045CB2784C12FDAD91B38E8 /* BMKArcline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKArcline.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKArcline.h; sourceTree = "<group>"; };
+		3B2E87E38556C9126BBDA6356A7E50F1 /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = BaiduMapKit/thirdlibs/libcrypto.a; sourceTree = "<group>"; };
+		3BF19F981F50A8D0EAFE8C0911014528 /* BMKOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayView.h; sourceTree = "<group>"; };
+		3ECD5E56C20E216F0F86615AE2BF5B2E /* BMKFavPoiManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKFavPoiManager.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKFavPoiManager.h; sourceTree = "<group>"; };
+		40C30A34EAEF609AF867E085ED30744F /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		4156C24E6C301F12DAFA6084AB7CFCA6 /* BMKHeatMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKHeatMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKHeatMap.h; sourceTree = "<group>"; };
+		4182DA4164DFAB093E055919361607FA /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		42082293F41DC31D17E6C29C8466C872 /* BMKLocationComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationComponent.h; path = BaiduMapKit/BaiduMapAPI_Location.framework/Headers/BMKLocationComponent.h; sourceTree = "<group>"; };
+		42C8B99729E22275A44084E8C9F980DD /* BMKMultiPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMultiPoint.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMultiPoint.h; sourceTree = "<group>"; };
+		4304D0494C657A7E16CB2A5EA3E379D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		4392430EF306EF98E77400EBA344651B /* JGProgressHUDPieIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDPieIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.h; sourceTree = "<group>"; };
+		43C99C7E3BF4E2883D447676D5B74D16 /* UIProgressView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIProgressView+AFNetworking.h"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.h"; sourceTree = "<group>"; };
+		44F276B04CE5F431C26D02A05C3EA189 /* AFImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFImageDownloader.h; path = "UIKit+AFNetworking/AFImageDownloader.h"; sourceTree = "<group>"; };
+		44F9CF6285178551CA8116973393B966 /* BaiduMapAPI_Utils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Utils.framework; path = BaiduMapKit/BaiduMapAPI_Utils.framework; sourceTree = "<group>"; };
+		454A52CBF88E7C5CA3D4CC0FE85A515A /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		461974E81B5B4425D984AD1E887F49DE /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		462CA58E4BB742084836C868884D54E1 /* BMKPolygon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolygon.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolygon.h; sourceTree = "<group>"; };
+		484A634E878D84A559A633CBDA49EB1F /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIWebView+AFNetworking.h"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
+		49655B01F006D45F2602B7EEE55297C3 /* BMKCloudVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudVersion.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudVersion.h; sourceTree = "<group>"; };
+		4EF0E778E5CDEC9B60BE4581ED0AC473 /* BMKBusLineSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBusLineSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKBusLineSearchOption.h; sourceTree = "<group>"; };
+		4F950296842E89B2B3FA35B0BE204749 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIWebView+AFNetworking.m"; path = "UIKit+AFNetworking/UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		4FCC2364E76AD2F54AD193DC82B73F39 /* UIImage+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+AFNetworking.h"; path = "UIKit+AFNetworking/UIImage+AFNetworking.h"; sourceTree = "<group>"; };
+		555E63D3A2F2CE6EBC2B6D930D962BB5 /* BMKRadarManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarManager.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarManager.h; sourceTree = "<group>"; };
+		559077F5E619C7EB4E56BAC96D4D0633 /* BMKNavigation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKNavigation.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKNavigation.h; sourceTree = "<group>"; };
+		5673BEE32631264B970B78E5B7AA0CD8 /* JGProgressHUDImageIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDImageIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.m; sourceTree = "<group>"; };
+		584EC03CD24F7D14BB08767D4BF1E1D9 /* BMKTileLayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTileLayerView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKTileLayerView.h; sourceTree = "<group>"; };
+		58AAD9DD5ED337C6251D17F605AD41E3 /* UIKit+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIKit+AFNetworking.h"; path = "UIKit+AFNetworking/UIKit+AFNetworking.h"; sourceTree = "<group>"; };
+		5A3F632FEB4AB02C93453FA15BF818DC /* AFSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		5A6BB18956010344237198BE59A1DFAA /* BMKUserLocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKUserLocation.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKUserLocation.h; sourceTree = "<group>"; };
+		5B496434F1F4426A193AEC3D2E5494A2 /* UIButton+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+AFNetworking.h"; path = "UIKit+AFNetworking/UIButton+AFNetworking.h"; sourceTree = "<group>"; };
+		5D6FD001464AFE59D1EBA8A312E83735 /* UIRefreshControl+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIRefreshControl+AFNetworking.h"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.h"; sourceTree = "<group>"; };
+		6009805469E9B6CCB098D454898C97AB /* JGProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUD.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUD.h; sourceTree = "<group>"; };
+		63354726541CF482E25DD9BC055E2A9C /* BMKOfflineMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOfflineMap.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOfflineMap.h; sourceTree = "<group>"; };
+		65B0544C892D1B8A1297307C81BF402B /* BMKOpenRouteOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenRouteOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenRouteOption.h; sourceTree = "<group>"; };
+		66C3DB57909931C72DBF1F38E3866140 /* JGProgressHUD Resources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = "JGProgressHUD Resources.bundle"; path = "JGProgressHUD/JGProgressHUD/JGProgressHUD Resources.bundle"; sourceTree = "<group>"; };
+		6889067904AB00FFFF0AFB1064010D89 /* BMKFavPoiInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKFavPoiInfo.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKFavPoiInfo.h; sourceTree = "<group>"; };
+		6933262AFDB4914AB31F3CA4D4714CF5 /* JGProgressHUDImageIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDImageIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDImageIndicatorView.h; sourceTree = "<group>"; };
+		6C0F2BC3ACC4A816C1687EFB1F797B9D /* Pods-house_usa-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-house_usa-dummy.m"; sourceTree = "<group>"; };
+		6C63DA6F3500BF33D28BAF26943BC849 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		6D54017441FF8147F957F4F707DA1D4B /* BMKDistrictSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKDistrictSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKDistrictSearch.h; sourceTree = "<group>"; };
+		6D64968CB0BE0C77CCCB4F9919106508 /* UIButton+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+AFNetworking.m"; path = "UIKit+AFNetworking/UIButton+AFNetworking.m"; sourceTree = "<group>"; };
+		6D6FC787DE7DFD1336122D1880BF2CA0 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		6D6FFE11D1739C06303AF523E0D50126 /* BMKLocationViewDisplayParam.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKLocationViewDisplayParam.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKLocationViewDisplayParam.h; sourceTree = "<group>"; };
+		712BA70C555E4E3CDE5625ACAD0B58B6 /* BMKRouteSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearchType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearchType.h; sourceTree = "<group>"; };
+		72CD69DE061596E8131162F0C6CA1D5E /* JGProgressHUDAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.m; sourceTree = "<group>"; };
+		7433A2B36F35064C86DF37B66C89102B /* JGProgressHUDIndeterminateIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndeterminateIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndeterminateIndicatorView.h; sourceTree = "<group>"; };
+		74BC3065F219A22B3F07C04D9EFF98C2 /* BMKCircleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircleView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircleView.h; sourceTree = "<group>"; };
+		76A1202F6B6E127F7A5BD8FA47131D64 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		7A507065D0D33753BE32B74DE4BEA7CF /* BMKPolygonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolygonView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolygonView.h; sourceTree = "<group>"; };
+		7ACBF68403368A98E211B969F2E56EA4 /* BMKCircle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCircle.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKCircle.h; sourceTree = "<group>"; };
+		7B1E93B4A633F780FF6BF2FC8E6CAA26 /* JGProgressHUDErrorIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDErrorIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.m; sourceTree = "<group>"; };
+		7D1DAE29E4D2C191405B7CC8480FA5A1 /* BMKMapVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapVersion.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapVersion.h; sourceTree = "<group>"; };
+		7E70D35112734C0EBB4F3A81C29415A2 /* BMKPoiSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearchOption.h; sourceTree = "<group>"; };
+		7EB4DE82B4280F73C82B6F224EB51A14 /* BMKMapManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapManager.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKMapManager.h; sourceTree = "<group>"; };
+		7F38E1C30D21E68E153CAB6199C6505F /* BMKGeocodeSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeocodeSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKGeocodeSearchOption.h; sourceTree = "<group>"; };
+		807D41F28D84BDB74C28723CD317F1EC /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		820DBAFB3FD81D9F36B54D2E4F5CD47F /* libJGProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libJGProgressHUD.a; path = libJGProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		82548B1DDE8C37A7D26D851830973724 /* Pods-house_usa-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-house_usa-resources.sh"; sourceTree = "<group>"; };
+		846324AA63968E6B6514BDFE6453B89D /* BMKOpenRoute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenRoute.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenRoute.h; sourceTree = "<group>"; };
+		853D9C8FFE1D13BE82D936458E47E3AD /* BMKOpenPoiOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoiOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoiOption.h; sourceTree = "<group>"; };
+		874443E1DEA47E91C0ACF6B59EE36B9A /* AFNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AFNetworking.xcconfig; sourceTree = "<group>"; };
+		89367B103BBBB5385074A15FBE4AAF6E /* BMKTileLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTileLayer.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKTileLayer.h; sourceTree = "<group>"; };
+		8992C013DDBB9C3EAB4763906B93C317 /* Pods-house_usa-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-house_usa-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8A324DA0F57D3D0093C426D3F0F541C1 /* BMKCloudSearchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearchComponent.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearchComponent.h; sourceTree = "<group>"; };
+		8A37BEDBDBDD3BE36D4C3B14A91B50A5 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIProgressView+AFNetworking.m"; path = "UIKit+AFNetworking/UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
+		8B083C5EF91FA75F4D90083397F61E44 /* JGProgressHUDPieIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDPieIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDPieIndicatorView.m; sourceTree = "<group>"; };
+		8B96741795927116D777B0F424C166C1 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		8BDECFD981ACFC2E001E85FFA0334D03 /* BMKGradient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGradient.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGradient.h; sourceTree = "<group>"; };
+		906A8F927519CF6083CAF8452CF0DBC5 /* BMKPoiSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearch.h; sourceTree = "<group>"; };
+		906C7B70A53EE8C7AD5A45E6A23B09C5 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFNetworkActivityIndicatorManager.m; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.m"; sourceTree = "<group>"; };
+		90E44C34730EF4683DADA7D87D58E9BD /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIRefreshControl+AFNetworking.m"; path = "UIKit+AFNetworking/UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
+		92D107348951345CAEA5AFA4C0134591 /* BMKAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKAnnotation.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKAnnotation.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9570167424D66DEE34A2889DD10D6084 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+AFNetworking.h"; path = "UIKit+AFNetworking/UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		97321323010894E622271FE37A6AD102 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		989FDE26C607BE4147A8FBDBEBC4352B /* BaiduMapAPI_Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Base.framework; path = BaiduMapKit/BaiduMapAPI_Base.framework; sourceTree = "<group>"; };
+		999A928655BE5A190645114449E27955 /* Pods-house_usa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-house_usa.debug.xcconfig"; sourceTree = "<group>"; };
+		9CB664A973A09282286C91AB8900343E /* BMKRadarResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarResult.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarResult.h; sourceTree = "<group>"; };
+		9F8EA8A112DA3CFF718A2EC5E7DF37F3 /* BMKOverlayGLBasicView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayGLBasicView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayGLBasicView.h; sourceTree = "<group>"; };
+		9FF80DFF1E321F07A866BC6E5A8489CA /* BMKOfflineMapType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOfflineMapType.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOfflineMapType.h; sourceTree = "<group>"; };
+		A02C69427F12B8B8FA6365765C212FFB /* BMKSuggestionSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSuggestionSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSuggestionSearchOption.h; sourceTree = "<group>"; };
+		A26041F99160D60796B641BBC0CC16BD /* BMKOverlayPathView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlayPathView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlayPathView.h; sourceTree = "<group>"; };
+		A3378ECE3AF223F681D69D4E142C6135 /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = BaiduMapKit/thirdlibs/libssl.a; sourceTree = "<group>"; };
+		A3F8561A2E54CB75FB03AFE07E84A94A /* BMKShareURLSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareURLSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareURLSearch.h; sourceTree = "<group>"; };
+		A539BEDD65008A451F2AC73D862DF92D /* BaiduMapAPI_Location.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Location.framework; path = BaiduMapKit/BaiduMapAPI_Location.framework; sourceTree = "<group>"; };
+		AA87A4E3CE9BC3B6DE5B7D63054D612F /* BMKMapStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapStatus.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapStatus.h; sourceTree = "<group>"; };
+		AAF8D6E677F40D12B2D1C0858D021DA7 /* BMKCloudSearchInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearchInfo.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearchInfo.h; sourceTree = "<group>"; };
+		ABA12CECFE5BDA25A27F78245DCA4030 /* BMKPolylineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolylineView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolylineView.h; sourceTree = "<group>"; };
+		AD1E9EE02630C1075AA6D6E38E29E8AB /* BMKRouteSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearchOption.h; sourceTree = "<group>"; };
+		B022B5ABBB5BCDF786884DF7B1525E87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		B054B474A7EED0947D4ED9392EA337E4 /* BMKShareUrlSearchOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKShareUrlSearchOption.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKShareUrlSearchOption.h; sourceTree = "<group>"; };
+		B0E9200D26ACBA096B0FD987E7DE8553 /* BMKCloudSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKCloudSearch.h; path = BaiduMapKit/BaiduMapAPI_Cloud.framework/Headers/BMKCloudSearch.h; sourceTree = "<group>"; };
+		B302F1D56BF13C4920F797838750385B /* JGProgressHUDAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDAnimation.h; sourceTree = "<group>"; };
+		B440BCB1C924B32AD303A1714BDD776A /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFMDB.a; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B83294EA0C242C84F99C4F525A9A78A5 /* BaiduMapAPI_Radar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Radar.framework; path = BaiduMapKit/BaiduMapAPI_Radar.framework; sourceTree = "<group>"; };
+		B8B61A95CE874902A1D0069ACC67378A /* JGProgressHUDSuccessIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDSuccessIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.h; sourceTree = "<group>"; };
+		B9934814E4CB3ABD931A839203F42AD0 /* JGProgressHUDIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.m; sourceTree = "<group>"; };
+		B9BE0FD512B5CE72A8ED828CAC31664F /* BaiduMapAPI_Map.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Map.framework; path = BaiduMapKit/BaiduMapAPI_Map.framework; sourceTree = "<group>"; };
+		BA7CF68A8B860F4244D89841F414AD16 /* BMKMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapView.h; sourceTree = "<group>"; };
+		BAB19B8F0418ED436E93A4471123294E /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		BB07D9C6165386B73EB1634FCC8EA274 /* BMKActionPaopaoView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKActionPaopaoView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKActionPaopaoView.h; sourceTree = "<group>"; };
+		BC0FED7E5DDFF35FBEFEE4F447116D28 /* BMKSearchVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchVersion.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchVersion.h; sourceTree = "<group>"; };
+		BD17B67C454E50626B3BA7115EA9051D /* AFImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AFImageDownloader.m; path = "UIKit+AFNetworking/AFImageDownloader.m"; sourceTree = "<group>"; };
+		BD9E982B46D711FFD07D8BCAD3A9FB2A /* JGProgressHUDFadeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDFadeAnimation.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.m; sourceTree = "<group>"; };
+		BEFDB7FCE98C6A1655680C28BCC76FB9 /* BMKPolyline.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPolyline.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPolyline.h; sourceTree = "<group>"; };
+		BF9FDD3DD54BD9A45D57ED2A9E7A15F5 /* BMKMapComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKMapComponent.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKMapComponent.h; sourceTree = "<group>"; };
+		C069463D1CA74109358D80C1C2DB879F /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		C2D2A02D01F3C43CE70402A3EDEB5451 /* BMKBaseComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKBaseComponent.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKBaseComponent.h; sourceTree = "<group>"; };
+		C3EB21AC0E15B540A6805B10C8B6A1A2 /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		C4BD2BB1CA2C662463ACAEA5DDFDEC94 /* Pods-house_usa-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-house_usa-acknowledgements.plist"; sourceTree = "<group>"; };
+		C5C77522C476B5DF8B7465A2DB1AE953 /* libPods-house_usa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-house_usa.a"; path = "libPods-house_usa.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6416A4781C7D59E6199DF1C2E37DEB0 /* BMKArclineView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKArclineView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKArclineView.h; sourceTree = "<group>"; };
+		C6ACC794C8D5800AFF68706230E5C7F8 /* JGProgressHUDIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDIndicatorView.h; sourceTree = "<group>"; };
+		C9022A7A6C648EA910E092C312EDFE3D /* JGProgressHUDFadeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDFadeAnimation.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDFadeAnimation.h; sourceTree = "<group>"; };
+		CA290F902D8B05E23BC0F108E07E20E7 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIActivityIndicatorView+AFNetworking.h"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
+		CBF826C6BAAAC7F87F6B7AFA8BDB2058 /* BMKTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKTypes.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKTypes.h; sourceTree = "<group>"; };
+		CC45BC37F8F961D40518A51B56E04DFA /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = umsdk_IOS_analyics_idfa_v4.2.4/UMMobClick.framework; sourceTree = "<group>"; };
+		CCB73C4C9C51F2D0E1357EB91F1104A0 /* BMKVersion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKVersion.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKVersion.h; sourceTree = "<group>"; };
+		CCFD5B590F37787706FDB3059F3C68D2 /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		D0341E550D6398069F13C3897A28E542 /* JGProgressHUDRingIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDRingIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDRingIndicatorView.m; sourceTree = "<group>"; };
+		D04E0E26225176563DA09F9A3EDFAFC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		D057ECE1711328834835ADCAD009A9CB /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAFNetworking.a; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D106C11A646BB3A102BD906CE9B04DAF /* BMKSearchComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchComponent.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchComponent.h; sourceTree = "<group>"; };
+		D7EC9398ABB52801006188AA15F5C3EC /* mapapi.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		D96D4822A04F5E3C3C010B55A731516F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		D9DB0208C39578015B5251AB5B1EB739 /* BMKOpenPoi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenPoi.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenPoi.h; sourceTree = "<group>"; };
+		DA31D486795D39F3F989F04DAA054154 /* BMKPointAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPointAnnotation.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKPointAnnotation.h; sourceTree = "<group>"; };
+		DAC42DAA8A000376C5D07154AFFC4DC4 /* BMKOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOverlay.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKOverlay.h; sourceTree = "<group>"; };
+		DBB021A8E1A437621EF30F7579C8D2B3 /* JGProgressHUDSuccessIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGProgressHUDSuccessIndicatorView.m; path = JGProgressHUD/JGProgressHUD/JGProgressHUDSuccessIndicatorView.m; sourceTree = "<group>"; };
+		DEB34A4F403FF3BA6A7AC7FF5F4AE681 /* BMKPoiSearchType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKPoiSearchType.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKPoiSearchType.h; sourceTree = "<group>"; };
+		E3F556C377C79A12A2E73D080A208976 /* BMKRadarOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRadarOption.h; path = BaiduMapKit/BaiduMapAPI_Radar.framework/Headers/BMKRadarOption.h; sourceTree = "<group>"; };
+		E44772D97D0EB2C5F3C1DB26FB997DA8 /* BMKGeneralDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGeneralDelegate.h; path = BaiduMapKit/BaiduMapAPI_Base.framework/Headers/BMKGeneralDelegate.h; sourceTree = "<group>"; };
+		E92C3F9221A073197645269E196F50F8 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFNetworkActivityIndicatorManager.h; path = "UIKit+AFNetworking/AFNetworkActivityIndicatorManager.h"; sourceTree = "<group>"; };
+		E9F0810951729774E96C4E9B3AA4C38B /* BMKOpenOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKOpenOption.h; path = BaiduMapKit/BaiduMapAPI_Utils.framework/Headers/BMKOpenOption.h; sourceTree = "<group>"; };
+		EAEB5B857931E16CBFC695FB550716F7 /* BMKGroundOverlayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGroundOverlayView.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGroundOverlayView.h; sourceTree = "<group>"; };
+		EB4FB2FDF31E2F8899C8A07789ED0FA1 /* BMKSearchBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKSearchBase.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKSearchBase.h; sourceTree = "<group>"; };
+		EBC177ABD7FDE68BA102A27CFD67DE29 /* JGProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		EBF0822C562F853720B664CC1AF7CC58 /* BMKRouteSearch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKRouteSearch.h; path = BaiduMapKit/BaiduMapAPI_Search.framework/Headers/BMKRouteSearch.h; sourceTree = "<group>"; };
+		EDEE682F0BE0A10569EE8C979484A8CC /* BMKGroundOverlay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BMKGroundOverlay.h; path = BaiduMapKit/BaiduMapAPI_Map.framework/Headers/BMKGroundOverlay.h; sourceTree = "<group>"; };
+		EE6A68E6934874F860923E84CDEA3909 /* BaiduMapAPI_Cloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaiduMapAPI_Cloud.framework; path = BaiduMapKit/BaiduMapAPI_Cloud.framework; sourceTree = "<group>"; };
+		F1E68DBA83886954848B6F40A7735B54 /* AFNetworking-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AFNetworking-prefix.pch"; sourceTree = "<group>"; };
+		F21E0F12222F67BCC7E0B71D588B194D /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		F7299EF075E7E7B525D4ECD9A7EEF5C1 /* JGProgressHUDErrorIndicatorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGProgressHUDErrorIndicatorView.h; path = JGProgressHUD/JGProgressHUD/JGProgressHUDErrorIndicatorView.h; sourceTree = "<group>"; };
+		F7F0C83B4D0B66BDB573AD6B0FA97AE1 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		FCFDCC0E5AF00AA8E4BB191C8D5EF8D5 /* UIActivityIndicatorView+AFNetworking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+AFNetworking.m"; path = "UIKit+AFNetworking/UIActivityIndicatorView+AFNetworking.m"; sourceTree = "<group>"; };
+		FE1D6F61E1F17C4559FDB019A745D31C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		FE8D20F6C122A5383BF0D03B41332891 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		025694188CB9A7D96CC58750018B4FFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C8FE823FB0DA31FA72637BBBA637026 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09E17F69FEF0112566275248C526F743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9451F2FCD27610D7CA3DA9CEA05789B8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D792C877201DE480037F9A9F8B406BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4896F43640969DF6AC0C1E4BFDFEBE5 /* Foundation.framework in Frameworks */,
+				C50C22D80519D29F50377B2A4A294B02 /* QuartzCore.framework in Frameworks */,
+				38E214F5610265E2C503CFA8CA606A4E /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3284DBE3CA8932733932AD2A48445B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2843898C40D365BC1361BF1CD832E9B2 /* CoreGraphics.framework in Frameworks */,
+				AFD0634B4D580C7C585C242BE0008A0E /* Foundation.framework in Frameworks */,
+				8B1E1A45E0B423395CE2A513BB1B1010 /* MobileCoreServices.framework in Frameworks */,
+				D6661D944DA4B5402DA6B57914542DF9 /* Security.framework in Frameworks */,
+				E738C16AF8020F2D6948D867AA7109EF /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03A69100EC4543BC8398A67C1BCEEF03 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C227148CBFA252F39F9223AD216B521 /* JGProgressHUD.xcconfig */,
+				0E4644148CD2EEAA64ACE3CCEB871851 /* JGProgressHUD-dummy.m */,
+				EBC177ABD7FDE68BA102A27CFD67DE29 /* JGProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JGProgressHUD";
+			sourceTree = "<group>";
+		};
+		0BFAC0F968475B1A1FD6D16E88DF9FD8 /* UMengAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				57C8575D0DCE5C0794BF8D3EA33BDD84 /* Frameworks */,
+			);
+			name = UMengAnalytics;
+			path = UMengAnalytics;
+			sourceTree = "<group>";
+		};
+		0F2778043CC796DA9F1908C348F6378E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2591AD84BFC6FE969AB42C3EF62F02EB /* AFAutoPurgingImageCache.h */,
+				1BE0ED18AFFFBEC9E7FF935E17D4A4D4 /* AFAutoPurgingImageCache.m */,
+				44F276B04CE5F431C26D02A05C3EA189 /* AFImageDownloader.h */,
+				BD17B67C454E50626B3BA7115EA9051D /* AFImageDownloader.m */,
+				E92C3F9221A073197645269E196F50F8 /* AFNetworkActivityIndicatorManager.h */,
+				906C7B70A53EE8C7AD5A45E6A23B09C5 /* AFNetworkActivityIndicatorManager.m */,
+				CA290F902D8B05E23BC0F108E07E20E7 /* UIActivityIndicatorView+AFNetworking.h */,
+				FCFDCC0E5AF00AA8E4BB191C8D5EF8D5 /* UIActivityIndicatorView+AFNetworking.m */,
+				5B496434F1F4426A193AEC3D2E5494A2 /* UIButton+AFNetworking.h */,
+				6D64968CB0BE0C77CCCB4F9919106508 /* UIButton+AFNetworking.m */,
+				4FCC2364E76AD2F54AD193DC82B73F39 /* UIImage+AFNetworking.h */,
+				9570167424D66DEE34A2889DD10D6084 /* UIImageView+AFNetworking.h */,
+				461974E81B5B4425D984AD1E887F49DE /* UIImageView+AFNetworking.m */,
+				58AAD9DD5ED337C6251D17F605AD41E3 /* UIKit+AFNetworking.h */,
+				43C99C7E3BF4E2883D447676D5B74D16 /* UIProgressView+AFNetworking.h */,
+				8A37BEDBDBDD3BE36D4C3B14A91B50A5 /* UIProgressView+AFNetworking.m */,
+				5D6FD001464AFE59D1EBA8A312E83735 /* UIRefreshControl+AFNetworking.h */,
+				90E44C34730EF4683DADA7D87D58E9BD /* UIRefreshControl+AFNetworking.m */,
+				484A634E878D84A559A633CBDA49EB1F /* UIWebView+AFNetworking.h */,
+				4F950296842E89B2B3FA35B0BE204749 /* UIWebView+AFNetworking.m */,
+			);
+			name = UIKit;
+			sourceTree = "<group>";
+		};
+		1931B7C9A7DA4C6704EA62B2BA8A15D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				989FDE26C607BE4147A8FBDBEBC4352B /* BaiduMapAPI_Base.framework */,
+				EE6A68E6934874F860923E84CDEA3909 /* BaiduMapAPI_Cloud.framework */,
+				A539BEDD65008A451F2AC73D862DF92D /* BaiduMapAPI_Location.framework */,
+				B9BE0FD512B5CE72A8ED828CAC31664F /* BaiduMapAPI_Map.framework */,
+				B83294EA0C242C84F99C4F525A9A78A5 /* BaiduMapAPI_Radar.framework */,
+				12C6E63CA8932E581EEA2FEF37371481 /* BaiduMapAPI_Search.framework */,
+				44F9CF6285178551CA8116973393B966 /* BaiduMapAPI_Utils.framework */,
+				3B2E87E38556C9126BBDA6356A7E50F1 /* libcrypto.a */,
+				A3378ECE3AF223F681D69D4E142C6135 /* libssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2B142CEB4B2CFF4265F3D94FE1DACFF9 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				5A3F632FEB4AB02C93453FA15BF818DC /* AFSecurityPolicy.h */,
+				2A4777835FC6268C2DED5C8671DAD483 /* AFSecurityPolicy.m */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
+		36FD4537AF395AD2F2BA2DD91AE5A54E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D04E0E26225176563DA09F9A3EDFAFC0 /* CoreGraphics.framework */,
+				220F32386B93FEA67395A11B86A15E4D /* Foundation.framework */,
+				2A7DB0E1C1232B45E420C2D2EC166699 /* MobileCoreServices.framework */,
+				B022B5ABBB5BCDF786884DF7B1525E87 /* QuartzCore.framework */,
+				4304D0494C657A7E16CB2A5EA3E379D1 /* Security.framework */,
+				6C63DA6F3500BF33D28BAF26943BC849 /* SystemConfiguration.framework */,
+				FE1D6F61E1F17C4559FDB019A745D31C /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		42E5EF486ECB19597F7091CF337E153F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66C3DB57909931C72DBF1F38E3866140 /* JGProgressHUD Resources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		46BA853FEDEDE7E4320902E87BA72D0F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5E9130AF7248700CB1BD488F35C40AA /* Pods-house_usa */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5184A5628D6488D00DE8084599937DCB /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				76A1202F6B6E127F7A5BD8FA47131D64 /* AFNetworkReachabilityManager.h */,
+				40C30A34EAEF609AF867E085ED30744F /* AFNetworkReachabilityManager.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		52444B8176FECBD572C138C36C116E9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2C4A0B00055039DFED5F759FCC4547B /* AFNetworking */,
+				96D56066026B22D6D8AA27B9823DEFB5 /* BaiduMapKit */,
+				5E851AA83E80B108398FA54B98C7E977 /* FMDB */,
+				D6AD7D2C940D6B4CD98E67B7974E8A7B /* JGProgressHUD */,
+				0BFAC0F968475B1A1FD6D16E88DF9FD8 /* UMengAnalytics */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		57C8575D0DCE5C0794BF8D3EA33BDD84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC45BC37F8F961D40518A51B56E04DFA /* UMMobClick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E851AA83E80B108398FA54B98C7E977 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				6B479DD87AE8D6AD9E16F5FDA22B8243 /* standard */,
+				C80AE31AA28B99741C28F318CD30FACD /* Support Files */,
+			);
+			name = FMDB;
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		6B479DD87AE8D6AD9E16F5FDA22B8243 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				051493679A581BC5FD68A92717F8CAD5 /* FMDatabase.h */,
+				8B96741795927116D777B0F424C166C1 /* FMDatabase.m */,
+				6D6FC787DE7DFD1336122D1880BF2CA0 /* FMDatabaseAdditions.h */,
+				F21E0F12222F67BCC7E0B71D588B194D /* FMDatabaseAdditions.m */,
+				C3EB21AC0E15B540A6805B10C8B6A1A2 /* FMDatabasePool.h */,
+				343DA5C1BDEF39874B605F96E59ACDC4 /* FMDatabasePool.m */,
+				454A52CBF88E7C5CA3D4CC0FE85A515A /* FMDatabaseQueue.h */,
+				3517CB796AD50EA276D37496E9AA1AAA /* FMDatabaseQueue.m */,
+				2C08901FD71E053FE811B7273640D254 /* FMDB.h */,
+				CCFD5B590F37787706FDB3059F3C68D2 /* FMResultSet.h */,
+				807D41F28D84BDB74C28723CD317F1EC /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */,
+				52444B8176FECBD572C138C36C116E9D /* Pods */,
+				E163340EDADFAAF74AA09615439FC458 /* Products */,
+				46BA853FEDEDE7E4320902E87BA72D0F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8242AE86B714275E65E2D47ADA34E905 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7EC9398ABB52801006188AA15F5C3EC /* mapapi.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		96D56066026B22D6D8AA27B9823DEFB5 /* BaiduMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				BB07D9C6165386B73EB1634FCC8EA274 /* BMKActionPaopaoView.h */,
+				92D107348951345CAEA5AFA4C0134591 /* BMKAnnotation.h */,
+				2A947BF45B8CBEAE6AB481D75241827A /* BMKAnnotationView.h */,
+				392DF1FBF045CB2784C12FDAD91B38E8 /* BMKArcline.h */,
+				C6416A4781C7D59E6199DF1C2E37DEB0 /* BMKArclineView.h */,
+				C2D2A02D01F3C43CE70402A3EDEB5451 /* BMKBaseComponent.h */,
+				1EC392486294E415256A1C7B75DEF986 /* BMKBaseIndoorMapInfo.h */,
+				266CEE02F68A51ACD9A1D212161BF464 /* BMKBusLineSearch.h */,
+				4EF0E778E5CDEC9B60BE4581ED0AC473 /* BMKBusLineSearchOption.h */,
+				7ACBF68403368A98E211B969F2E56EA4 /* BMKCircle.h */,
+				74BC3065F219A22B3F07C04D9EFF98C2 /* BMKCircleView.h */,
+				344DA22BB128C7D0ABE3C61CE3CBBFC0 /* BMKCloudPOIList.h */,
+				B0E9200D26ACBA096B0FD987E7DE8553 /* BMKCloudSearch.h */,
+				8A324DA0F57D3D0093C426D3F0F541C1 /* BMKCloudSearchComponent.h */,
+				AAF8D6E677F40D12B2D1C0858D021DA7 /* BMKCloudSearchInfo.h */,
+				49655B01F006D45F2602B7EEE55297C3 /* BMKCloudVersion.h */,
+				6D54017441FF8147F957F4F707DA1D4B /* BMKDistrictSearch.h */,
+				6889067904AB00FFFF0AFB1064010D89 /* BMKFavPoiInfo.h */,
+				3ECD5E56C20E216F0F86615AE2BF5B2E /* BMKFavPoiManager.h */,
+				E44772D97D0EB2C5F3C1DB26FB997DA8 /* BMKGeneralDelegate.h */,
+				022772D995CFB8E40B9F5DAA624D2704 /* BMKGeocodeSearch.h */,
+				7F38E1C30D21E68E153CAB6199C6505F /* BMKGeocodeSearchOption.h */,
+				34471B96AC5B80E05AC3AF5368D383DA /* BMKGeocodeType.h */,
+				162EFCCA1E1AE03C958873C9B1673C24 /* BMKGeometry.h */,
+				8BDECFD981ACFC2E001E85FFA0334D03 /* BMKGradient.h */,
+				EDEE682F0BE0A10569EE8C979484A8CC /* BMKGroundOverlay.h */,
+				EAEB5B857931E16CBFC695FB550716F7 /* BMKGroundOverlayView.h */,
+				4156C24E6C301F12DAFA6084AB7CFCA6 /* BMKHeatMap.h */,
+				42082293F41DC31D17E6C29C8466C872 /* BMKLocationComponent.h */,
+				22CCAA20DBC4ECA9EBCAF65B09ACC314 /* BMKLocationService.h */,
+				331D40F03988E6DC16AB011D678AA84B /* BMKLocationVersion.h */,
+				6D6FFE11D1739C06303AF523E0D50126 /* BMKLocationViewDisplayParam.h */,
+				BF9FDD3DD54BD9A45D57ED2A9E7A15F5 /* BMKMapComponent.h */,
+				7EB4DE82B4280F73C82B6F224EB51A14 /* BMKMapManager.h */,
+				AA87A4E3CE9BC3B6DE5B7D63054D612F /* BMKMapStatus.h */,
+				7D1DAE29E4D2C191405B7CC8480FA5A1 /* BMKMapVersion.h */,
+				BA7CF68A8B860F4244D89841F414AD16 /* BMKMapView.h */,
+				42C8B99729E22275A44084E8C9F980DD /* BMKMultiPoint.h */,
+				559077F5E619C7EB4E56BAC96D4D0633 /* BMKNavigation.h */,
+				63354726541CF482E25DD9BC055E2A9C /* BMKOfflineMap.h */,
+				9FF80DFF1E321F07A866BC6E5A8489CA /* BMKOfflineMapType.h */,
+				E9F0810951729774E96C4E9B3AA4C38B /* BMKOpenOption.h */,
+				136164E05AFB4893C06581101983F58D /* BMKOpenPanorama.h */,
+				D9DB0208C39578015B5251AB5B1EB739 /* BMKOpenPoi.h */,
+				853D9C8FFE1D13BE82D936458E47E3AD /* BMKOpenPoiOption.h */,
+				846324AA63968E6B6514BDFE6453B89D /* BMKOpenRoute.h */,
+				65B0544C892D1B8A1297307C81BF402B /* BMKOpenRouteOption.h */,
+				DAC42DAA8A000376C5D07154AFFC4DC4 /* BMKOverlay.h */,
+				9F8EA8A112DA3CFF718A2EC5E7DF37F3 /* BMKOverlayGLBasicView.h */,
+				A26041F99160D60796B641BBC0CC16BD /* BMKOverlayPathView.h */,
+				3BF19F981F50A8D0EAFE8C0911014528 /* BMKOverlayView.h */,
+				33EE5870ED7B046278A6A6B8E6A1B09E /* BMKPinAnnotationView.h */,
+				DA31D486795D39F3F989F04DAA054154 /* BMKPointAnnotation.h */,
+				906A8F927519CF6083CAF8452CF0DBC5 /* BMKPoiSearch.h */,
+				7E70D35112734C0EBB4F3A81C29415A2 /* BMKPoiSearchOption.h */,
+				DEB34A4F403FF3BA6A7AC7FF5F4AE681 /* BMKPoiSearchType.h */,
+				462CA58E4BB742084836C868884D54E1 /* BMKPolygon.h */,
+				7A507065D0D33753BE32B74DE4BEA7CF /* BMKPolygonView.h */,
+				BEFDB7FCE98C6A1655680C28BCC76FB9 /* BMKPolyline.h */,
+				ABA12CECFE5BDA25A27F78245DCA4030 /* BMKPolylineView.h */,
+				188D786C9BDB4C60A97197D48F1D5052 /* BMKRadarComponent.h */,
+				555E63D3A2F2CE6EBC2B6D930D962BB5 /* BMKRadarManager.h */,
+				E3F556C377C79A12A2E73D080A208976 /* BMKRadarOption.h */,
+				9CB664A973A09282286C91AB8900343E /* BMKRadarResult.h */,
+				0CF72308FA2867B13C9FFCE0EE5AFB35 /* BMKRadarVersion.h */,
+				EBF0822C562F853720B664CC1AF7CC58 /* BMKRouteSearch.h */,
+				AD1E9EE02630C1075AA6D6E38E29E8AB /* BMKRouteSearchOption.h */,
+				712BA70C555E4E3CDE5625ACAD0B58B6 /* BMKRouteSearchType.h */,
+				EB4FB2FDF31E2F8899C8A07789ED0FA1 /* BMKSearchBase.h */,
+				D106C11A646BB3A102BD906CE9B04DAF /* BMKSearchComponent.h */,
+				BC0FED7E5DDFF35FBEFEE4F447116D28 /* BMKSearchVersion.h */,
+				15BB6BE6F60983D81D7A1F5C11466D55 /* BMKShape.h */,
+				A3F8561A2E54CB75FB03AFE07E84A94A /* BMKShareURLSearch.h */,
+				B054B474A7EED0947D4ED9392EA337E4 /* BMKShareUrlSearchOption.h */,
+				092AFD214CF3698A7857716F510F1668 /* BMKSuggestionSearch.h */,
+				A02C69427F12B8B8FA6365765C212FFB /* BMKSuggestionSearchOption.h */,
+				89367B103BBBB5385074A15FBE4AAF6E /* BMKTileLayer.h */,
+				584EC03CD24F7D14BB08767D4BF1E1D9 /* BMKTileLayerView.h */,
+				CBF826C6BAAAC7F87F6B7AFA8BDB2058 /* BMKTypes.h */,
+				5A6BB18956010344237198BE59A1DFAA /* BMKUserLocation.h */,
+				27935C017A722971C6C3DD15EDB6A83E /* BMKUtilsComponent.h */,
+				2A49B9AB9E837A257C50DCF2718B11EC /* BMKUtilsVersion.h */,
+				CCB73C4C9C51F2D0E1357EB91F1104A0 /* BMKVersion.h */,
+				1931B7C9A7DA4C6704EA62B2BA8A15D0 /* Frameworks */,
+				8242AE86B714275E65E2D47ADA34E905 /* Resources */,
+			);
+			name = BaiduMapKit;
+			path = BaiduMapKit;
+			sourceTree = "<group>";
+		};
+		B5E9130AF7248700CB1BD488F35C40AA /* Pods-house_usa */ = {
+			isa = PBXGroup;
+			children = (
+				8992C013DDBB9C3EAB4763906B93C317 /* Pods-house_usa-acknowledgements.markdown */,
+				C4BD2BB1CA2C662463ACAEA5DDFDEC94 /* Pods-house_usa-acknowledgements.plist */,
+				6C0F2BC3ACC4A816C1687EFB1F797B9D /* Pods-house_usa-dummy.m */,
+				250CB640472F70E4580DA49FAF81F85E /* Pods-house_usa-frameworks.sh */,
+				82548B1DDE8C37A7D26D851830973724 /* Pods-house_usa-resources.sh */,
+				999A928655BE5A190645114449E27955 /* Pods-house_usa.debug.xcconfig */,
+				0D24C745A970C6DACC24A7F6047DFDE5 /* Pods-house_usa.release.xcconfig */,
+			);
+			name = "Pods-house_usa";
+			path = "Target Support Files/Pods-house_usa";
+			sourceTree = "<group>";
+		};
+		C4544FCD1EC0BECCB5F0E2A97EA743FC /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				4182DA4164DFAB093E055919361607FA /* AFURLRequestSerialization.h */,
+				3295383E521D1D889DB94003077A068F /* AFURLRequestSerialization.m */,
+				F7F0C83B4D0B66BDB573AD6B0FA97AE1 /* AFURLResponseSerialization.h */,
+				97321323010894E622271FE37A6AD102 /* AFURLResponseSerialization.m */,
+			);
+			name = Serialization;
+			sourceTree = "<group>";
+		};
+		C80AE31AA28B99741C28F318CD30FACD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE8D20F6C122A5383BF0D03B41332891 /* FMDB.xcconfig */,
+				C069463D1CA74109358D80C1C2DB879F /* FMDB-dummy.m */,
+				0CDCC75E8AA6086F06E0EFB052B9181F /* FMDB-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+		D6AD7D2C940D6B4CD98E67B7974E8A7B /* JGProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6009805469E9B6CCB098D454898C97AB /* JGProgressHUD.h */,
+				2BE8C3BB3E39992A46360105019D959A /* JGProgressHUD.m */,
+				2F8298A9442FA45680DFC75B373E4AF1 /* JGProgressHUD-Defines.h */,
+				B302F1D56BF13C4920F797838750385B /* JGProgressHUDAnimation.h */,
+				72CD69DE061596E8131162F0C6CA1D5E /* JGProgressHUDAnimation.m */,
+				F7299EF075E7E7B525D4ECD9A7EEF5C1 /* JGProgressHUDErrorIndicatorView.h */,
+				7B1E93B4A633F780FF6BF2FC8E6CAA26 /* JGProgressHUDErrorIndicatorView.m */,
+				C9022A7A6C648EA910E092C312EDFE3D /* JGProgressHUDFadeAnimation.h */,
+				BD9E982B46D711FFD07D8BCAD3A9FB2A /* JGProgressHUDFadeAnimation.m */,
+				0EEA2171E2DEDE3F6DA723BFC54B28F4 /* JGProgressHUDFadeZoomAnimation.h */,
+				111D972D9F06F5D3BB9CB1765F2FCA91 /* JGProgressHUDFadeZoomAnimation.m */,
+				6933262AFDB4914AB31F3CA4D4714CF5 /* JGProgressHUDImageIndicatorView.h */,
+				5673BEE32631264B970B78E5B7AA0CD8 /* JGProgressHUDImageIndicatorView.m */,
+				7433A2B36F35064C86DF37B66C89102B /* JGProgressHUDIndeterminateIndicatorView.h */,
+				0BCA55D4ECC676D3B7119E2993FDC284 /* JGProgressHUDIndeterminateIndicatorView.m */,
+				C6ACC794C8D5800AFF68706230E5C7F8 /* JGProgressHUDIndicatorView.h */,
+				B9934814E4CB3ABD931A839203F42AD0 /* JGProgressHUDIndicatorView.m */,
+				4392430EF306EF98E77400EBA344651B /* JGProgressHUDPieIndicatorView.h */,
+				8B083C5EF91FA75F4D90083397F61E44 /* JGProgressHUDPieIndicatorView.m */,
+				13C68E9AA12761F54FC8F29288D013D8 /* JGProgressHUDRingIndicatorView.h */,
+				D0341E550D6398069F13C3897A28E542 /* JGProgressHUDRingIndicatorView.m */,
+				B8B61A95CE874902A1D0069ACC67378A /* JGProgressHUDSuccessIndicatorView.h */,
+				DBB021A8E1A437621EF30F7579C8D2B3 /* JGProgressHUDSuccessIndicatorView.m */,
+				42E5EF486ECB19597F7091CF337E153F /* Resources */,
+				03A69100EC4543BC8398A67C1BCEEF03 /* Support Files */,
+			);
+			name = JGProgressHUD;
+			path = JGProgressHUD;
+			sourceTree = "<group>";
+		};
+		E163340EDADFAAF74AA09615439FC458 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D057ECE1711328834835ADCAD009A9CB /* libAFNetworking.a */,
+				B440BCB1C924B32AD303A1714BDD776A /* libFMDB.a */,
+				820DBAFB3FD81D9F36B54D2E4F5CD47F /* libJGProgressHUD.a */,
+				C5C77522C476B5DF8B7465A2DB1AE953 /* libPods-house_usa.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E17679FC99A5769D6E38C08FF3BC15D8 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				D96D4822A04F5E3C3C010B55A731516F /* AFHTTPSessionManager.h */,
+				BAB19B8F0418ED436E93A4471123294E /* AFHTTPSessionManager.m */,
+				369BEA5D3B00A01B7521C56DF4141E7F /* AFURLSessionManager.h */,
+				29D7FB46172C93670F81BEBD3F70821C /* AFURLSessionManager.m */,
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		E2C4A0B00055039DFED5F759FCC4547B /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				0AE427C23A5B0F049611A40053CBD436 /* AFNetworking.h */,
+				E17679FC99A5769D6E38C08FF3BC15D8 /* NSURLSession */,
+				5184A5628D6488D00DE8084599937DCB /* Reachability */,
+				2B142CEB4B2CFF4265F3D94FE1DACFF9 /* Security */,
+				C4544FCD1EC0BECCB5F0E2A97EA743FC /* Serialization */,
+				E718426D8B59B88C831A6EBCC041C2F8 /* Support Files */,
+				0F2778043CC796DA9F1908C348F6378E /* UIKit */,
+			);
+			name = AFNetworking;
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		E718426D8B59B88C831A6EBCC041C2F8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				874443E1DEA47E91C0ACF6B59EE36B9A /* AFNetworking.xcconfig */,
+				0CE2F180A372DC524BD9989497852368 /* AFNetworking-dummy.m */,
+				F1E68DBA83886954848B6F40A7735B54 /* AFNetworking-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AFNetworking";
+			sourceTree = "<group>";
+		};
+		F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36FD4537AF395AD2F2BA2DD91AE5A54E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0A1C2B07813030B0D51EB1D804A4439E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1F93EE1AA5E870F2CE81325CE9EB643 /* AFAutoPurgingImageCache.h in Headers */,
+				6B71CE5BA32574F407349C1DA20605B4 /* AFHTTPSessionManager.h in Headers */,
+				707E818332E5033501DF2D7826C639DF /* AFImageDownloader.h in Headers */,
+				E7B0270BEDCBE116DDD853F76E27B0BA /* AFNetworkActivityIndicatorManager.h in Headers */,
+				46401F3C7FF0B0CFE2E9B14914780835 /* AFNetworking.h in Headers */,
+				DE31BBF6A7963C5871A19655EF5532BE /* AFNetworkReachabilityManager.h in Headers */,
+				D59FC98A74E440C4725B6FDC28F5951E /* AFSecurityPolicy.h in Headers */,
+				C1C0D7C93BF3DE14A26757273598D0FA /* AFURLRequestSerialization.h in Headers */,
+				66635EAAE52FF5571DBCDC626FB8CA86 /* AFURLResponseSerialization.h in Headers */,
+				F5CC06F3E0C232483A72DCCFAF393BE0 /* AFURLSessionManager.h in Headers */,
+				682B0E603612B6ADBCCF30580F9A4B09 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
+				2EBAA518CB8B2DAF89A63637091D4615 /* UIButton+AFNetworking.h in Headers */,
+				1341A7AC2439CB63D459D32EF985A414 /* UIImage+AFNetworking.h in Headers */,
+				D5CB999FB5FC80FC126A38AB4DF12227 /* UIImageView+AFNetworking.h in Headers */,
+				5719F06B809080CDEF7E6BC75DEA1A3C /* UIKit+AFNetworking.h in Headers */,
+				B40756412613B53C80EE77C4C223990F /* UIProgressView+AFNetworking.h in Headers */,
+				F099E5987DD80E8D78E909AF81D3C587 /* UIRefreshControl+AFNetworking.h in Headers */,
+				8958F2453EEBAF71BFEBD78FB48986EC /* UIWebView+AFNetworking.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		293F9C09564E35625ECAE922FAE46246 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E7BA397D538FC3A3770401C99F0224 /* JGProgressHUD-Defines.h in Headers */,
+				6B0FAC1299D612C7019E28B8220664AA /* JGProgressHUD.h in Headers */,
+				29B9B704A68D466390484447A206876E /* JGProgressHUDAnimation.h in Headers */,
+				05D3AF2D70A38F500E15827A84155ECC /* JGProgressHUDErrorIndicatorView.h in Headers */,
+				4D26972AF6F07DDD067BCF390C5EC7D8 /* JGProgressHUDFadeAnimation.h in Headers */,
+				DAE7265D0053E08E6203453853A82E3A /* JGProgressHUDFadeZoomAnimation.h in Headers */,
+				6D06226E4854E2E8B95AB0640740E61E /* JGProgressHUDImageIndicatorView.h in Headers */,
+				8D221D393D771F77A56E01E007AB7E5B /* JGProgressHUDIndeterminateIndicatorView.h in Headers */,
+				4ACCF7B339E9034FDBE4B9970FFBCCA4 /* JGProgressHUDIndicatorView.h in Headers */,
+				2532545CA3B8C53A39E5730D7192BB1E /* JGProgressHUDPieIndicatorView.h in Headers */,
+				4CC8511A4FE51A4737F97BCBBA222B65 /* JGProgressHUDRingIndicatorView.h in Headers */,
+				71807C8F559F2AD181BFDC7A11250B23 /* JGProgressHUDSuccessIndicatorView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A93D3ABB603D66C647446B37AA29FE64 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D852415DFD46E85C293E0DDE01868EA2 /* FMDatabase.h in Headers */,
+				F00CCFAB93A4F18419CD91217B1D5F66 /* FMDatabaseAdditions.h in Headers */,
+				2012864C735C3DD88ECE425F6C981F6B /* FMDatabasePool.h in Headers */,
+				99714143FA44A34F87D1F2AA6D254177 /* FMDatabaseQueue.h in Headers */,
+				889D48A9B81ADF617C1D4E4E9473E3A9 /* FMDB.h in Headers */,
+				398A5C11EFB816892FD5E18AD24F03D4 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8460316CC2F8DD37F4E9ED2B76437971 /* Pods-house_usa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F73767404A39512AF8DCBF3B8DD9DF6C /* Build configuration list for PBXNativeTarget "Pods-house_usa" */;
+			buildPhases = (
+				E61C1AF73D065CC25D0BCE2F6849A9DA /* Sources */,
+				09E17F69FEF0112566275248C526F743 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D431012E9E48991EECB2464A677B1F87 /* PBXTargetDependency */,
+				EC7DEC4C98F678948C0B7C4A0ECB5F68 /* PBXTargetDependency */,
+				DC983AE8958954ED4AE1F9F21D444F2B /* PBXTargetDependency */,
+			);
+			name = "Pods-house_usa";
+			productName = "Pods-house_usa";
+			productReference = C5C77522C476B5DF8B7465A2DB1AE953 /* libPods-house_usa.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8642CC820CE8C5B88C113D7F47AF4BC3 /* FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1BA066B3D32C553BF37E3322F9113F02 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildPhases = (
+				ADE36E87832B736E1FAF9E50036C1530 /* Sources */,
+				025694188CB9A7D96CC58750018B4FFC /* Frameworks */,
+				A93D3ABB603D66C647446B37AA29FE64 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMDB;
+			productName = FMDB;
+			productReference = B440BCB1C924B32AD303A1714BDD776A /* libFMDB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9E033EDB5EC0819481B0546434FA577B /* AFNetworking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 483FBC4A668BF7F1A8767452E7E188AC /* Build configuration list for PBXNativeTarget "AFNetworking" */;
+			buildPhases = (
+				0068413C89BADAAF4691AA78AFE62C3E /* Sources */,
+				F3284DBE3CA8932733932AD2A48445B2 /* Frameworks */,
+				0A1C2B07813030B0D51EB1D804A4439E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AFNetworking;
+			productName = AFNetworking;
+			productReference = D057ECE1711328834835ADCAD009A9CB /* libAFNetworking.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CAFE1E212EB266EC7F5190DB78A8C0E7 /* JGProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D58C0DCF6BBB8CF3362EA739C234AD /* Build configuration list for PBXNativeTarget "JGProgressHUD" */;
+			buildPhases = (
+				D7A3331E0995CD1B5379600F7C077168 /* Sources */,
+				8D792C877201DE480037F9A9F8B406BD /* Frameworks */,
+				293F9C09564E35625ECAE922FAE46246 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JGProgressHUD;
+			productName = JGProgressHUD;
+			productReference = 820DBAFB3FD81D9F36B54D2E4F5CD47F /* libJGProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E163340EDADFAAF74AA09615439FC458 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E033EDB5EC0819481B0546434FA577B /* AFNetworking */,
+				8642CC820CE8C5B88C113D7F47AF4BC3 /* FMDB */,
+				CAFE1E212EB266EC7F5190DB78A8C0E7 /* JGProgressHUD */,
+				8460316CC2F8DD37F4E9ED2B76437971 /* Pods-house_usa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0068413C89BADAAF4691AA78AFE62C3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				775CE7A8107457BDE59F113D40020839 /* AFAutoPurgingImageCache.m in Sources */,
+				73811DA312BCB537D44D62EC6AD15766 /* AFHTTPSessionManager.m in Sources */,
+				5C0696B2AD1DC23F6473F5A19FAB6296 /* AFImageDownloader.m in Sources */,
+				31ED9BD97AF9E62874AF3CDF2F8090CF /* AFNetworkActivityIndicatorManager.m in Sources */,
+				97A86FAAD4B1AD9B3292FF6AF1D8F82B /* AFNetworking-dummy.m in Sources */,
+				E0EF330DB2D3521ED26E67B2E8687A2E /* AFNetworkReachabilityManager.m in Sources */,
+				66E1040543AF7BA3DC3731FE17C85F5B /* AFSecurityPolicy.m in Sources */,
+				5945033488F9995134DBB7014DE2412F /* AFURLRequestSerialization.m in Sources */,
+				85D30678FF4F0AB306399A368EAA46B2 /* AFURLResponseSerialization.m in Sources */,
+				9F5BB6B4995BA4A3B2C6AEBA6C31A6DB /* AFURLSessionManager.m in Sources */,
+				2579663181BFA8F7DA4B5D7CF8537FC0 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				D10CC46035F7A0C868C0955664A34609 /* UIButton+AFNetworking.m in Sources */,
+				A277AD9070E44BED5A7DE0B1D64D6F15 /* UIImageView+AFNetworking.m in Sources */,
+				D4AA4704CA7863CC86E22AAF88635836 /* UIProgressView+AFNetworking.m in Sources */,
+				B84CD33084C9867E67BD56E47B7BFC04 /* UIRefreshControl+AFNetworking.m in Sources */,
+				A7F7FDCD36E2DD8D8E346DB19452CC03 /* UIWebView+AFNetworking.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE36E87832B736E1FAF9E50036C1530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6199817CB29DADBC9AB1D4C44E52F5BA /* FMDatabase.m in Sources */,
+				4DB541C1C41B1C597EC36CDAB5243D1A /* FMDatabaseAdditions.m in Sources */,
+				8021697A1557D425AC130472DA1317CC /* FMDatabasePool.m in Sources */,
+				98ABF277A45F1AB72A8D02D53FFE67BF /* FMDatabaseQueue.m in Sources */,
+				C40CFE1274D588CA1A9DF9394BF76EAE /* FMDB-dummy.m in Sources */,
+				4B3B2EABA01FE0065CA6693CEE33CA92 /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7A3331E0995CD1B5379600F7C077168 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890A683F3E53F6D7B1E81D6F3619D84D /* JGProgressHUD-dummy.m in Sources */,
+				5181241B1ABB612075EA45059774706D /* JGProgressHUD.m in Sources */,
+				64EDB376BBA17EF96FA163E9757162EE /* JGProgressHUDAnimation.m in Sources */,
+				EA9AD894CD4A20184FA22280949C5242 /* JGProgressHUDErrorIndicatorView.m in Sources */,
+				7E91BC4A442B0E348F72E9E93FBE0083 /* JGProgressHUDFadeAnimation.m in Sources */,
+				F98386E44ECCB02E521224B917F2B818 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
+				FABB4FF076D17A67A35458901DF2EA6A /* JGProgressHUDImageIndicatorView.m in Sources */,
+				05482882E68FAAC354850E64973B1BA8 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
+				668F4A04170275CC2003594BBB8D1332 /* JGProgressHUDIndicatorView.m in Sources */,
+				4A412BCDE9FB41C8ACCEEEA8E802B2CA /* JGProgressHUDPieIndicatorView.m in Sources */,
+				519F1ACB6AD0BACC76B373A3C6219596 /* JGProgressHUDRingIndicatorView.m in Sources */,
+				B4B8137A972039426B43144E5EF9FC56 /* JGProgressHUDSuccessIndicatorView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E61C1AF73D065CC25D0BCE2F6849A9DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73BD7DCFA50B1D040C91CDC21D8C8ED0 /* Pods-house_usa-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D431012E9E48991EECB2464A677B1F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AFNetworking;
+			target = 9E033EDB5EC0819481B0546434FA577B /* AFNetworking */;
+			targetProxy = B7323A2E2342CB8F06E5D4F91E063697 /* PBXContainerItemProxy */;
+		};
+		DC983AE8958954ED4AE1F9F21D444F2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JGProgressHUD;
+			target = CAFE1E212EB266EC7F5190DB78A8C0E7 /* JGProgressHUD */;
+			targetProxy = E90F30E6AE7771AE62D7A6288640D1A0 /* PBXContainerItemProxy */;
+		};
+		EC7DEC4C98F678948C0B7C4A0ECB5F68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 8642CC820CE8C5B88C113D7F47AF4BC3 /* FMDB */;
+			targetProxy = 111012C157659CEF024D325BC7C16EB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		14DC5BAF9F2D73AE90C675175085A05D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8D20F6C122A5383BF0D03B41332891 /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		15937D43BDDE8FED1A1EFECA13EEFD39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C227148CBFA252F39F9223AD216B521 /* JGProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2BE35E68B38556FCA8E8BF9B3F339E21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 999A928655BE5A190645114449E27955 /* Pods-house_usa.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E2F95937BD27829D299193A3165F929 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE8D20F6C122A5383BF0D03B41332891 /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		72D1B831316303C2E356BBAC53FEF78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874443E1DEA47E91C0ACF6B59EE36B9A /* AFNetworking.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A13F897344493A868294C17782BBD04F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C227148CBFA252F39F9223AD216B521 /* JGProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JGProgressHUD/JGProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CE8DFC01499FE9E0228AA5D09BC15979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D24C745A970C6DACC24A7F6047DFDE5 /* Pods-house_usa.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		FF778088B62C05BE1205DAE628D151DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 874443E1DEA47E91C0ACF6B59EE36B9A /* AFNetworking.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1BA066B3D32C553BF37E3322F9113F02 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E2F95937BD27829D299193A3165F929 /* Debug */,
+				14DC5BAF9F2D73AE90C675175085A05D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		483FBC4A668BF7F1A8767452E7E188AC /* Build configuration list for PBXNativeTarget "AFNetworking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF778088B62C05BE1205DAE628D151DF /* Debug */,
+				72D1B831316303C2E356BBAC53FEF78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D58C0DCF6BBB8CF3362EA739C234AD /* Build configuration list for PBXNativeTarget "JGProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15937D43BDDE8FED1A1EFECA13EEFD39 /* Debug */,
+				A13F897344493A868294C17782BBD04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F73767404A39512AF8DCBF3B8DD9DF6C /* Build configuration list for PBXNativeTarget "Pods-house_usa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE35E68B38556FCA8E8BF9B3F339E21 /* Debug */,
+				CE8DFC01499FE9E0228AA5D09BC15979 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

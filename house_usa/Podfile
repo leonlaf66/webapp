@@ -1,0 +1,9 @@
+platform :ios, '8.0'  
+target ‘house_usa’ do
+pod 'AFNetworking', '~> 3.1.0'
+pod 'JGProgressHUD', '~> 1.3'
+pod 'FMDB', '~> 2.6.2'
+pod 'BaiduMapKit', '~> 3.3.0'
+pod 'UMengAnalytics', '~> 4.2.4'
+end
+

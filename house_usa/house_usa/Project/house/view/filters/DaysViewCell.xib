@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DaysViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上市天数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hz9-ui-T92">
+                        <rect key="frame" x="13" y="10" width="294" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="knC-he-JTB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGJ-zu-4ap">
+                        <rect key="frame" x="111" y="30" width="98" height="30"/>
+                        <subviews>
+                            <button opaque="NO" tag="70001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaE-oS-XcX" customClass="FilterButton">
+                                <rect key="frame" x="0.0" y="3" width="88" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="FIe-YV-BAS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aaE-oS-XcX" firstAttribute="centerY" secondItem="RGJ-zu-4ap" secondAttribute="centerY" id="IMh-zo-iUs"/>
+                            <constraint firstAttribute="height" constant="30" id="MoF-Cx-lJm"/>
+                            <constraint firstAttribute="trailing" secondItem="aaE-oS-XcX" secondAttribute="trailing" constant="10" id="iUX-ys-S1y"/>
+                            <constraint firstItem="aaE-oS-XcX" firstAttribute="leading" secondItem="RGJ-zu-4ap" secondAttribute="leading" id="jhh-wi-ZmF"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzP-Tt-sqa">
+                        <rect key="frame" x="210" y="30" width="98" height="30"/>
+                        <subviews>
+                            <button opaque="NO" tag="70002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ep-Za-rbd" customClass="FilterButton">
+                                <rect key="frame" x="0.0" y="3" width="88" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="3tE-JC-yzX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="1PW-V9-HkE"/>
+                            <constraint firstItem="8ep-Za-rbd" firstAttribute="leading" secondItem="tzP-Tt-sqa" secondAttribute="leading" id="NFZ-W3-KtR"/>
+                            <constraint firstItem="8ep-Za-rbd" firstAttribute="centerY" secondItem="tzP-Tt-sqa" secondAttribute="centerY" id="gRo-wp-VMi"/>
+                            <constraint firstAttribute="trailing" secondItem="8ep-Za-rbd" secondAttribute="trailing" constant="10" id="znA-mZ-7OM"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kko-1j-UuD">
+                        <rect key="frame" x="13" y="30" width="98" height="30"/>
+                        <subviews>
+                            <button opaque="NO" tag="70000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxz-AB-bpF" customClass="FilterButton">
+                                <rect key="frame" x="0.0" y="3" width="88" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="K2J-m5-qGG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qxz-AB-bpF" secondAttribute="trailing" constant="10" id="7aT-lL-pPI"/>
+                            <constraint firstAttribute="height" constant="30" id="ZkJ-PK-g1Q"/>
+                            <constraint firstItem="qxz-AB-bpF" firstAttribute="centerY" secondItem="kko-1j-UuD" secondAttribute="centerY" id="lTT-dM-Cp5"/>
+                            <constraint firstItem="qxz-AB-bpF" firstAttribute="leading" secondItem="kko-1j-UuD" secondAttribute="leading" id="lnf-jA-87k"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Hz9-ui-T92" secondAttribute="trailing" constant="13" id="AD6-tc-Ds3"/>
+                    <constraint firstItem="tzP-Tt-sqa" firstAttribute="leading" secondItem="RGJ-zu-4ap" secondAttribute="trailing" constant="1" id="CHl-F3-bHF"/>
+                    <constraint firstItem="kko-1j-UuD" firstAttribute="top" secondItem="Hz9-ui-T92" secondAttribute="bottom" constant="5" id="CPN-li-rfK"/>
+                    <constraint firstItem="Hz9-ui-T92" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="GfQ-rH-Fz7"/>
+                    <constraint firstItem="tzP-Tt-sqa" firstAttribute="top" secondItem="Hz9-ui-T92" secondAttribute="bottom" constant="5" id="J8q-vt-6B8"/>
+                    <constraint firstItem="tzP-Tt-sqa" firstAttribute="height" secondItem="kko-1j-UuD" secondAttribute="height" id="LWh-N4-7aM"/>
+                    <constraint firstItem="tzP-Tt-sqa" firstAttribute="width" secondItem="kko-1j-UuD" secondAttribute="width" id="Qtw-wM-avt"/>
+                    <constraint firstItem="RGJ-zu-4ap" firstAttribute="height" secondItem="kko-1j-UuD" secondAttribute="height" id="Yb4-jr-BH0"/>
+                    <constraint firstItem="RGJ-zu-4ap" firstAttribute="leading" secondItem="kko-1j-UuD" secondAttribute="trailing" id="aXT-B2-xHX"/>
+                    <constraint firstItem="kko-1j-UuD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="bDg-UV-zIG"/>
+                    <constraint firstItem="Hz9-ui-T92" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="cwB-6j-hHq"/>
+                    <constraint firstAttribute="trailing" secondItem="tzP-Tt-sqa" secondAttribute="trailing" constant="12" id="fiK-fU-m0Z"/>
+                    <constraint firstItem="RGJ-zu-4ap" firstAttribute="top" secondItem="Hz9-ui-T92" secondAttribute="bottom" constant="5" id="hgK-pT-4Pc"/>
+                    <constraint firstItem="RGJ-zu-4ap" firstAttribute="width" secondItem="kko-1j-UuD" secondAttribute="width" id="qE3-7B-Fcr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="Hz9-ui-T92" id="2TQ-XW-hk3"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HomeNewsCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header_news_default" translatesAutoresizingMaskIntoConstraints="NO" id="xcq-UG-5cq">
+                        <rect key="frame" x="219" y="5" width="100" height="59"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="r2o-tE-Tv8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美国购房流程介绍，应该注意哪些详细问题？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEh-2F-wjH">
+                        <rect key="frame" x="12" y="5" width="195" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqH-2o-n0u">
+                        <rect key="frame" x="5" y="68.5" width="315" height="1"/>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="hC3-uv-i7u"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="阅读  30493  收藏 1234" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIg-59-NAL">
+                        <rect key="frame" x="12" y="52.5" width="180" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="Mos-rF-Z7q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xcq-UG-5cq" secondAttribute="trailing" constant="1" id="4s2-gL-5wQ"/>
+                    <constraint firstItem="VEh-2F-wjH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ce7-60-jqp"/>
+                    <constraint firstAttribute="bottom" secondItem="sqH-2o-n0u" secondAttribute="bottom" id="Hx0-gC-3ZP"/>
+                    <constraint firstItem="xcq-UG-5cq" firstAttribute="leading" secondItem="VEh-2F-wjH" secondAttribute="trailing" constant="12" id="Lql-PU-lPe"/>
+                    <constraint firstAttribute="bottom" secondItem="qIg-59-NAL" secondAttribute="bottom" constant="5" id="OEK-7g-82g"/>
+                    <constraint firstAttribute="bottom" secondItem="xcq-UG-5cq" secondAttribute="bottom" constant="5" id="ZOs-SV-qWQ"/>
+                    <constraint firstItem="VEh-2F-wjH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="eHK-Wy-UlQ"/>
+                    <constraint firstItem="xcq-UG-5cq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="kh5-ed-T0k"/>
+                    <constraint firstAttribute="trailing" secondItem="sqH-2o-n0u" secondAttribute="trailing" id="lkj-DN-hyZ"/>
+                    <constraint firstItem="qIg-59-NAL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="mee-tN-X50"/>
+                    <constraint firstItem="sqH-2o-n0u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="sCx-uA-a9q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerImage" destination="xcq-UG-5cq" id="fRd-AS-NxO"/>
+                <outlet property="myLabel" destination="qIg-59-NAL" id="b2C-wa-N9k"/>
+                <outlet property="titleLabel" destination="VEh-2F-wjH" id="cy0-Qt-jBh"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="header_news_default" width="100" height="60"/>
+    </resources>
+</document>

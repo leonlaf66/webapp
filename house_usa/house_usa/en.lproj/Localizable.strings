@@ -1,0 +1,143 @@
+/* 
+  Localizable.strings
+  house_usa
+
+  Created by 林 建军 on 27/06/2017.
+  Copyright © 2017 yl. All rights reserved.
+*/
+
+//首页
+"homeSearchPlaceHolder" = "Search City, Zip, Address or List No.";
+"tab_home" = "Home";
+
+"tab_search" = "Search";
+
+"tab_service" = "Service";
+
+"tab_me" = "Me";
+
+
+"nearbyLabel" = "Nearby";
+
+"newsLabel" = "News";
+
+"servicesLabel" = "Pro services";
+
+"flowLabel" = "Purchase flows";
+
+"mapLabel" = "Map";
+
+"buyBtn" = "Buy/Sell";
+
+"rentalBtn" = "Rental";
+"workFlow" = "Workflows";
+
+
+"Latestnews" = "Latest news";
+"more" = "more";
+
+"houseRecommended" = "Recommended";
+
+"businessRecommended" = "Recommended";
+
+
+
+/////房管中心
+"proServiceTitle" = "PRO SERVICE";
+
+
+
+/////最新资讯
+"latestNewsTitle" = "Latest news";
+
+
+
+/////周边房源
+"nearbyTitle" = "Nearby";
+
+
+////房屋详情
+"houseDetail" = "House Details";
+
+"roi" = "ROI";
+"moreInformation" = "More Information";
+
+"like" = "Favorite";
+"share" = "Share";
+
+
+/////地图
+"mapTitle" = "MAP";
+"map" = " MAP";
+"price" = "Price";
+
+"Type" = "Type";
+"Price" = "Price";
+"LivingArea" = "Area";
+"Beds" = "Beds";
+"More" = "More";
+//房屋类型
+
+"SF" = "Single Family";
+"MF" = "Multi Family";
+"CC" = "Condominium";
+"CI" = "Commercial";
+"BU" = "Business Opportunity";
+"LD" = "Land";
+///排序呢
+"defaultSort" = "Default";
+"daysSort" = "On Market New";
+"pricea" = "Price:High to Low";
+"priceb" = "Price:Low to High";
+
+"bedssorta" = "Beds:Many to Few";
+"bedssortb" = "Beds:Few to Many";
+"sortLabel" = "Sort";
+
+"resetLabel" = "Reset";
+
+"searchLabel" = "Search";
+
+"beweenLabel" = "Betweens:";
+
+"okLabel" = "OK";
+"minLabel" = "MIN";
+"maxLabel" = "MAX";
+
+//////
+/**
+ *  下拉刷新
+ */
+
+"MJRefreshHeaderIdleText" = "PULL TO REFRESH";
+"MJRefreshHeaderPullingText" = "RELEASE TO REFRESH";
+"MJRefreshHeaderRefreshingText" = "REFRESHING DATA...";
+
+"MJRefreshAutoFooterIdleText" = "PUSH LOAD MORE";
+"MJRefreshAutoFooterRefreshingText" = "LOAING MORE...";
+"MJRefreshAutoFooterNoMoreDataText" = "NO MORE DATA";
+
+"MJRefreshBackFooterIdleText" = "PUSH LOAD MORE DATA";
+"MJRefreshBackFooterPullingText" = "RELEASE LOAD MORE DATA";
+"MJRefreshBackFooterRefreshingText" = "LOADING MORE DATA...";
+
+"MJRefreshBackFooterNoMoreDataText" = "NO MORE DATA";
+
+"lastupdate" = "Last updated";
+"norecord" = "No records";
+
+
+"loginin" = "LOGIN IN";
+"loginout" = "LOG OUT";
+"loginoutstatus" = "LOG OUT SUCCESS";
+
+"contactInfo" = "CONTACT INFO";
+"mortgage" = "MORTGAGE CALC";
+"scheduleTour" = "SCHEDULE TOUR";
+
+"mortgagen" = "MORTGAGE CALC";
+"serviceTtile" = "Customer Service";
+
+"emailLabel" = "Email:contact@usleju.com";
+"wxLabel" = "Wchat:woniuusa";
+"onlineServiceLabel" = "Online chat";

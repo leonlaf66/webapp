@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FavoritesViewController">
+            <connections>
+                <outlet property="ctitleLabel" destination="uiR-Lc-TBV" id="hHp-ON-1da"/>
+                <outlet property="tableView" destination="dhm-3d-XoF" id="oOK-Ve-BWd"/>
+                <outlet property="view" destination="Rwx-sc-yCG" id="Ebb-SX-h0W"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Rwx-sc-yCG">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AnH-ef-0X4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwl-3m-OJa">
+                            <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7c-Ld-Wgv">
+                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="e9x-LW-KML"/>
+                                    </constraints>
+                                    <state key="normal" image="goback">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="goBack:" destination="-1" eventType="touchUpInside" id="5P8-3k-oH0"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest news" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiR-Lc-TBV">
+                                    <rect key="frame" x="52" y="13" width="315" height="19.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.68627450980000004" green="0.82352941180000006" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="uiR-Lc-TBV" firstAttribute="centerY" secondItem="jwl-3m-OJa" secondAttribute="centerY" id="OTx-ME-R3K"/>
+                                <constraint firstItem="Y7c-Ld-Wgv" firstAttribute="top" secondItem="jwl-3m-OJa" secondAttribute="top" id="Og7-7L-KaU"/>
+                                <constraint firstItem="uiR-Lc-TBV" firstAttribute="leading" secondItem="Y7c-Ld-Wgv" secondAttribute="trailing" constant="8" id="Pte-GZ-IIa"/>
+                                <constraint firstAttribute="height" constant="44" id="UkM-cr-X5D"/>
+                                <constraint firstAttribute="trailing" secondItem="uiR-Lc-TBV" secondAttribute="trailing" constant="8" id="cnm-9N-MK3"/>
+                                <constraint firstItem="Y7c-Ld-Wgv" firstAttribute="leading" secondItem="jwl-3m-OJa" secondAttribute="leading" id="rx7-ks-cia"/>
+                                <constraint firstAttribute="bottom" secondItem="Y7c-Ld-Wgv" secondAttribute="bottom" id="u5D-sQ-222"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.68627450980000004" green="0.82352941180000006" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="jwl-3m-OJa" firstAttribute="top" secondItem="AnH-ef-0X4" secondAttribute="top" constant="20" id="91Y-a5-WYB"/>
+                        <constraint firstAttribute="trailing" secondItem="jwl-3m-OJa" secondAttribute="trailing" id="CHa-ds-Hzt"/>
+                        <constraint firstAttribute="height" constant="64" id="LM7-06-RDz"/>
+                        <constraint firstItem="jwl-3m-OJa" firstAttribute="leading" secondItem="AnH-ef-0X4" secondAttribute="leading" id="ccR-z1-yzF"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dhm-3d-XoF">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="pbn-Hy-5B7"/>
+                        <outlet property="delegate" destination="-1" id="UCh-QQ-V34"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="AnH-ef-0X4" firstAttribute="top" secondItem="Rwx-sc-yCG" secondAttribute="top" id="172-ip-Uta"/>
+                <constraint firstItem="AnH-ef-0X4" firstAttribute="leading" secondItem="Rwx-sc-yCG" secondAttribute="leading" id="AXc-FQ-UqO"/>
+                <constraint firstAttribute="bottom" secondItem="dhm-3d-XoF" secondAttribute="bottom" id="FaU-VJ-Mxh"/>
+                <constraint firstAttribute="trailing" secondItem="dhm-3d-XoF" secondAttribute="trailing" id="MGW-Ay-rR7"/>
+                <constraint firstItem="dhm-3d-XoF" firstAttribute="top" secondItem="AnH-ef-0X4" secondAttribute="bottom" id="mT5-ZW-cJi"/>
+                <constraint firstItem="dhm-3d-XoF" firstAttribute="leading" secondItem="Rwx-sc-yCG" secondAttribute="leading" id="rYv-T2-EgN"/>
+                <constraint firstAttribute="trailing" secondItem="AnH-ef-0X4" secondAttribute="trailing" id="ubO-SZ-6WV"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="goback" width="40" height="40"/>
+    </resources>
+</document>
