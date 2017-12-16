@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="200dp">
+
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/clocka"
+            android:src="@drawable/photoframe"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="12dp"
+            android:text="10dp"
+            android:id="@+id/userLabel"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/clocka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:textColor="@color/globalBlack"
+            android:layout_marginRight="12dp"
+            android:textSize="10dp"
+            android:text="10dp"
+            android:id="@+id/timeLabel"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <RatingBar
+        android:layout_below="@+id/nametitle"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:layout_centerInParent="true"
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/room_ratingbar"
+        android:minHeight="15dp"
+        android:maxHeight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4" >
+    </RatingBar>
+
+
+    <TextView
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="10dp"
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>

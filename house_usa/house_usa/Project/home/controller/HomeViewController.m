@@ -111,13 +111,7 @@
            // [self initHotDatas:];
             NSDictionary *obj = operation[@"data"];
             _hotAreaDatas  = obj;
-            NSArray *keys = obj.allKeys;
-            NSString * key = [keys objectAtIndex:1];
-            _hotAreaCode = key;
-            _hotAreaName = obj[key][@"name"];
-            [HomeModel sharedInstance].area = _hotAreaCode;
-            
-           // _headercell
+                       // _headercell
             
         }
         [self.tableView.header beginRefreshing];
@@ -167,11 +161,21 @@
     [_searchTextInput addGestureRecognizer:atap];
     
     
-    if ([[self getSystemLang] isEqualToString:@"en"]) {
+    if ([[self getSystemLang] containsString:@"en"]) {
         _langChooseLabel.selectedSegmentIndex = 0;
+        
+       
+        _hotAreaCode = @"ma";
+        _hotAreaName = @"Boston";
+        [HomeModel sharedInstance].area = @"ma";
+        
+
         [self setLangs:@"en"];
         [self loadEn];
-    }else if([[self getSystemLang] isEqualToString:@"zh-Hans"]){
+    }else if([[self getSystemLang] containsString:@"zh"]){
+        _hotAreaCode = @"ma";
+        _hotAreaName = @"波士顿";
+          [HomeModel sharedInstance].area = @"ma";
         [self setLangs:@"zh-Hans"];
         _langChooseLabel.selectedSegmentIndex = 1;
         [self loadCn];

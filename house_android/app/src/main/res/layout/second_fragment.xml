@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/house_list_filter_header"></include>
+
+
+        <RelativeLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/main_srl"
+             android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/main_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+            
+            <RelativeLayout
+                android:id="@+id/sortBtn"
+                android:layout_marginBottom="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/corners_haf"
+                android:orientation="vertical"
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:layout_marginTop="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/sort"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:id="@+id/sort_text"
+                    android:layout_marginTop="35dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Sort"
+                    android:textSize="10dp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/myloading"
+                android:visibility="invisible"
+                android:layout_alignParentBottom="true"
+                android:background="#f2f2f2"
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+                <TextView
+                    android:id="@+id/myloadingText"
+                    android:textColor="@color/black"
+                    android:text="loading...."
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/bgView"
+            android:visibility="invisible"
+            android:layout_marginTop="100dp"
+            android:background="#50000000"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/typeView"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <net.lhh.apst.fragments.TypeFilterView
+                android:id="@+id/typeViewIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/priceView"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <net.lhh.apst.fragments.PriceFilterView
+                android:id="@+id/priceViewIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/areaView"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <net.lhh.apst.fragments.AreaFilterView
+                android:id="@+id/areaViewIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bedsView"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <net.lhh.apst.fragments.BedsFilterView
+                android:id="@+id/bedsViewIn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/moreView"
+            android:orientation="vertical"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <net.lhh.apst.fragments.MoreFilterView
+                android:id="@+id/moreViewIn"
+                android:layout_marginBottom="44dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/comView"
+            android:orientation="vertical"
+            android:layout_marginTop="54dp"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

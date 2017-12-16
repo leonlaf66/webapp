@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/popView"
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <ScrollView
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        app:image_scale_type="fit_xy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <ImageView android:src="@mipmap/goback"
+                        android:layout_width="40dp"
+                        android:id="@+id/home_map_go_btn"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="8dp"
+                        android:layout_height="40dp"></ImageView>
+
+
+                    <ImageView android:src="@mipmap/share"
+                        android:layout_width="20dp"
+                        android:id="@+id/newshare"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_height="20dp"></ImageView>
+
+
+                    <ImageView android:src="@drawable/alike"
+                        android:layout_width="20dp"
+                        android:id="@+id/newlike"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginBottom="100dp"
+                        android:layout_height="20dp"></ImageView>
+                </RelativeLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/house_detial_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="14dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/house_detial_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="14dp"
+                        />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:background="@color/globgray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/house_detial_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/house_detial_type_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/house_detial_bath"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/house_detial_bath_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/house_detial_bed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/house_detial_bed_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/house_detial_living_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/house_detial_living_area_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/house_detial_region"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/house_detial_region_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/house_detial_regiona_area"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/house_detial_regiona_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/red"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:background="@color/globgray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"></LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_marginTop="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp">
+                        <LinearLayout
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp">
+                            <TextView
+                                android:id="@+id/house_detial_moreinformation"
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:text="更多信息"
+                                android:gravity="center"
+                                android:textColor="@color/green"
+                                android:layout_weight="1"
+                                android:textSize="14dp"
+                                />
+                            <LinearLayout
+                                android:layout_marginTop="5dp"
+                                android:background="@color/green"
+                                android:layout_width="120dp"
+                                android:layout_height="1dp"></LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="12dp"
+                        android:background="@color/globgray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"></LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/house_detial_touz"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/green"
+                                android:textSize="10dp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/house_detial_touz"
+                                android:id="@+id/house_detial_touz_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                />
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/globgray"
+                                android:orientation="horizontal"
+                                android:layout_width="1dp"
+                                android:layout_height="20dp"></LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/house_detial_touz_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/green"
+                                android:textSize="10dp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/house_detial_touz_value"
+                                android:id="@+id/house_detial_touz_title_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:background="@color/globgray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"></LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/house_detial_touz_a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/green"
+                                android:textSize="10dp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/house_detial_touz_a"
+                                android:id="@+id/house_detial_touz_title_a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                />
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:background="@color/globgray"
+                                android:orientation="horizontal"
+                                android:layout_width="1dp"
+                                android:layout_height="20dp"></LinearLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp">
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/house_detial_touz_value_a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/green"
+                                android:textSize="10dp"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_below="@+id/house_detial_touz_value_a"
+                                android:id="@+id/house_detial_touz_title_value_a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="12dp"
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:background="@color/globgray"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"></LinearLayout>
+
+
+                    <com.baidu.mapapi.map.MapView
+                        android:layout_marginTop="12dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:id="@+id/bmapView"
+                        android:layout_marginBottom="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:clickable="true" />
+
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+
+                            <TextView
+                                android:layout_alignParentRight="true"
+                                android:id="@+id/house_detial_nearby"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="周边房源"
+                                android:layout_marginRight="12dp"
+                                android:gravity="center"
+                                android:textColor="@color/green"
+                                android:textSize="12dp"
+                                />
+
+                            <ImageView android:src="@drawable/map"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_toLeftOf="@+id/house_detial_nearby"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <HorizontalScrollView
+                        android:layout_marginBottom="44dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/recommend_house"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"></LinearLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/globgray"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <RelativeLayout
+                android:id="@+id/dayiBtn"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageView
+
+                    android:id="@+id/dayiimage"
+                    android:src="@drawable/dayi"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/dayiimage"
+                    android:id="@+id/dayititle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="答疑"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp"
+                    />
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#dedede"
+                    ></LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/daikuangBtn"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageView
+
+                    android:id="@+id/daikuanimage"
+                    android:src="@drawable/fangdai"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/daikuanimage"
+                    android:id="@+id/daikuantitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="房贷"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp"
+                    />
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="7dp"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="#dedede"
+                    ></LinearLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/kanfangBtn"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <ImageView
+
+                    android:id="@+id/kanfangimage"
+                    android:src="@drawable/kanfang"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/kanfangimage"
+                    android:id="@+id/kangfangtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="看房"
+                    android:gravity="center"
+                    android:textColor="@color/gray"
+                    android:textSize="10dp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        </RelativeLayout>
+
+
+</RelativeLayout>

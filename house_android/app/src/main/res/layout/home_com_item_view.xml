@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="40dp">
+
+
+    <TextView
+       android:id="@+id/housetitle"
+       android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_height="wrap_content"
+        android:text="布鲁克林多家庭"
+        android:textSize="12dp"
+        android:layout_marginLeft="12dp"
+        />
+
+
+    <TextView
+        android:id="@+id/housetitle_item"
+        android:layout_marginTop="14dp"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="item"
+        android:textSize="12dp"
+        android:layout_marginRight="12dp"
+        />
+
+
+    <RelativeLayout
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="12dp"
+            android:layout_width="match_parent"
+            android:background="@color/home_bar_text_normal"
+            android:layout_height="1dp">
+        </RelativeLayout>
+
+</RelativeLayout>

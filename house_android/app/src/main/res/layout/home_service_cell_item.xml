@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="100dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_height="90dp">
+
+
+        <net.lhh.apst.advancedpagerslidingtabstrip.ZQImageViewRoundOval
+            android:id="@+id/newImg"
+            android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:scaleType="fitXY"
+            android:layout_height="50dp"
+            android:src="@mipmap/newsdefault"/>
+
+        <TextView
+            android:id="@+id/servicetitle"
+            android:lines="1"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/newImg"
+            android:layout_marginTop="2dp"
+            android:layout_height="wrap_content"
+            android:text="Sonja B.Selami"
+            android:gravity="center"
+            android:textSize="9dp"
+            />
+
+<RelativeLayout
+    android:layout_below="@+id/servicetitle"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+    <RatingBar
+        android:background="@color/white"
+   android:layout_centerInParent="true"
+        style="?android:attr/ratingBarStyleSmall"
+        android:id="@+id/room_ratingbar"
+        android:minHeight="15dp"
+        android:maxHeight="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4" >
+    </RatingBar>
+</RelativeLayout>
+
+
+    </RelativeLayout>
+</RelativeLayout>

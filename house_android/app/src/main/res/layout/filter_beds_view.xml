@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:id="@+id/aView"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+
+    <TextView
+        android:id="@+id/titlea"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/globalBlack"
+        android:textSize="12dp"
+        android:text="全部(单位：Sq.Ft)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    
+</RelativeLayout>
+    <LinearLayout
+
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/bView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/titleb"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:text="0-1000Sq.Ft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/cView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/titlec"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:text="1000-2000Sq.Ft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/dView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/titled"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:text="2000-3000Sq.Ft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/eView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/titlee"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:text="3000Sq.Ft+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/fView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/titlef"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:text="3000Sq.Ft+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/gView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/titleg"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:text="3000Sq.Ft+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:background="@drawable/corners_bg_btn"
+        android:textColor="#ffffff"
+        android:text="确定"
+        android:id="@+id/search_Btn"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp" />
+</LinearLayout>

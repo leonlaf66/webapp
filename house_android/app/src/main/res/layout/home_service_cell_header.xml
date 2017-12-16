@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/home_bar_text_normal"
+    android:layout_height="40dp">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:id="@+id/newsHeaderTitle"
+            android:layout_height="wrap_content"
+            android:text="商家推荐"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:textSize="14dp"
+            />
+        </RelativeLayout>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_marginRight="10dp"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_height="20dp"
+    android:layout_width="wrap_content">
+
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_height="12dp"
+        android:src="@mipmap/more"/>
+    <TextView
+        android:id="@+id/newsHeaderMore"
+        android:layout_marginTop="1dp"
+        android:layout_width="wrap_content"
+        android:textSize="10dp"
+        android:textColor="@color/green"
+        android:layout_height="wrap_content"
+        android:text="查看更多"
+        />
+</LinearLayout>
+</RelativeLayout>

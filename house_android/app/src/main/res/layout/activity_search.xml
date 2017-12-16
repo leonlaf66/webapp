@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="50dp">
+
+
+        <ImageView android:src="@mipmap/goback"
+            android:layout_width="40dp"
+            android:id="@+id/back_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_height="40dp"></ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/corners_bg"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="12dp"
+            android:layout_height="31dp">
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:id="@+id/gvvvv"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_width="wrap_content"
+                android:background="@color/white"
+                android:layout_height="31dp">
+                <TextView
+                    android:text="购房"
+                    android:id="@+id/typeTitle"
+                    android:layout_marginTop="6dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView android:src="@drawable/down"
+                    android:layout_width="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="15dp"></ImageView>
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/globgray"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"></LinearLayout>
+            </LinearLayout>
+            <ImageView android:src="@mipmap/homesearch"
+                android:layout_width="15dp"
+                android:id="@+id/home_search_btn"
+               android:layout_toRightOf="@+id/gvvvv"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="15dp"></ImageView>
+
+            <EditText
+                android:layout_toRightOf="@+id/home_search_btn"
+                android:layout_marginLeft="8dp"
+                android:id="@+id/inputText"
+                android:background="@null"
+                android:textSize="12dp"
+                android:layout_marginRight="50dp"
+                android:hint="Search Address,City or Zip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView android:src="@mipmap/homesearchgo"
+                android:layout_width="20dp"
+                android:id="@+id/searchgo"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="10dp"></ImageView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <TextView
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/hotArealabel"
+                    android:text="热门区域"
+                    android:background="@color/globgray"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                <GridView
+                    android:background="@color/white"
+                    android:id="@+id/gview"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:numColumns="4"
+                    android:columnWidth="80dp"
+                    android:stretchMode="columnWidth"
+                    ></GridView>
+
+                <TextView
+                    android:id="@+id/historylabel"
+                    android:layout_marginTop="12dp"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="5dp"
+                    android:text="历史搜索记录"
+                    android:background="@color/globgray"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+                
+                <FrameLayout
+                    android:layout_marginTop="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                     <ListView
+                         android:id="@+id/listView"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"></ListView>
+
+                    <RelativeLayout
+                        android:background="@color/white"
+                        android:id="@+id/nodataView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                         <ImageView
+                             android:id="@+id/vvvvvv"
+                             android:layout_centerHorizontal="true"
+                             android:layout_marginTop="12dp"
+                             android:layout_alignParentTop="true"
+                             android:src="@drawable/no_data"
+                             android:layout_width="100dp"
+                             android:layout_height="100dp" />
+                        <TextView
+                            android:id="@+id/nodataText"
+                            android:gravity="center"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="105dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="暂无历史搜索记录"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:id="@+id/comView"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -182,7 +182,7 @@ DEF_SINGLETON(HomeModel);
     
     NSMutableDictionary *newdata = [NSMutableDictionary dictionaryWithDictionary:data];
     
-    [newdata setObject:self.area forKey:@"area_id"];
+    //[newdata setObject:self.area forKey:@"area_id"];
     [self gettUrl:@"estate/house/map-search" data:newdata success:^(NSDictionary *responseObject) {
         BLOCK_SAFE(success)(responseObject);
     } failure:^(NSError *error) {

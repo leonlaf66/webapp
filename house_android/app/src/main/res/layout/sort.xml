@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="300dp">
+
+    <net.lhh.apst.fragments.MoreTextViewa
+        android:text="Default"
+        android:gravity="center"
+        android:id="@+id/sort_a"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <net.lhh.apst.fragments.MoreTextViewa
+        android:text="On Market New"
+        android:id="@+id/sort_b"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <net.lhh.apst.fragments.MoreTextViewa
+        android:text="Price:High to Low"
+        android:id="@+id/sort_c"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <net.lhh.apst.fragments.MoreTextViewa
+        android:text="Price:Low to High"
+        android:id="@+id/sort_d"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <net.lhh.apst.fragments.MoreTextViewa
+        android:text="Beds:Many to Few"
+        android:id="@+id/sort_e"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <net.lhh.apst.fragments.MoreTextViewa
+        android:text="Beds:Few to Many"
+        android:id="@+id/sort_f"
+        android:textColor="@color/black"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+  
+</LinearLayout>
+
+

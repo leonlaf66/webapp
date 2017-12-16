@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'ssvfhppl'
+            keyPassword 'ssvfhppl'
+            storeFile file('/Users/ssvfhppl/Downloads/android/ssvfhppl.jks')
+            storePassword 'ssvfhppl'
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "net.lhh.apst.advancedpagerslidingtabstrip"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 3
+        versionName "3.0"
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+            debuggable true
+            jniDebuggable false
+            zipAlignEnabled true
+        }
+    }
+    sourceSets {
+        main() {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    productFlavors {
+    }
+
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':Library')
+
+    //    compile 'homhomlin.lib:apsts:1.4.0'
+    // compile 'com.android.support:appcompat-v7:25.3.1'
+    // compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:support-v13:26.0.0-alpha1'
+    //compile 'com.android.support:design:23.1.1'
+    compile 'homhomlin.lib:frescoimageview:1.2.0'
+    compile 'com.facebook.fresco:fresco:0.9.0'
+    compile 'com.facebook.fresco:imagepipeline-okhttp:0.9.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //  compile 'com.squareup.okhttp3:okhttp:3.8.1'
+    compile files('libs/baidumapapi_v3_3_0.jar')
+    compile files('libs/locSDK_5.0.jar')
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    // compile 'com.android.support:support-v13:23.4.0'
+    compile 'com.android.support:design:26.0.0-alpha1'
+
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+
+
+}

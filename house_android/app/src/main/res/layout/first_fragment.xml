@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="50dp">
+
+        <RelativeLayout
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+            android:background="@drawable/corners_bg"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="85dp"
+            android:layout_height="31dp">
+            <ImageView android:src="@mipmap/homesearch"
+                android:layout_width="15dp"
+                android:id="@+id/home_search_btn"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_height="15dp"></ImageView>
+
+            <TextView
+              android:layout_toRightOf="@+id/home_search_btn"
+                android:layout_marginLeft="8dp"
+                android:paddingTop="6dp"
+                android:textSize="12dp"
+                android:id="@+id/searchText"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="50dp"
+                android:text="Search Address,City or Zip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView android:src="@mipmap/homesearchgo"
+                android:layout_width="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="10dp"></ImageView>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_height="30dp">
+
+            <RelativeLayout
+                android:id="@+id/chineseFlag"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="#dedede">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="30dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/chinese"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/englishFlag"
+                android:layout_toLeftOf="@+id/chineseFlag"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="#d9d9d9">
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="30dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/english"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/homescrollView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/homebg"></ImageView>
+            <LinearLayout
+                android:background="@drawable/corners_map"
+                android:layout_marginTop="80dp"
+                android:id="@+id/regionBtn"
+                android:orientation="horizontal"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="2dp"
+
+                android:layout_width="80dp"
+                android:layout_height="20dp">
+                <ImageView
+                    android:layout_width="10dp"
+                     android:layout_marginLeft="12dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_height="12dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/location"></ImageView>
+
+                <TextView
+                    android:id="@+id/home_location_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Boston"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12dp"
+                    />
+            </LinearLayout>
+               <LinearLayout
+                   android:background="@color/white"
+                   android:layout_marginTop="120dp"
+                   android:orientation="vertical"
+                   android:layout_marginRight="15dp"
+                   android:layout_marginLeft="15dp"
+                   android:layout_marginBottom="2dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+                   <LinearLayout
+                       android:background="@color/white"
+                       android:orientation="horizontal"
+                       android:layout_width="match_parent"
+                       android:layout_height="100dp">
+
+                       <RelativeLayout
+                           android:background="@color/white"
+                           android:orientation="vertical"
+                           android:id="@+id/home_zhoubian_view"
+                           android:layout_width="fill_parent"
+                           android:layout_weight="1"
+                           android:layout_height="100dp">
+
+                           <ImageView
+                               android:layout_marginTop="15dp"
+                               android:id="@+id/home_zhoubian_img"
+                               android:layout_alignParentTop="true"
+                               android:layout_centerHorizontal="true"
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:scaleType="fitXY"
+                               android:src="@mipmap/header_zhoubian"></ImageView>
+
+
+                           <TextView
+                               android:id="@+id/home_zhoubian_title"
+                               android:layout_width="wrap_content"
+                               android:layout_below="@+id/home_zhoubian_img"
+                               android:layout_height="wrap_content"
+                               android:text="查看周边"
+                               android:layout_marginTop="5dp"
+                               android:textColor="@color/green"
+                               android:layout_centerHorizontal="true"
+                               android:textSize="12dp"
+                               />
+
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:background="@color/white"
+                           android:orientation="vertical"
+                           android:layout_width="fill_parent"
+                           android:layout_weight="1"
+                           android:id="@+id/home_news_view"
+                           android:layout_height="100dp">
+
+                           <ImageView
+                               android:layout_marginTop="15dp"
+                               android:id="@+id/home_news_img"
+                               android:layout_alignParentTop="true"
+                               android:layout_centerHorizontal="true"
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:scaleType="fitXY"
+                               android:src="@mipmap/header_news"></ImageView>
+
+
+                           <TextView
+                               android:id="@+id/home_news_title"
+                               android:layout_width="wrap_content"
+                               android:layout_below="@+id/home_news_img"
+                               android:layout_height="wrap_content"
+                               android:text="新闻资讯"
+                               android:textColor="@color/green"
+                               android:layout_marginTop="5dp"
+                               android:layout_centerHorizontal="true"
+                               android:textSize="12dp"
+                               />
+
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:background="@color/white"
+                           android:orientation="vertical"
+                           android:layout_width="fill_parent"
+                           android:layout_weight="1"
+                           android:id="@+id/home_service_center_view"
+                           android:layout_height="100dp">
+                           <ImageView
+                               android:layout_marginTop="15dp"
+                               android:id="@+id/home_fangguan_img"
+                               android:layout_alignParentTop="true"
+                               android:layout_centerHorizontal="true"
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:scaleType="fitXY"
+                               android:src="@mipmap/header_house_center"></ImageView>
+
+
+                           <TextView
+                               android:id="@+id/home_fangguan_title"
+                               android:layout_width="wrap_content"
+                               android:layout_below="@+id/home_fangguan_img"
+                               android:layout_height="wrap_content"
+                               android:text="房管中心"
+                               android:layout_marginTop="5dp"
+                               android:textColor="@color/green"
+                               android:layout_centerHorizontal="true"
+                               android:textSize="12dp"
+                               />
+                       </RelativeLayout>
+
+                       <RelativeLayout
+                           android:background="@color/white"
+                           android:orientation="vertical"
+                           android:layout_width="fill_parent"
+                           android:layout_weight="1"
+                           android:id="@+id/home_map_search_view"
+                           android:layout_height="100dp">
+                           <ImageView
+                               android:layout_marginTop="15dp"
+                               android:id="@+id/home_dituzhaofang_img"
+                               android:layout_alignParentTop="true"
+                               android:layout_centerHorizontal="true"
+                               android:layout_width="30dp"
+                               android:layout_height="30dp"
+                               android:scaleType="fitXY"
+                               android:src="@mipmap/header_map_search"></ImageView>
+
+
+                           <TextView
+                               android:id="@+id/home_dituzhaofang_title"
+                               android:layout_width="wrap_content"
+                               android:layout_below="@+id/home_dituzhaofang_img"
+                               android:layout_height="wrap_content"
+                               android:text="购房流程"
+                               android:layout_marginTop="5dp"
+                               android:textColor="@color/green"
+                               android:layout_centerHorizontal="true"
+                               android:textSize="12dp"
+                               />
+                       </RelativeLayout>
+                   </LinearLayout>
+
+                </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/homescrollViewnew"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

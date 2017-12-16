@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="home_bar_text_normal">#f2f2f2</color>
+    <color name="globgray">#f2f2f2</color>
+    <color name="home_bar_text_push">#AFD25E</color>
+    <color name="textnormal">#adadad</color>
+
+    <color name="btn_bg_pressed_color">#AFD25E</color>
+    <color name="btn_bg_color">#AFD25E</color>
+
+    <!-- 常用颜色值 -->
+    <color name="white40">#40FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#333333</color>
+    <color name="gray">#808080</color>
+    <color name="green">#AFD25E</color>
+
+    <color name="hgreen">#50AFD25E</color>
+    <color name="globalBlack">#888888</color>
+
+
+    <color name="colorPrimary">#EEF0F3</color>
+    <color name="colorPrimaryDark">#EEF0F3</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="main_activity_top_img_bg">#FF7800</color>
+
+    <!--Share Color-->
+    <color name="main_fragment_share_bg">#F8F8F8</color>
+    <color name="name_fragment_share_txt_bg">#464646</color>
+
+    <color name="authorization_status_txt_color">#FFC794</color>
+    <color name="userinfo_status_txt_bg">#00B2FF</color>
+
+
+
+    <color name="blue">#ffccddff</color>
+    <color name="grey">#58616d</color>
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+</resources>

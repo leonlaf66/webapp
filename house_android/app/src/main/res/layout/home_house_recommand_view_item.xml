@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="120dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_height="90dp">
+
+
+
+        <ImageView
+            android:id="@+id/houseImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="90dp"
+            android:src="@mipmap/home_house_default"/>
+
+
+        <TextView
+            android:id="@+id/pricetitle"
+            android:layout_width="match_parent"
+            android:height="20dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="2dp"
+            android:background="@color/hgreen"
+             android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:text="1111$"
+            android:textSize="12dp"
+            android:textColor="@color/white"
+            />
+
+
+     </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/locationtitle"
+        android:layout_width="match_parent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:text="1111$"
+        android:maxLines="1"
+        android:textSize="8dp"
+        />
+
+
+    <TextView
+        android:id="@+id/houseInfor"
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:text="1111$"
+        android:textSize="8dp"
+        />
+
+</LinearLayout>

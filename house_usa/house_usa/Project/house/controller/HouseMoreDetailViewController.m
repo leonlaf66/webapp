@@ -89,7 +89,19 @@
     
     cell.titleLabel.text = [NSString stringWithFormat:@"%@:",o[@"title"]];
     
-    cell.valueLabel.text = [NSString stringWithFormat:@"%@",o[@"value"]];
+    if([o[@"value"] isKindOfClass:NSArray.class]){
+        
+        NSArray *dsa =o[@"value"];
+         cell.valueLabel.text=@"";
+        for (NSString * a in dsa) {
+            cell.valueLabel.text= [NSString stringWithFormat:@"%@ %@", cell.valueLabel.text,a ];
+        }
+    
+    }else{
+      cell.valueLabel.text = [NSString stringWithFormat:@"%@",o[@"value"]];
+    }
+    
+  
 
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

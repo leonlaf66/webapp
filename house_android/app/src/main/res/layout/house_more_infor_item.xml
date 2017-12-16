@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/green"
+    android:layout_height="30dp">
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:paddingLeft="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="10dp"
+        android:maxLines="1"
+        android:background="@color/white"
+        android:text="11登录"
+        android:textColor="@color/globalBlack" />
+
+
+</LinearLayout>

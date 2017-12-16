@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/navigationbar"></include>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/swipe_refresh_widget"
+            android:layout_width="match_parent"
+            android:layout_marginTop="150dp"
+            android:layout_height="match_parent" >
+
+            <android.support.v7.widget.RecyclerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/home_list_recycle_view"
+                android:layout_centerVertical="true"
+                android:background="#f6f6f6"
+                android:layout_centerHorizontal="true"/>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:id="@+id/typeView"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/typeText"
+                    android:layout_marginLeft="12dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="服务类型"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                
+                <LinearLayout
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/globgray"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"></LinearLayout>
+                
+                <Button
+                    android:id="@+id/allBtn"
+                    android:text="全部"
+                    android:background="@color/white"
+                    android:textColor="@color/green"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/home_list_recycle_view_type"
+                android:layout_centerVertical="true"
+                android:background="#f6f6f6"
+                android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

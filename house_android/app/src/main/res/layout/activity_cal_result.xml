@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    android:layout_height="match_parent">
+
+    <include layout="@layout/navigationbar"></include>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_marginTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/mChart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+   </LinearLayout>
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:id="@+id/aa"
+            android:text="11111"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/globalBlack"
+            android:text="222"
+            android:id="@+id/bb"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:id="@+id/cc"
+            android:text="11111"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/globalBlack"
+            android:text="222"
+            android:id="@+id/dd"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:textColor="@color/globalBlack"
+            android:textSize="12dp"
+            android:id="@+id/ee"
+            android:text="11111"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:textSize="12dp"
+            android:textColor="@color/globalBlack"
+            android:text="222"
+            android:id="@+id/ff"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+</LinearLayout>

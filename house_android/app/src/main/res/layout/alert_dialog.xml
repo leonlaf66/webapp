@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/globgray"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+<LinearLayout
+    android:id="@+id/leftgg"
+    android:layout_marginTop="12dp"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentLeft="true"
+    android:layout_width="150dp"
+    android:layout_height="150dp">
+    
+    <ImageView
+        android:layout_marginLeft="25dp"
+        android:src="@drawable/photoframe"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+<LinearLayout
+    android:id="@+id/kefuBtn"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="25dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+    <ImageView
+        android:src="@drawable/chat"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+    <TextView
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="2dp"
+        android:id="@+id/chattitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Online chat"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:textSize="10dp"
+        />
+</LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/leftgg"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/kehutitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Service"
+            android:textColor="@color/black"
+            android:textSize="12dp"
+            />
+        <FrameLayout
+            android:id="@+id/cn_btn"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <ImageView
+                android:src="@drawable/cn"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+               android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13167111930"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/en_btn"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <ImageView
+
+                android:src="@drawable/en"
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="857-205-4318"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                />
+        </FrameLayout>
+
+
+        <TextView
+
+            android:layout_marginTop="6dp"
+            android:id="@+id/emailtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:contact@usleju.com"
+
+            android:textSize="12dp"
+            />
+
+
+
+        <TextView
+
+            android:layout_marginTop="6dp"
+            android:id="@+id/catLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wechat:woniuusa"
+
+            android:textSize="12dp"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

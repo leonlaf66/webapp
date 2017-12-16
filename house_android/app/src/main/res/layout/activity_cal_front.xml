@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    android:layout_height="match_parent">
+
+    <include layout="@layout/navigationbar"></include>
+
+<RelativeLayout
+    android:layout_marginTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="30dp">
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/priceLabel"
+        android:textSize="12dp"
+        android:text="Purchase price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginRight="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/priceValue"
+        android:text=""
+        android:textSize="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/downpayLabel"
+            android:text="Down Payment"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginRight="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/downpayunit"
+            android:id="@+id/downpayValue"
+            android:text="20"
+            android:gravity="right"
+            android:textSize="12dp"
+            android:background="@null"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/downpayunit"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="%"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/yearLabel"
+            android:text="Mortgage Term"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginRight="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/yearunit"
+            android:id="@+id/yearValue"
+            android:text="30"
+            android:gravity="right"
+            android:textSize="12dp"
+            android:background="@null"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/yearunit"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="年"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/rateLabel"
+            android:text="Interest Rate"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_marginRight="12dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/rateunit"
+            android:id="@+id/rateValue"
+            android:text="4.5"
+            android:gravity="right"
+            android:textSize="12dp"
+            android:background="@null"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/rateunit"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="%"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/taxLabel"
+            android:textSize="12dp"
+            android:text="Property Tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/TaxValue"
+            android:text=""
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="12dp"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"></LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/okBtn"
+        android:background="@drawable/corners_bg_btn"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+
+        <TextView
+            android:id="@+id/add_title"
+            android:layout_height="match_parent"
+            android:text="开始计算"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+
+            android:textSize="14dp"
+            />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="105dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_height="105dp">
+
+
+
+        <ImageView
+            android:id="@+id/houseImage"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:layout_width="110dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitXY"
+            android:layout_height="70dp"
+            android:src="@mipmap/home_house_default"/>
+
+
+        <TextView
+            android:id="@+id/housetitle"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/houseImage"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:text="布鲁克林多家庭"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            />
+
+        <TextView
+            android:id="@+id/houselocation"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/houseImage"
+            android:layout_below="@+id/housetitle"
+            android:layout_height="wrap_content"
+            android:text="布鲁克林多家庭"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="10dp"
+            />
+
+        <TextView
+            android:id="@+id/houseInfor"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/houseImage"
+            android:layout_below="@+id/houselocation"
+            android:layout_height="wrap_content"
+            android:text="布鲁克林多家庭"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="9dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/mystatusView"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/houseImage"
+            android:layout_below="@+id/houseInfor"
+            android:layout_marginTop="5dp"
+            android:layout_height="20dp">
+
+
+            <TextView
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/statusLabel"
+                android:background="@drawable/corners_house_status"
+                android:textColor="@color/red"
+                android:layout_width="60dp"
+                android:layout_height="20dp"
+                android:text=""
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:textSize="10dp"
+                />
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/marketLabel"
+                android:gravity="center"
+                android:background="@drawable/corners_house_market"
+                android:layout_width="120dp"
+                android:layout_height="20dp"
+                android:text="222"
+                android:textColor="@color/green"
+                android:layout_marginRight="5dp"
+                android:textSize="10dp"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_toRightOf="@+id/houseImage"
+            android:layout_below="@+id/mystatusView"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/priceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="price:"
+                android:layout_marginLeft="5dp"
+                android:textSize="12dp"
+                />
+
+            <TextView
+                android:id="@+id/priceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="222"
+                android:textColor="@color/red"
+                android:layout_marginLeft="5dp"
+                android:textSize="12dp"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/newCellLine"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:background="@color/home_bar_text_normal"
+            android:layout_height="1dp">
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

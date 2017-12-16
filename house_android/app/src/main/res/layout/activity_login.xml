@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="50dp">
+
+        <ImageView android:src="@mipmap/goback"
+            android:layout_width="40dp"
+            android:id="@+id/home_map_go_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_height="40dp"></ImageView>
+
+        <TextView
+            android:id="@+id/home_map_title"
+            android:layout_width="wrap_content"
+            android:layout_toRightOf="@+id/home_map_go_btn"
+            android:layout_height="wrap_content"
+            android:text="周边房源"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            />
+
+
+        <TextView
+            android:id="@+id/btn_reg"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            />
+
+
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账号密码登录"
+            android:textColor="#333333"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:textSize="20dp"
+            />
+
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <ImageView android:src="@mipmap/email"
+                android:id="@+id/eamilimag"
+                android:layout_width="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_height="20dp"></ImageView>
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/eamilimag"
+                android:id="@+id/userName"
+                android:background="@null"
+                android:hint="请输入邮箱"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="#333333"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:background="#f2f2f2"
+            android:layout_height="1dp">
+            </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="35dp">
+
+            <ImageView android:src="@mipmap/pwd"
+                android:id="@+id/eamilimagpp"
+                android:layout_width="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_height="20dp"></ImageView>
+
+            <EditText
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/eamilimagpp"
+                android:id="@+id/password"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:password="true"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="#333333"
+                android:layout_marginLeft="5dp"
+                android:textSize="14dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:background="#f2f2f2"
+            android:layout_height="1dp">
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginTop="40dp"
+            android:background="@drawable/corners_bg_btn"
+            android:textColor="#ffffff"
+            android:text="登录"
+            android:id="@+id/login_Btn"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp" />
+
+
+
+        <TextView
+            android:id="@+id/login_other_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="社交账号直接登录"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:textSize="14dp"
+            />
+<RelativeLayout
+    android:layout_marginTop="20px"
+    android:layout_width="match_parent"
+    android:layout_height="44dp">
+
+    <ImageView android:src="@mipmap/wx"
+        android:id="@+id/wxLogin"
+        android:layout_width="40dp"
+        android:layout_centerInParent="true"
+        android:layout_height="40dp"></ImageView>
+</RelativeLayout>
+
+        <TextView
+            android:id="@+id/liencense_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="注册/登录代表接手米乐居使用条款"
+            android:gravity="center"
+            android:textColor="#999999"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="40dp"
+            android:textSize="12dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    android:layout_height="match_parent">
+
+    <include layout="@layout/navigationbar"></include>
+
+<RelativeLayout
+    android:layout_marginTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+
+    <TextView
+        android:id="@+id/date_choose"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="日期选择"
+        android:textColor="@color/green"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:textSize="12dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/date_title"
+        android:layout_toRightOf="@+id/date_choose"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/green"
+        android:layout_marginLeft="12dp"
+        android:layout_alignParentTop="true"
+        android:textSize="12dp"
+        />
+
+
+    <ImageView android:src="@drawable/date"
+        android:layout_width="20dp"
+        android:layout_marginRight="12dp"
+        android:id="@+id/choose_date_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_height="20dp"></ImageView>
+
+</RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/startTime_choose"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="开始时间"
+            android:textColor="@color/green"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="12dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/startTime_title"
+            android:layout_toRightOf="@+id/startTime_choose"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/green"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentTop="true"
+            android:textSize="12dp"
+            />
+
+
+        <ImageView android:src="@drawable/time"
+            android:layout_width="20dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/choose_starttime_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="20dp"></ImageView>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/endTime_choose"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="结束时间"
+            android:textColor="@color/green"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textSize="12dp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/endTime_title"
+            android:layout_toRightOf="@+id/endTime_choose"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_marginRight="30dp"
+            android:textColor="@color/green"
+            android:layout_marginLeft="12dp"
+            android:layout_alignParentTop="true"
+            android:textSize="12dp"
+            />
+
+
+        <ImageView android:src="@drawable/time"
+            android:layout_width="20dp"
+            android:layout_marginRight="12dp"
+            android:id="@+id/choose_endtime_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="20dp"></ImageView>
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/okBtn"
+        android:background="@drawable/corners_bg_btn"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+
+        <TextView
+            android:id="@+id/add_title"
+            android:layout_height="match_parent"
+            android:text="添加"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+
+            android:textSize="14dp"
+            />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

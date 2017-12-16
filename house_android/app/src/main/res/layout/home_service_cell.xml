@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="80dp">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:layout_height="110dp">
+
+
+        <TextView
+            android:id="@+id/servicetitle"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_height="wrap_content"
+            android:text="Sonja B.Selami"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="12dp"
+            />
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:id="@+id/serviceCellLine"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/servicetitle"
+            android:layout_width="match_parent"
+            android:background="@color/home_bar_text_normal"
+            android:layout_height="1dp">
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/serContent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/serviceCellLine"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+           android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/home_bar_text_normal"
+            android:layout_height="15dp">
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

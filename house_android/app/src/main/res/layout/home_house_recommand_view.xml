@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:background="@color/globgray"
+    android:layout_height="140dp">
+
+<net.lhh.apst.fragments.HouseRecomentCell
+    android:layout_width="130dp"
+    android:id="@+id/recommend_house_cell"
+    android:layout_centerInParent="true"
+    android:layout_height="130dp">
+
+</net.lhh.apst.fragments.HouseRecomentCell>
+</RelativeLayout>

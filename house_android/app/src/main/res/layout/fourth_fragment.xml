@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/mycrollView"
+            android:orientation="vertical"
+            android:background="@color/home_bar_text_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+                <ImageView
+                    android:id="@+id/personImg"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/mine"></ImageView>
+
+                <ImageView
+                    android:id="@+id/myheader"
+                    android:layout_centerInParent="true"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/myheader"></ImageView>
+
+                <TextView
+                    android:id="@+id/headertitle"
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/myheader"
+                    android:layout_height="wrap_content"
+                    android:text="SuperSun"
+                    android:layout_centerHorizontal="true"
+                     android:textColor="@color/white"
+                    android:textSize="14dp"
+                    />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/myfavorite"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+
+                    <ImageView
+                        android:id="@+id/mycellImage"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/shoucang"/>
+
+
+                    <TextView
+                        android:id="@+id/mytitle"
+                        android:layout_width="match_parent"
+                        android:layout_toRightOf="@+id/mycellImage"
+                        android:layout_height="wrap_content"
+                        android:text="我的收藏"
+                        android:layout_marginLeft="5dp"
+                        android:layout_centerVertical="true"
+                        android:textSize="14dp"
+                        />
+
+                    <ImageView
+
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_width="10dp"
+                        android:scaleType="fitXY"
+                        android:layout_height="15dp"
+                        android:src="@mipmap/arrayright"/>
+
+                    <RelativeLayout
+                        android:id="@+id/myCellLine"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/home_bar_text_normal"
+                        android:layout_height="1dp">
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/myschedule"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/yuyuecellImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/yuyue"/>
+
+
+                <TextView
+                    android:id="@+id/yuyuetitle"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/yuyuecellImage"
+                    android:layout_height="wrap_content"
+                    android:text="我的预约"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp"
+                    />
+
+                <ImageView
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/arrayright"/>
+
+            </RelativeLayout>
+
+
+
+            <!-- 第3段-->
+
+            <RelativeLayout
+                android:id="@+id/setting"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/shezhicellImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/shezhi"/>
+
+
+                <TextView
+                    android:id="@+id/shezhititle"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/shezhicellImage"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp"
+                    />
+
+                <ImageView
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/arrayright"/>
+
+
+
+            </RelativeLayout>
+
+            <!-- 第3段-->
+
+            <RelativeLayout
+                android:id="@+id/aboutus"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/aboutcellImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/about"/>
+
+
+                <TextView
+                    android:id="@+id/acouttitle"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@+id/aboutcellImage"
+                    android:layout_height="wrap_content"
+                    android:text="关于我们"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="14dp"
+                    />
+
+                <ImageView
+
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_height="15dp"
+                    android:src="@mipmap/arrayright"/>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/typeTitle"
+                    android:text="Type"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/type_a"
+                        android:text="Single Family"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/type_b"
+                        android:text="Multi Family"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/type_c"
+                        android:text="Condominium"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/type_d"
+                        android:text="Commercial"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/type_e"
+                        android:text="Business Oportunty"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/type_f"
+                        android:text="Land"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- beds-->
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/bedsTitle"
+                    android:text="Beds"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/beds_a"
+                        android:text="1+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/beds_b"
+                        android:text="2+"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/beds_c"
+                        android:text="3+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/beds_d"
+                        android:text="4+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/beds_e"
+                        android:text="5+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/beds_f"
+                        android:text="6+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- price-->
+
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/priceTitle"
+                    android:text="Price"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/price_a"
+                        android:text="1+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/price_b"
+                        android:text="2+"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/price_c"
+                        android:text="3+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/price_d"
+                        android:text="4+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/price_e"
+                        android:text="  "
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/price_f"
+                        android:text="   "
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--- Living area-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/areaTitle"
+                    android:text="Living Area(Sq.Ft)"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_a"
+                        android:text="0-1000"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_b"
+                        android:text="1000-2000"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_c"
+                        android:text="2000-3000"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_d"
+                        android:text="3000+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_e"
+                        android:text="  "
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_f"
+                        android:text="   "
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!--- bath-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/bathTitle"
+                    android:text="Living Area(Sq.Ft)"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/bath_a"
+                        android:text="1+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/bath_b"
+                        android:text="2+"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/bath_c"
+                        android:text="3+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/bath_d"
+                        android:text="4+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/bath_e"
+                        android:text="5+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/area_f"
+                        android:text="   "
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--- parking-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/parkingTitle"
+                    android:text="Parking"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/parking_a"
+                        android:text="1+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/parking_b"
+                        android:text="2+"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/parking_c"
+                        android:text="3+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/parking_d"
+                        android:text="4+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/parking_e"
+                        android:text="5+"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/parking_f"
+                        android:text="   "
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--- marking-->
+            <LinearLayout
+                android:layout_marginLeft="12dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/marketTitle"
+                    android:text="Days on Market"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/market_a"
+                        android:text="New"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/market_b"
+                        android:text="Less than 7 days"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+
+                    <net.lhh.apst.fragments.MoreTextView
+                        android:layout_weight="1"
+                        android:id="@+id/market_c"
+                        android:text="Less than 30 days"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/globgray"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"></LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+    
+    <LinearLayout
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@color/globgray"
+        android:layout_width="match_parent"
+        android:layout_height="46dp">
+
+        <LinearLayout
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:textColor="@color/globalBlack"
+                android:text="重置"
+                android:id="@+id/reset_Btn"
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+
+            <Button
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:textColor="#ffffff"
+                android:text="确定"
+                android:id="@+id/search_Btn"
+
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
