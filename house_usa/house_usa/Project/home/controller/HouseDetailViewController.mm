@@ -131,7 +131,7 @@
 }
 -(void)gofd{
     
-    if(_datas){
+    if(_datas && ![@"Unknown" isEqualToString:_datas[@"list_price"]]){
         CalcutorFrontViewController *cv = [[CalcutorFrontViewController alloc] initWithNibName:@"CalcutorFrontViewController" bundle:nil];
         
           NSDictionary *data = @{@"price": _datas[@"list_price"],@"tax":_myTax};
@@ -1257,54 +1257,23 @@ _mapView.showsUserLocation = YES;
     _datacell.titleLabel.text = _datas[@"location"];
     
     
-    NSArray *adetails =  [_datas objectForKey:@"details"];
+    
+  
     
     
-    NSDictionary *all  = [adetails lastObject];
-    
-    NSDictionary *d = [all objectForKey:@"items"];
-    
-    
-    NSDictionary *df = d[@"taxes"];
+    NSDictionary *df = _datas[@"taxes"];
     
     _myTax = df[@"rawValue"];
 
     
    
-    
+    _datacell.priceLabel.textColor =GlobalRedColor;
     
        _datacell.priceLabel.text = [_datas objectForKey:@"list_price"];
   
    // _myPrice = price[@"origin_value"]?price[@"origin_value"]:price[@"value"];
     
-    if ([[self getMyLang] containsString:@"zh"]) {
-        
-        
-        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString: _datacell.priceLabel.text];
-        
-        NSRange rang = [ _datacell.priceLabel.text rangeOfString:@"万美元"];
-        NSRange pricerang =  NSMakeRange(0, rang.location);
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rang];
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:GlobalRedColor range:pricerang];
-        _datacell.priceLabel.attributedText = attrString;
-        
-    }else{
-       
-        
-        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString: _datacell.priceLabel.text];
-        
-        NSRange rang = [ _datacell.priceLabel.text rangeOfString:@"$"];
-        NSRange pricerang =  NSMakeRange(1,  _datacell.priceLabel.text.length - 1);
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rang];
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:GlobalRedColor range:pricerang];
-        _datacell.priceLabel.attributedText = attrString;
-
-        
-    }
+   
     
 
 }

@@ -7,6 +7,7 @@
 //
 
 #import "DataModel.h"
+#import "HomeModel.h"
 
 @implementation DataModel
 
@@ -152,8 +153,12 @@
     _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
     [_sessionManager.requestSerializer setValue:APPTOKEN forHTTPHeaderField:@"app-token"];
      [_sessionManager.requestSerializer setValue:newData[@"language"] forHTTPHeaderField:@"language"];
+    
+    NSString *area_id = [HomeModel sharedInstance].area;
+    
+    [_sessionManager.requestSerializer setValue:area_id forHTTPHeaderField:@"area-id"];
    
-        
+    
     [_sessionManager GET:newurl parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

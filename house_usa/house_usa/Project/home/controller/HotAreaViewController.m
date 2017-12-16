@@ -12,16 +12,23 @@
 @property (weak, nonatomic) IBOutlet UIImageView *aImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *bImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *cImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *dImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *eImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *aLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *dLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eLabel;
 
 
 
 @property (weak, nonatomic) IBOutlet UIView *aView;
 @property (weak, nonatomic) IBOutlet UIView *bView;
 @property (weak, nonatomic) IBOutlet UIView *cView;
+
+@property (weak, nonatomic) IBOutlet UIView *dView;
+@property (weak, nonatomic) IBOutlet UIView *eView;
 @end
 
 @implementation HotAreaViewController
@@ -48,11 +55,26 @@
         
           _bLabel.text =   [NSString stringWithFormat:@"%@(%@)",objb[@"name"],objb[@"desc"] ];
         NSDictionary *objc = [value objectAtIndex:2];
+        
+        
         [_cImageView sd_setImageWithURL:[NSURL URLWithString:objc[@"image_url"]] placeholderImage:nil];
           _cLabel.text =   [NSString stringWithFormat:@"%@(%@)",objc[@"name"],objc[@"desc"] ];
         
         
+        NSDictionary *objd = [value objectAtIndex:3];
         
+        
+        [_dImageView sd_setImageWithURL:[NSURL URLWithString:objd[@"image_url"]] placeholderImage:nil];
+        _dLabel.text =   [NSString stringWithFormat:@"%@(%@)",objd[@"name"],objd[@"desc"] ];
+
+        
+        
+        NSDictionary *obje = [value objectAtIndex:4];
+        
+        
+        [_eImageView sd_setImageWithURL:[NSURL URLWithString:obje[@"image_url"]] placeholderImage:nil];
+        _eLabel.text =   [NSString stringWithFormat:@"%@(%@)",obje[@"name"],obje[@"desc"] ];
+
         
         UITapGestureRecognizer *atap = [[UITapGestureRecognizer alloc] init];
         [atap addTarget:self action:@selector(atap)];
@@ -71,10 +93,37 @@
         UITapGestureRecognizer *ctap = [[UITapGestureRecognizer alloc] init];
         [ctap addTarget:self action:@selector(ctap)];
         [_cView addGestureRecognizer:ctap];
-
-
         
+        
+        
+        UITapGestureRecognizer *dtap = [[UITapGestureRecognizer alloc] init];
+        [dtap addTarget:self action:@selector(dtap)];
+        [_dView addGestureRecognizer:dtap];
+
+
+
+        UITapGestureRecognizer *etap = [[UITapGestureRecognizer alloc] init];
+        [etap addTarget:self action:@selector(etap)];
+        [_eView addGestureRecognizer:etap];
+        
+
      }
+}
+
+
+-(void)etap{
+    NSString *key = [self.datas.allKeys objectAtIndex:4];
+    NSString *name =  _datas[key][@"name"];
+    _getBackAction(@{@"code":key,@"address":name});
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+-(void)dtap{
+    NSString *key = [self.datas.allKeys objectAtIndex:3];
+    NSString *name =  _datas[key][@"name"];
+    _getBackAction(@{@"code":key,@"address":name});
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)atap{
