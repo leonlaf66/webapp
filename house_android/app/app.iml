@@ -118,8 +118,8 @@
     <orderEntry type="library" exported="" name="support-fragment-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-QZone-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Alipay-3.1.0" level="project" />
-    <orderEntry type="library" exported="" name="ShareSDK-Tumblr-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Pinterest-3.1.0" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-Tumblr-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-QQ-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Dropbox-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Wechat-Moments-3.1.0" level="project" />
@@ -179,9 +179,9 @@
     <orderEntry type="library" exported="" name="ShareSDK-KakaoStory-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Douban-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="baidumapapi_v3_3_0" level="project" />
-    <orderEntry type="library" exported="" name="locSDK_5.0" level="project" />
-    <orderEntry type="library" exported="" name="ShareSDK-KakaoTalk-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Alipay-Moments-3.1.0" level="project" />
+    <orderEntry type="library" exported="" name="ShareSDK-KakaoTalk-3.1.0" level="project" />
+    <orderEntry type="library" exported="" name="locSDK_5.0" level="project" />
     <orderEntry type="library" exported="" name="transition-26.0.0-alpha1" level="project" />
     <orderEntry type="library" exported="" name="ShareSDK-Youtube-3.1.0" level="project" />
     <orderEntry type="library" exported="" name="imagepipeline-base-0.9.0" level="project" />

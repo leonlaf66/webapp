@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -21,10 +21,10 @@
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/res/values/colors.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/res/values/colors.xml -->
     <eat-comment/>
     <color name="background_tab_pressed">#6633B5E5</color>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
     <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
@@ -65,10 +65,10 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/res/values/colors.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/res/values/colors.xml -->
     <eat-comment/>
     <color name="red">#ff0066</color>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
     <eat-comment/>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
@@ -212,7 +212,7 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/res/values/dimens.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="psts_dot_linelayout_h">23dp</dimen>
     <dimen name="psts_dot_m_right">9dp</dimen>
@@ -221,7 +221,7 @@
     <dimen name="psts_dot_txt_size">10sp</dimen>
     <dimen name="psts_dot_wh">10dp</dimen>
     <dimen name="psts_indicator_circle">4dp</dimen>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
     <eat-comment/>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
@@ -230,18 +230,18 @@
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
     <item name="home" type="id"/>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/res/values/ids.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/res/values/ids.xml -->
     <eat-comment/>
     <item name="id_tab_txt" type="id">888</item>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
     <eat-comment/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="split_action_bar" type="id"/>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/res/values/ids.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/res/values/ids.xml -->
     <eat-comment/>
     <item name="tag_position" type="id"/>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values/values.xml -->
     <eat-comment/>
     <item name="up" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>

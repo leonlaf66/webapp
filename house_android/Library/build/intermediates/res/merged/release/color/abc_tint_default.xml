@@ -23,4 +23,4 @@
     <item android:state_selected="true" android:color="?attr/colorControlActivated"/>
     <item android:state_checked="true" android:color="?attr/colorControlActivated"/>
     <item android:color="?attr/colorControlNormal"/>
-</selector><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color/abc_tint_default.xml -->
+</selector><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color/abc_tint_default.xml -->

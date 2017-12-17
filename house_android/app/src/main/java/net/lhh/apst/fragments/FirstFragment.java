@@ -1012,7 +1012,7 @@ public class FirstFragment extends BaseFragment{
         JSONObject obj = new JSONObject();
         try {
             obj.put("config_id","androidVersion");
-            obj.put("config_content","3.0");
+            obj.put("config_content","4.0");
         } catch (JSONException e) {
             e.printStackTrace();
         }

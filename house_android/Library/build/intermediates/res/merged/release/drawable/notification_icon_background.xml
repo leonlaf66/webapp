@@ -19,4 +19,4 @@
     android:shape="oval">
     <solid
         android:color="@color/notification_icon_bg_color"/>
-</shape><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable/notification_icon_background.xml -->
+</shape><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable/notification_icon_background.xml -->

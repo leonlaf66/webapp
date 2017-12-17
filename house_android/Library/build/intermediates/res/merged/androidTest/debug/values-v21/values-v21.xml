@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values-v21/values-v21.xml -->
+    <!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <color name="notification_action_color_filter">@color/secondary_text_default_material_light</color>
     <dimen name="notification_content_margin_start">0dp</dimen>

@@ -28,4 +28,4 @@
         android:textAppearance="?attr/actionMenuTextAppearance"
         android:textColor="?attr/actionMenuTextColor"
         style="?attr/actionButtonStyle"/>
-<!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout/abc_action_menu_item_layout.xml -->
+<!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout/abc_action_menu_item_layout.xml -->

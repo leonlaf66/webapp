@@ -23,4 +23,4 @@
         android:visibility="gone"
         android:theme="?attr/actionBarTheme"
         style="?attr/actionModeStyle"/>
-<!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout/abc_action_mode_bar.xml -->
+<!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/layout/abc_action_mode_bar.xml -->

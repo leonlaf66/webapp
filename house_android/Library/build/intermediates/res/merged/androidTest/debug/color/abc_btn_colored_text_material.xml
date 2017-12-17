@@ -21,4 +21,4 @@
           app:alpha="?android:attr/disabledAlpha"
           android:color="?android:attr/textColorPrimary" />
     <item android:color="?android:attr/textColorPrimaryInverse" />
-</selector><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color/abc_btn_colored_text_material.xml -->
+</selector><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/color/abc_btn_colored_text_material.xml -->

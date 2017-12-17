@@ -19,4 +19,4 @@
     android:color="@color/ripple_material_light">
     <item android:id="@android:id/mask"
         android:drawable="@drawable/abc_btn_default_mtrl_shape" />
-</ripple><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable-v21/notification_action_background.xml -->
+</ripple><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable-v21/notification_action_background.xml -->

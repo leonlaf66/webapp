@@ -5,4 +5,4 @@
     <item android:state_focused="true" android:drawable="@color/background_tab_pressed"/>
     <item android:drawable="@android:color/transparent"/>
 
-</selector><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/res/drawable/psts_background_tab.xml --><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/bundles/debug/res/drawable/psts_background_tab.xml -->
+</selector><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/res/drawable/psts_background_tab.xml --><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/bundles/debug/res/drawable/psts_background_tab.xml -->

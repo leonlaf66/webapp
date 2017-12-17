@@ -19,4 +19,4 @@
     <size android:width="@dimen/abc_progress_bar_height_material"
           android:height="@dimen/abc_progress_bar_height_material"/>
     <solid android:color="@android:color/white"/>
-</shape><!-- From: file:/Users/ssvfhppl/Desktop/AdvancedPagerSlidingTabStrip-master/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable/abc_seekbar_tick_mark_material.xml -->
+</shape><!-- From: file:/Users/ssvfhppl/webapp/house_android/Library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/26.0.0-alpha1/res/drawable/abc_seekbar_tick_mark_material.xml -->
