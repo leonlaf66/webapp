@@ -403,7 +403,7 @@ public class FirstFragment extends BaseFragment{
 
         loadLanguage();
         getHotAreaDatas();
-       addVersion();
+     //  addVersion();
         new UpdateManager(getActivity()).checkUpdate();
         return view;
     }
@@ -888,7 +888,7 @@ public class FirstFragment extends BaseFragment{
                     ld_stars.getDrawable(2).setColorFilter(getResources().getColor(R.color.green), PorterDuff.Mode.SRC_ATOP);
                     TextView title = (TextView) ov.findViewById(R.id.servicetitle);
                     title.setText(item.get("name").toString());
-                     ZQImageViewRoundOval imageView = (ZQImageViewRoundOval)ov.findViewById(R.id.newImg);//圆形图片
+                    ImageView imageView = (ImageView)ov.findViewById(R.id.newImg);//圆形图片
                      serContent.addView(ov);
 
                     Glide.with(getActivity())

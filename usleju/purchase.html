@@ -1112,6 +1112,10 @@
 				if(window.market) {
 					param['filters[market]'] = window.market;
 				}
+				
+				param['area_id'] =  window.sessionStorage.getItem('area_id')?window.sessionStorage.getItem('area_id'):'ma';
+				
+				
 
 				$.ajax({
 					url: 'http://api.usleju.cn/estate/house/search',

@@ -176,6 +176,8 @@
 				var one;
 				var two;
 				var three;
+				var four;
+				var five;
 				
 				for(var key in window.area){
 					if(i == 0){
@@ -188,6 +190,13 @@
 						three = window.area[key];
 						three.key = key;
 					}
+					else if(i == 3){
+						four = window.area[key];
+						four.key = key;
+					}else if(i == 4){
+						five = window.area[key];
+						five.key = key;
+					}
 					i++;
 				}
 				var widht = $(window).width()*0.9 / 2 - 10;
@@ -196,18 +205,40 @@
 				html += '<div style="background:#f2f2f2;height:1px;"></div>';
 				html +='<table style="width:100%;"><tbody>'
 				
-				html +='<tr><td rowspan="2" width="50%"><div key="'+one.key+'" class="areaItem"><img src="'+one.image_url+'" style="width:'+widht+'px;margin-left:5px;height:200px;margin-top:5px;margin-bottom: 5px;"/>';
-				html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+one.name+'</div>';
+					html +='<tr>';
+					html +='<td width="50%"><div key="'+one.key+'" class="areaItem"><img src="'+one.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
+					html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+one.name+'</div>';
+				html +='</div></td>';
+					html +='<td width="50%"><div key="'+two.key+'" class="areaItem"><img src="'+two.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
+					html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+two.name+'</div>';
+				html +='</div></td>';
+				html +='</tr>';
 				
+				
+					html +='<tr>';
+					html +='<td width="50%"><div key="'+three.key+'" class="areaItem"><img src="'+three.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
+					html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+three.name+'</div>';
+				html +='</div></td>';
+					html +='<td width="50%"><div key="'+four.key+'" class="areaItem"><img src="'+four.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
+					html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+four.name+'</div>';
 				html +='</div></td>';
 				
-				html  +='<td width="50%"><div key="'+two.key+'" class="areaItem"><img src="'+two.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
-				html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+two.name+'</div>';
-				html +='</div></td></tr>';
 				
-				html +='<tr>	<td width="50%"><div key="'+three.key+'" class="areaItem"><img src="'+three.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
-					html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+three.name+'</div>';
-				html +='</div></td></tr>';
+					html +='</tr>';
+					
+					
+					
+					
+					
+					
+					html +='<tr>';
+					html +='<td width="50%"><div key="'+five.key+'" class="areaItem"><img src="'+five.image_url+'" style="width:'+widht+'px;margin-top:5px;height:95px;"/>';
+					html +='<div style="height:20px; position:relative;left: 5px;top: -30px;color:white;padding-left:5px;font-size:14px;">'+five.name+'</div>';
+				html +='</div></td>';
+					html +='<td width="50%"></td>';
+				
+				
+					html +='</tr>';
 				
 				html +='</tbody></table>'
 				
@@ -353,7 +384,7 @@
 					beforeSend: function(request) {
 						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
 						request.setRequestHeader("language", window.lang || 'en-US');
-
+	                    //request.setRequestHeader("area_id",window.sessionStorage.getItem('area_id')?window.sessionStorage.getItem('area_id'):'ma');
 					},
 					success: function(data, textStatus, jqXHR) {
 						var obj = data;
