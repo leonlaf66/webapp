@@ -230,7 +230,7 @@ public class FirstFragment extends BaseFragment{
                                     e.printStackTrace();
                                 }
                                 loadDatas();
-
+                                ((IconTabActivity) getActivity()).onRefresha();
                             }
                         });
 
@@ -247,7 +247,7 @@ public class FirstFragment extends BaseFragment{
                                     e.printStackTrace();
                                 }
                                 loadDatas();
-
+                                ((IconTabActivity) getActivity()).onRefresha();
                             }
                         });
 
@@ -264,6 +264,8 @@ public class FirstFragment extends BaseFragment{
                                     e.printStackTrace();
                                 }
                                 loadDatas();
+
+                                ((IconTabActivity) getActivity()).onRefresha();
                             }
                         });
 
@@ -279,7 +281,7 @@ public class FirstFragment extends BaseFragment{
                                     e.printStackTrace();
                                 }
                                 loadDatas();
-
+                                ((IconTabActivity) getActivity()).onRefresha();
                             }
                         });
 
@@ -296,7 +298,7 @@ public class FirstFragment extends BaseFragment{
                                     e.printStackTrace();
                                 }
                                 loadDatas();
-
+                                ((IconTabActivity) getActivity()).onRefresha();
                             }
                         });
 

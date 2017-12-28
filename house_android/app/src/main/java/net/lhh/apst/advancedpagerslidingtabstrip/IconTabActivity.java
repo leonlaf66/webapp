@@ -257,6 +257,11 @@ public class IconTabActivity extends AppCompatActivity implements ViewPager.OnPa
 
     }
 
+    public  void onRefresha(){
+
+        mSecondFragment.onRefresha();
+    }
+
     public  void initLang(){
         mSecondFragment.initLang();
     }

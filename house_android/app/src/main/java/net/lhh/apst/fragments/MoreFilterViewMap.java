@@ -106,9 +106,9 @@ public class MoreFilterViewMap extends LinearLayout {
         type_f = findViewById(R.id.type_f);
 
 
-       // type_a.setChecked(true);
-       // type_b.setChecked(true);
-       // type_c.setChecked(true);
+        type_a.setChecked(true);
+        type_b.setChecked(true);
+        type_c.setChecked(true);
 
 
 

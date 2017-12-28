@@ -740,6 +740,13 @@ public class SecondFragment extends BaseFragment implements  SwipeRefreshLayout.
 
         return view;
     }
+    public void onRefresha() {
+
+        currentPage = 1;
+        list = new LinkedList();
+        new LoadDataThread().start();
+
+    }
 
 
     @Override
