@@ -229,6 +229,7 @@ public class FirstFragment extends BaseFragment{
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
+                                loadDatas();
 
                             }
                         });
@@ -245,6 +246,7 @@ public class FirstFragment extends BaseFragment{
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
+                                loadDatas();
 
                             }
                         });
@@ -261,6 +263,7 @@ public class FirstFragment extends BaseFragment{
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
+                                loadDatas();
                             }
                         });
 
@@ -275,6 +278,7 @@ public class FirstFragment extends BaseFragment{
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
+                                loadDatas();
 
                             }
                         });
@@ -291,6 +295,7 @@ public class FirstFragment extends BaseFragment{
                                 }catch (Exception e){
                                     e.printStackTrace();
                                 }
+                                loadDatas();
 
                             }
                         });
@@ -403,7 +408,7 @@ public class FirstFragment extends BaseFragment{
 
         loadLanguage();
         getHotAreaDatas();
-     //  addVersion();
+      //addVersion();
         new UpdateManager(getActivity()).checkUpdate();
         return view;
     }
@@ -1012,7 +1017,7 @@ public class FirstFragment extends BaseFragment{
         JSONObject obj = new JSONObject();
         try {
             obj.put("config_id","androidVersion");
-            obj.put("config_content","4.0");
+            obj.put("config_content","5.0");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -1038,7 +1043,7 @@ public class FirstFragment extends BaseFragment{
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError arg0) {
-
+int a = 1;
             }
         }) {
             @Override

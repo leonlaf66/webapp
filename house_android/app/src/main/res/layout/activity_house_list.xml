@@ -73,8 +73,8 @@
                     <ImageView android:src="@mipmap/map_white"
                         android:id="@+id/goMapBtn"
                         android:layout_centerInParent="true"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"></ImageView>
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"></ImageView>
 
                 </RelativeLayout>
             </RelativeLayout>
@@ -355,6 +355,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentTop="true"
                     android:text="Sort"
+                    android:id="@+id/sort_text"
                     android:textSize="10dp"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"

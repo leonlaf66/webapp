@@ -389,6 +389,14 @@ _mapView.showsUserLocation = YES;
     
     
     [self requestUrl];
+    
+    if([WXApi isWXAppInstalled]){
+        
+        
+    }else{
+        _shareBtn.hidden = YES;
+    }
+
 
 }
 -(void)goNearBy{

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailsViewController">
             <connections>
                 <outlet property="ctitleLabel" destination="U1N-rE-xhG" id="5H9-Co-4OU"/>
+                <outlet property="sBtn" destination="SoE-6W-d7P" id="tPH-H5-vFE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="webView" destination="NZX-mt-KKG" id="IuQ-W7-iWz"/>
             </connections>

@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *thirdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *aggLabel;
 @property (weak, nonatomic) IBOutlet UIButton *regBtn;
+@property (weak, nonatomic) IBOutlet UIButton *wBtn;
 
 @end
 
@@ -111,11 +112,28 @@
 }
 - (IBAction)wxLogin:(id)sender {
     
-    SendAuthReq* req = [[SendAuthReq alloc ] init  ];
-    req.scope = @"snsapi_userinfo" ;
-    req.state = @"123" ;
-    //第三方向微信终端发送一个SendAuthReq消息结构
-    [WXApi sendReq:req];
+    if([WXApi isWXAppInstalled]){
+        SendAuthReq* req = [[SendAuthReq alloc ] init  ];
+        req.scope = @"snsapi_userinfo" ;
+        req.state = @"123" ;
+        //第三方向微信终端发送一个SendAuthReq消息结构
+        [WXApi sendReq:req];
+
+    }else{
+        
+        if([[self getMyLang] containsString:@"zh"]){
+            
+            
+            [self showMsg:@"请先安装微信客户端"];
+            
+        }else{
+            
+            [self showMsg:@"Please install WeChat client first"];
+        
+            
+        }
+    }
+    
     
     
 }
@@ -136,6 +154,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    if([WXApi isWXAppInstalled]){
+        
+        _wBtn.hidden = NO;
+
+    }else{
+        _wBtn.hidden = YES;
+    }
     // Do any additional setup after loading the view from its nib.
     
     _loginBtn.layer.cornerRadius = 3;

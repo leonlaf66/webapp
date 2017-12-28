@@ -15,8 +15,8 @@ android {
         applicationId "net.lhh.apst.advancedpagerslidingtabstrip"
         minSdkVersion 14
         targetSdkVersion 26
-        versionCode 4
-        versionName "4.0"
+        versionCode 5
+        versionName "5.0"
         signingConfig signingConfigs.config
     }
     buildTypes {

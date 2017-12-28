@@ -11,6 +11,7 @@
 #import "LXActivity.h"
 @interface NewsDetailsViewController ()<LXActivityDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIButton *sBtn;
 
 @end
 
@@ -22,6 +23,13 @@
    // self.ctitleLabel.text = self.lang[@"nearbyTitle"];
     // Do any additional setup after loading the view from its nib.
     self.ctitleLabel.text = _data[@"title"];
+    
+    if([WXApi isWXAppInstalled]){
+        
+        
+    }else{
+        _sBtn.hidden = YES;
+    }
 }
 - (IBAction)shareActions:(id)sender {
     

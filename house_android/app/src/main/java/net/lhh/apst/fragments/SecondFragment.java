@@ -668,7 +668,7 @@ public class SecondFragment extends BaseFragment implements  SwipeRefreshLayout.
 
                         for(int i = 0;i < keys.length();i++){
                             JSONObject obj = keys.getJSONObject(i);
-                            if(obj.getString("title").contains(inputText.getText())){
+                            if( obj.getString("title").toLowerCase().startsWith(inputText.getText().toString())){
 
                                 tem.add(obj);
                                 if(tem.size() == 6){

@@ -139,7 +139,7 @@ public class UpdateManager {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError arg0) {
-
+      int a = 1;
             }
         }) {
             @Override

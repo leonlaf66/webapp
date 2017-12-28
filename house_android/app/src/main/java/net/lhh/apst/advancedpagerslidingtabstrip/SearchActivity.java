@@ -244,7 +244,7 @@ public class SearchActivity extends BaseActivity {
 
                             for(int i = 0;i < keys.length();i++){
                                 JSONObject obj = keys.getJSONObject(i);
-                                if(obj.getString("title").contains(inputText.getText())){
+                                if( obj.getString("title").toLowerCase().startsWith(inputText.getText().toString())){
 
                                     tem.add(obj);
                                     if(tem.size() == 6){
@@ -427,6 +427,8 @@ public class SearchActivity extends BaseActivity {
                 try {
                     // MCrypt mCrypt = new MCrypt();
                     // headers.put("accept", "text/json");
+                    App app =  (App)getApplication();
+                    headers.put("area-id",  app.area);
                     headers.put("app-token",  AppCfg.TOKEN);
                     headers.put("language", getLanguage());
                 } catch (Exception e) {
@@ -490,6 +492,8 @@ public class SearchActivity extends BaseActivity {
                 try {
                     // MCrypt mCrypt = new MCrypt();
                     // headers.put("accept", "text/json");
+                    App app =  (App)getApplication();
+                    headers.put("area-id",  app.area);
                     headers.put("app-token",  AppCfg.TOKEN);
                     headers.put("language", getLanguage());
                 } catch (Exception e) {
