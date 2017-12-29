@@ -51,42 +51,45 @@
       _houseDayLabel.text = _data[@"list_days_description"];
     
    // NSLog(@"--%@",_data[@"list_price"]);
+          self.priceLabel.textColor =GlobalRedColor;
     
     if([[self getMyLang] containsString:@"zh"]){
     
          self.priceLabel.text = [NSString stringWithFormat:@"售价：%@",_data[@"list_price"]];
      _descLabel.text =  [NSString stringWithFormat:@"卧室 %@| 全卫 %@ 半卫 %@ | 居住面积 %@",_data[@"no_bedrooms"],_data[@"no_full_baths"],_data[@"no_half_baths"],_data[@"square_feet"]];
         
-        
-        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:  self.priceLabel.text];
-        
-        NSRange rang = [ self.priceLabel.text rangeOfString:@"万美元"];
-        
-        if(rang.length == 0){
-        rang = [ self.priceLabel.text rangeOfString:@"$"];
-        
-        }
-        NSRange pricerang =  NSMakeRange(3, rang.location);
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rang];
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:GlobalRedColor range:pricerang];
-        self.priceLabel.attributedText = attrString;
+  
+//        
+//        
+//        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:  self.priceLabel.text];
+//        
+//        NSRange rang = [ self.priceLabel.text rangeOfString:@"万美元"];
+//        
+//        if(rang.length == 0){
+//        rang = [ self.priceLabel.text rangeOfString:@"$"];
+//        
+//        }
+//        NSRange pricerang =  NSMakeRange(3, rang.location);
+//        
+//        [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rang];
+//        
+//        [attrString addAttribute:NSForegroundColorAttributeName value:GlobalRedColor range:pricerang];
+//        self.priceLabel.attributedText = attrString;
         
     }else{
           self.priceLabel.text = [NSString stringWithFormat:@"Price：%@",_data[@"list_price"]];
           _descLabel.text =  [NSString stringWithFormat:@"%@beds %@.%@baths %@",_data[@"no_bedrooms"],_data[@"no_full_baths"],_data[@"no_half_baths"],_data[@"square_feet"]];
         
         
-        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString: self.priceLabel.text];
-        
-        NSRange rang =  NSMakeRange(0,  6);
-        NSRange pricerang =  NSMakeRange(6,  self.priceLabel.text.length - 6);
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rang];
-        
-        [attrString addAttribute:NSForegroundColorAttributeName value:GlobalRedColor range:pricerang];
-        self.priceLabel.attributedText = attrString;
+//        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString: self.priceLabel.text];
+//        
+//        NSRange rang =  NSMakeRange(0,  6);
+//        NSRange pricerang =  NSMakeRange(6,  self.priceLabel.text.length - 6);
+//        
+//        [attrString addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:rang];
+//        
+//        [attrString addAttribute:NSForegroundColorAttributeName value:GlobalRedColor range:pricerang];
+//        self.priceLabel.attributedText = attrString;
     
     }
     

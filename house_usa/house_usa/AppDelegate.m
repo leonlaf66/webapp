@@ -33,7 +33,7 @@
     
    // [self loadKeys];
     
-  // [self addVersion];
+   [self addVersion];
    
 
     return YES;
@@ -43,7 +43,7 @@
     
     
     [[HomeModel sharedInstance] addCfg:@{@"config_id":@"iosVersion",
-                                         @"config_content":@"5.8"} success:^(id operation) {
+                                         @"config_content":@"6.0"} success:^(id operation) {
         
        
         

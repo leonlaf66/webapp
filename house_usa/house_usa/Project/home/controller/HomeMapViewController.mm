@@ -156,6 +156,7 @@
         weakSelf.bgView.hidden = YES;
         
     };
+   
     CGFloat height = ScreenHight;
     
     
@@ -271,6 +272,7 @@
 -(void)resetActionBycon{
     
     [_filterController setAction];
+    
 }
 
 -(void)tapped{
