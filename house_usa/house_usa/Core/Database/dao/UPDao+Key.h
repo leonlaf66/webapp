@@ -10,7 +10,7 @@
 #import "Key.h"
 @interface UPDao (Key)
 //创建
-- (void)createSearchKey:(Key *)key;
+- (void)createSearchKey:(NSArray *)key;
 
 //删除
 - (void)deleteAllSearchKey;

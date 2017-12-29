@@ -12,12 +12,24 @@
 
 
 
-- (void)createSearchKey:(Key *)key{
+- (void)createSearchKey:(NSArray *)operation{
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self inTransaction:^(FMDatabase *db, BOOL *rollback) {
             
-             [db executeUpdate:@"delete from "TABLE_BT_KEY" where keyName=?",key.cityName];
-             [db executeUpdate:@"INSERT INTO "TABLE_BT_KEY"(keyName,keyCode) VALUES(?,?)",key.cityName,key.cityCode];
+            // [db executeUpdate:@"delete from "TABLE_BT_KEY" where keyName=?",key.cityName];
+            
+            
+            
+            for (NSDictionary *obj  in operation) {
+                
+                Key *key = [[Key alloc] init];
+                key.cityName = obj[@"desc"];
+                key.cityCode = obj[@"title"];
+                
+                [db executeUpdate:@"INSERT INTO "TABLE_BT_KEY"(keyName,keyCode) VALUES(?,?)",key.cityName,key.cityCode];
+                
+            }
+            
             
         }];
     });

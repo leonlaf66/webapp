@@ -260,6 +260,8 @@
     
     [mapBtn addSubview:suoxiao];
     
+    [_filterController setTypes:@[@{@"value":@"sf"},@{@"value":@"mf"},@{@"value":@"cc"}]];
+    
     [self searchActionBycon];
     
 

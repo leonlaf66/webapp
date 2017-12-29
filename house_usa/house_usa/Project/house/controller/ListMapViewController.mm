@@ -577,7 +577,7 @@
     
     [self.view insertSubview:_comView aboveSubview:_bgView];
 
-    
+     [_filterController setTypes:@[@{@"value":@"sf"},@{@"value":@"mf"},@{@"value":@"cc"}]];
     
     if(_fromHome){
         
@@ -928,7 +928,7 @@
 //            }
             
         }else{
-             [params setObject:@"Boston" forKey:@"q"];
+            //[params setObject:@"Boston" forKey:@"q"];
         }
      
     }

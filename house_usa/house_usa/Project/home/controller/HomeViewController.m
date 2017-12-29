@@ -113,6 +113,8 @@
             _hotAreaDatas  = obj;
                        // _headercell
             
+            [self loadKeys];
+            
         }
         [self.tableView.header beginRefreshing];
         
@@ -698,38 +700,25 @@
 
 -(void)loadKeys{
     
-    NSMutableArray *datas = [[UPDao sharedInstance]  getSearchKeys:@"波士"];
-    
-    if([datas count] > 0){
-        return;
-    }else{
+    [[UPDao sharedInstance] deleteAllSearchKey];
+
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
-        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSDictionary *params = @{};
+        [[HomeModel sharedInstance] findKeyWordsList:params success:^(id operation) {
             
-            NSDictionary *params = @{};
-            [[HomeModel sharedInstance] findKeyWordsList:params success:^(id operation) {
+            if([operation[@"code"] integerValue] == 200){
                 
-                if([operation[@"code"] integerValue] == 200){
-                    
-                    for (NSDictionary *obj  in operation[@"data"]) {
-                        
-                        Key *key = [[Key alloc] init];
-                        key.cityName = obj[@"desc"];
-                        key.cityCode = obj[@"title"];
-                        [[UPDao sharedInstance] createSearchKey:key];
-                    }
-                    
-                    NSLog(@"");
-                }
+                 [[UPDao sharedInstance] createSearchKey:operation[@"data"]];
                 
-            } failure:^(NSError *error) {
-                
-            }];
+                NSLog(@"");
+            }
             
-        });
+        } failure:^(NSError *error) {
+            
+        }];
         
-    }
-    
+    });
     
     
 }
