@@ -964,9 +964,10 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
                 }catch (Exception e){
                     e.printStackTrace();
                 }
+                latlong = null;
 
             }else{
-                sb.append("&q=").append("Boston");
+               // sb.append("&q=").append("Boston");
             }
 
             //sb.append("&area_id=").append(app.area);

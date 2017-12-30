@@ -56,10 +56,9 @@
                         android:id="@+id/searchgo"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginTop="10dp"
                         android:layout_marginLeft="8dp"
                         android:layout_marginRight="5dp"
-                        android:layout_height="10dp"></ImageView>
+                        android:layout_height="match_parent"></ImageView>
 
                 </RelativeLayout>
                 <RelativeLayout
@@ -74,7 +73,7 @@
                         android:id="@+id/goMapBtn"
                         android:layout_centerInParent="true"
                         android:layout_width="20dp"
-                        android:layout_height="20dp"></ImageView>
+                        android:layout_height="match_parent"></ImageView>
 
                 </RelativeLayout>
             </RelativeLayout>
