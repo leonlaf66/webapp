@@ -43,7 +43,7 @@
     
     
     [[HomeModel sharedInstance] addCfg:@{@"config_id":@"iosVersion",
-                                         @"config_content":@"6.0"} success:^(id operation) {
+                                         @"config_content":@"7.0"} success:^(id operation) {
         
        
         
