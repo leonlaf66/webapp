@@ -331,7 +331,7 @@ public class NewsDetailsActivity extends BaseActivity {
                         String content = data.getString("content");
                         //webView.loadData(content,"text/html", "utf-8");
 
-                        String contents =   content.replaceAll("img","img style='width:"+widtha+"px;'");
+                        String contents =   content.replaceAll("<img","<img style='width:"+widtha+"px;'");
 
                         webView.loadDataWithBaseURL(null, contents, "text/html", "utf-8", null);
                         hideLoading();
