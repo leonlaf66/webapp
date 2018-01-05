@@ -819,7 +819,7 @@
 -(void)searchActionnewlat{
     _filerView.hidden = YES;
     
-    _bgView.hidden = YES;
+       _bgView.hidden = YES;
 
        _mapView.showsUserLocation = YES;
     
@@ -829,7 +829,20 @@
     
     [params setObject:_type forKey:@"type"];
     
-  
+    if([[_searchTextInput.text trim] length] > 0){
+        [params setObject:_searchTextInput.text forKey:@"q"];
+        
+        
+        
+    }else{
+        
+        _mapView.showsUserLocation = NO;
+        
+        [_filters removeObjectForKey:@"latlon"];
+    
+        
+    }
+
     
     
    
@@ -921,6 +934,12 @@
         
         
     }else{
+        
+        _mapView.showsUserLocation = NO;
+        
+        [_filters removeObjectForKey:@"latlon"];
+
+        
         if(_fromHome){
             
 //            if([HomeModel sharedInstance].area){
