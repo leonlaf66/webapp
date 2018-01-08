@@ -131,10 +131,10 @@
 }
 -(void)gofd{
     
-    if(_datas && ![@"Unknown" isEqualToString:_datas[@"list_price"]]){
+    if(_datas && ![@"Unknown" isEqualToString:_datas[@"list_price"]] ){
         CalcutorFrontViewController *cv = [[CalcutorFrontViewController alloc] initWithNibName:@"CalcutorFrontViewController" bundle:nil];
         
-          NSDictionary *data = @{@"price": _datas[@"list_price"],@"tax":_myTax};
+        NSDictionary *data = @{@"price": _datas[@"list_price"],@"tax":_myTax};
         
         [cv setData:data];
         [self.navigationController pushViewController:cv animated:YES];
@@ -1271,8 +1271,14 @@ _mapView.showsUserLocation = YES;
     
     NSDictionary *df = _datas[@"taxes"];
     
-    _myTax = df[@"rawValue"];
+    if(df){
+        _myTax = df[@"rawValue"];
 
+    }else{
+        _myTax = 0;
+    }
+    
+  
     
    
     _datacell.priceLabel.textColor =GlobalRedColor;

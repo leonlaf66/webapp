@@ -81,14 +81,14 @@
         [self hideLoading];
         //created_at
         if([operation[@"code"] integerValue] == 200){
-             NSString *html = [NSString stringWithFormat:@"<h2>%@</h2><br/><img src='%@' style='width:%fpx'><br/>%@&nbsp;&nbsp;米乐居",_data[@"title"],_data[@"image"],(ScreenWidth - 30),operation[@"data"][@"created_at"]];
+             NSString *html = [NSString stringWithFormat:@"<h2>%@</h2><br/><img src='%@' style='width:%dpx'><br/>%@&nbsp;&nbsp;米乐居",_data[@"title"],_data[@"image"],(ScreenWidth - 30),operation[@"data"][@"created_at"]];
             
             
             
             NSString *htmla = operation[@"data"][@"content"];
             
             
-             NSString *htmewn =   [htmla stringByReplacingOccurrencesOfString:@"<img" withString:[NSString stringWithFormat:@"<img  style='width:%fpx'",(ScreenWidth - 30)]];
+             NSString *htmewn =   [htmla stringByReplacingOccurrencesOfString:@"<img" withString:[NSString stringWithFormat:@"<img  style='width:%dpx'",(ScreenWidth - 30)]];
             
             
                NSString *newhtml = [NSString stringWithFormat:@"%@<br/>%@",html,htmewn];

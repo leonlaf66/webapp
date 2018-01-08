@@ -755,7 +755,7 @@
     
     if(_key){
     
-        [filters setObject:_key forKey:@"city_code"];
+        [filters setObject:_key forKey:@"city_id"];
     }else{
         if([[self.searchTextInput.text trim] length] >0){
             
