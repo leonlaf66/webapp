@@ -115,7 +115,7 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
     MapStatus ms;
     private ClusterManager<MyItem> mClusterManager;
 
-    float zoom = 11.f;
+    float zoom = 10.f;
 
     MyItem  currentItem = null;
 
@@ -584,7 +584,7 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
                 LatLng lll = new LatLng(latitude,
                         longitude);
                 MapStatus.Builder builderl = new MapStatus.Builder();
-                builderl.target(lll).zoom(11.0f);
+                builderl.target(lll).zoom(zoom);
                 mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builderl.build()));
 
 
@@ -714,7 +714,7 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
             // LatLng ll = new LatLng(42.425293,
                    //  -71.285443);
              MapStatus.Builder builder = new MapStatus.Builder();
-             builder.target(ll).zoom(14.0f);
+             builder.target(ll).zoom(zoom);
              mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
 
             // latlong = "&filters[latlon]=42.425293,-71.285443";
