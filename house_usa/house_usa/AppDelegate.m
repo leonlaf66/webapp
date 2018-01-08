@@ -33,7 +33,7 @@
     
    // [self loadKeys];
     
-   [self addVersion];
+  // [self addVersion];
    
 
     return YES;

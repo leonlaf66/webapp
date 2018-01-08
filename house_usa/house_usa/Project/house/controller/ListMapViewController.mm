@@ -832,13 +832,13 @@
     if([[_searchTextInput.text trim] length] > 0){
         [params setObject:_searchTextInput.text forKey:@"q"];
         
-        
-        
-    }else{
-        
         _mapView.showsUserLocation = NO;
         
         [_filters removeObjectForKey:@"latlon"];
+        
+    }else{
+        
+     
     
         
     }
@@ -922,37 +922,23 @@
     
        _mapView.showsUserLocation = NO;
    
-     [_filters removeObjectForKey:@"latlon"];
+    // [_filters removeObjectForKey:@"latlon"];
     
      [params setObject:_type forKey:@"type"];
     
     if([[_searchTextInput.text trim] length] > 0){
-      [params setObject:_searchTextInput.text forKey:@"q"];
-       
-        
-     
-        
-        
-    }else{
+        [params setObject:_searchTextInput.text forKey:@"q"];
         
         _mapView.showsUserLocation = NO;
         
         [_filters removeObjectForKey:@"latlon"];
-
         
-        if(_fromHome){
-            
-//            if([HomeModel sharedInstance].area){
-//                [params setObject:[HomeModel sharedInstance].area  forKey:@"q"];
-//            }
-            
-        }else{
-            //[params setObject:@"Boston" forKey:@"q"];
-        }
-     
+    }else{
+        
+        
+        
+        
     }
-    
-   
     
      //[params setObject:@"200" forKey:@"limit"];
     
@@ -976,7 +962,8 @@
         _mapView.showsUserLocation = NO;
         _mapView.userTrackingMode = BMKUserTrackingModeFollow;
         _mapView.showsUserLocation = YES;
-
+    
+_searchTextInput.text = @"";
           [_locService startUserLocationService];
     
     }else{
