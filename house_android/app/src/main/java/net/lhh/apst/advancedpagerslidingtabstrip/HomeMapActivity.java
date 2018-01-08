@@ -58,6 +58,7 @@ import com.baidu.mapapi.model.LatLng;
 import java.io.IOException;
 import java.io.Serializable;
 import java.net.URLEncoder;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -780,7 +781,8 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
                 if(getLanguage().contains("zh")){
                     newprice = price+"万美元";
                 }else{
-                    newprice = "$" + Double.parseDouble(price)*10000;
+                    DecimalFormat df   = new DecimalFormat("######0.00");
+                    newprice = "$" + df.format(Double.parseDouble(price)*10000);
                 }
 
 
@@ -947,12 +949,14 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
 
                 try{
                     sb.append("&").append("q="+ URLEncoder.encode(inputText.getText().toString(),"utf-8"));
+                    latlong = null;
                 }catch (Exception e){
                     e.printStackTrace();
                 }
 
             }else{
                // sb.append("&q=").append(app.area);
+
             }
 
 
@@ -1151,6 +1155,13 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
 
                     if(code == 200){
                         initHouseDatas(jsonObject.getJSONObject("data"));
+                    }else{
+                        if(getLanguage().contains("zh")){
+                            countText.setText("共"+0+"套房源");
+
+                        }else{
+                            countText.setText("There are "+0+" houses");
+                        }
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
