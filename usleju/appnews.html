@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title id="myTitle"></title>
+		<meta http-equiv="Access-Control-Allow-Origin" content="*">
+		<meta http-equiv="content-security-policy">
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body style="background: white;margin-top: 20px;">
+		
+
+		<div id="allContail" style="padding-left: 5px;padding-right: 5px;">
+
+		</div>
+		
+		<div class="-mob-share-ui" style="display: none">
+    <ul class="-mob-share-list">
+    	    <li class="-mob-share-weixin"><p>微信</p></li>
+        <li class="-mob-share-weibo"><p>新浪微博</p></li>
+        <li class="-mob-share-qq"><p>QQ好友</p></li>
+          <li class="-mob-share-qzone"><p>QQ空间</p></li>
+        <li class="-mob-share-facebook"><p>Facebook</p></li>
+        <li class="-mob-share-twitter"><p>Twitter</p></li>
+        <li class="-mob-share-google"><p>Google</p></li>
+        
+    </ul>
+    <div class="-mob-share-close" id="mycancel">取消</div>
+</div>
+<div class="-mob-share-ui-bg"></div>
+<script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=185b3576c3ffe"></script>
+      
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery.js"></script>
+		<script type="text/javascript">
+			$('#backBtn').click(function() {
+				window.history.go(-1);
+			});
+
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return unescape(r[2]);
+				return null;
+			}
+			var lang = GetQueryString('language');
+			
+			 if(lang == 'zh-CN'){
+			 	 $('#mycancel').get(0).innerHTML = '取消';
+			 	
+			 }else{
+			 	 $('#mycancel').get(0).innerHTML = 'CANCEL';
+			 	
+			 }
+			var id = GetQueryString('id');
+	$('#indexhome').attr('href', 'index.html?language=' + lang || 'en-US');
+			function loadData() {
+				$.ajax({
+					url: 'http://api.usleju.cn/catalog/news/get',
+					type: 'GET', //GET
+					async: true, //或false,是否异步
+					data: {
+						id: id //'72200884'
+					},
+					timeout: 5000, //超时时间
+					dataType: 'json', //返回的数据格式：json/xml/html/script/jsonp/text
+					beforeSend: function(request) {
+						request.setRequestHeader("app-token", "b2e476cb5ddcbf81c337218d5b5d43fa83bd6a8d4c9b7ba4ea047c70d22a828c");
+						request.setRequestHeader("language", lang || 'en-US');
+
+					},
+					success: function(data, textStatus, jqXHR) {
+						var obj = data;
+						if(obj.code == 200) {
+							//$('#headerTitle').get(0).innerHTML = obj.data.title;
+							 var content = 	obj.data.content;
+							var reg = new RegExp( '<img' , "g" )
+							
+                            var newstr = content.replace( reg , '<img style="width:'+($(window).width()-20)+'px;"' );
+
+						  $('#myTitle').get(0).innerHTML =obj.data.title;
+							$('#allContail').get(0).innerHTML =newstr;
+								
+							
+						} else {
+
+						}
+					},
+					error: function(xhr, textStatus) {
+						console.log('错误')
+						console.log(xhr)
+						console.log(textStatus)
+					},
+					complete: function() {
+						console.log('结束')
+					}
+				});
+
+			}
+
+			loadData();
+		</script>
+	</body>
+
+</html>
