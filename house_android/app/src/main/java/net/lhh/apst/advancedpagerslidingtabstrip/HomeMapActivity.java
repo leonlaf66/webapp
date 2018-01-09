@@ -115,7 +115,7 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
     MapStatus ms;
     private ClusterManager<MyItem> mClusterManager;
 
-    float zoom = 10.f;
+    float zoom = 12.f;
 
     MyItem  currentItem = null;
 
@@ -568,6 +568,59 @@ public class HomeMapActivity extends BaseActivity implements BaiduMap.OnMapLoade
             if(Integer.parseInt(home) == 1){
                 mLocClient.start();
             }else if(Integer.parseInt(home) == 2){
+
+                App app = (App)getApplication();
+
+                if(app.area.equalsIgnoreCase("MA")){
+
+
+                    if(getLanguage().contains("zh")){
+                        inputText.setText("波士顿");
+
+                    }else{
+                        inputText.setText("Boston");
+                    }
+
+
+                }else   if(app.area.equalsIgnoreCase("GA")){
+
+                    if(getLanguage().contains("zh")){
+                        inputText.setText("亚特兰大");
+
+                    }else{
+                        inputText.setText("Atlanta");
+                    }
+
+                }else   if(app.area.equalsIgnoreCase("IL")){
+
+                    if(getLanguage().contains("zh")){
+                        inputText.setText("芝加哥");
+
+                    }else{
+                        inputText.setText("Chicago");
+                    }
+
+                }else   if(app.area.equalsIgnoreCase("CA")){
+
+                    if(getLanguage().contains("zh")){
+                        inputText.setText("洛杉矶");
+
+                    }else{
+                        inputText.setText("Los Angeles");
+                    }
+
+                }else   if(app.area.equalsIgnoreCase("NY")){
+
+                    if(getLanguage().contains("zh")){
+                        inputText.setText("格雷特内克");
+
+                    }else{
+                        inputText.setText("Great Neck");
+                    }
+
+                }
+
+
                 this.getHouseDatas();
             }else if(Integer.parseInt(home) == 3){
                 details  = (String) getIntent().getSerializableExtra("details");

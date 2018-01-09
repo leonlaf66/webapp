@@ -313,7 +313,7 @@ public class NewsDetailsActivity extends BaseActivity {
                 .getSystemService(Context.WINDOW_SERVICE);
       final   int width = wm.getDefaultDisplay().getWidth() ;
 
-        final   int widtha =  (int) (width / scale + 0.5f) - 10;
+        final   int widtha =  (int) (width / scale + 0.5f) - 100;
 
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, sb.toString(), obj.toString(), new Response.Listener<JSONObject>() {
