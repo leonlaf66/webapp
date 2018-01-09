@@ -81,17 +81,17 @@
         [self hideLoading];
         //created_at
         if([operation[@"code"] integerValue] == 200){
-             NSString *html = [NSString stringWithFormat:@"<h2>%@</h2><br/><img src='%@' style='width:%dpx'><br/>%@&nbsp;&nbsp;米乐居",_data[@"title"],_data[@"image"],(ScreenWidth - 30),operation[@"data"][@"created_at"]];
+             NSString *html = [NSString stringWithFormat:@"<html><head><meta charset='UTF-8'><title></title><meta http-equiv='Access-Control-Allow-Origin' content='*'><meta http-equiv='content-security-policy'><meta name='viewport' content='width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no'></head><body><h2>%@</h2><br/><center><img src='%@' style='width:%fpx'><br/></center>%@&nbsp;&nbsp;米乐居",_data[@"title"],_data[@"image"],(ScreenWidth - 100),operation[@"data"][@"created_at"]];
             
             
             
             NSString *htmla = operation[@"data"][@"content"];
             
             
-             NSString *htmewn =   [htmla stringByReplacingOccurrencesOfString:@"<img" withString:[NSString stringWithFormat:@"<img  style='width:%dpx'",(ScreenWidth - 30)]];
+             NSString *htmewn =   [htmla stringByReplacingOccurrencesOfString:@"<img" withString:[NSString stringWithFormat:@"<img  style='width:%fpx'",(ScreenWidth - 100)]];
             
             
-               NSString *newhtml = [NSString stringWithFormat:@"%@<br/>%@",html,htmewn];
+               NSString *newhtml = [NSString stringWithFormat:@"%@<br/>%@</body></html>",html,htmewn];
             [_webView loadHTMLString:newhtml baseURL:nil];
         }
         
