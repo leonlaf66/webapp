@@ -130,6 +130,7 @@
 
 }
 -(void)gofd{
+   
     
     if(_datas && ![@"Unknown" isEqualToString:_datas[@"list_price"]] ){
         CalcutorFrontViewController *cv = [[CalcutorFrontViewController alloc] initWithNibName:@"CalcutorFrontViewController" bundle:nil];
@@ -972,6 +973,16 @@ _mapView.showsUserLocation = YES;
 }
 
 - (void)addCurrentAnnotation:(NSDictionary *)obj{
+    
+    if(obj[@"latitude"] == [NSNull null]||obj[@"longitude"] == [NSNull null]){
+        
+        CLLocationCoordinate2D coor;
+        coor.latitude = 42.38184;
+        coor.longitude = -71.07108;
+        
+        [self.mapView setCenterCoordinate:coor animated:YES];
+        return;
+    }
     MyBMKPointAnnotation      * pointAnnotationa = [[MyBMKPointAnnotation alloc]init];
     CLLocationCoordinate2D coor;
     // coor1.latitude = [obj[@"latitude"] doubleValue];
@@ -1271,11 +1282,13 @@ _mapView.showsUserLocation = YES;
     
     NSDictionary *df = _datas[@"taxes"];
     
-    if(df){
+    
+    
+    if(df && df[@"rawValue"] != [NSNull null]){
         _myTax = df[@"rawValue"];
 
     }else{
-        _myTax = 0;
+        _myTax = @"0";
     }
     
   
