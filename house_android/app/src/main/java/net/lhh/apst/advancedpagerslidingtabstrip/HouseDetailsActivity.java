@@ -379,7 +379,7 @@ public class HouseDetailsActivity extends BaseActivity implements BaiduMap.OnMap
 
                       //  JSONObject     taxes = items.getJSONObject("taxes");
 
-                        if(items.get("rawValue") != null){
+                        if(items.get("rawValue") != null && !"null".equalsIgnoreCase(items.getString("rawValue"))){
                             bundle.putSerializable("taxes", items.getString("rawValue"));
                         }else{
                             bundle.putSerializable("taxes", "0");
@@ -916,6 +916,8 @@ public class HouseDetailsActivity extends BaseActivity implements BaiduMap.OnMap
                 try {
                     // MCrypt mCrypt = new MCrypt();
                     // headers.put("accept", "text/json");
+                    App app =  (App)getApplication();
+                    headers.put("area-id",  app.area);
                     headers.put("app-token",  AppCfg.TOKEN);
                     headers.put("language", getLanguage());
                 } catch (Exception e) {
