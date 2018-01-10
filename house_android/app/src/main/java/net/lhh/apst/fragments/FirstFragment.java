@@ -410,7 +410,7 @@ public class FirstFragment extends BaseFragment{
 
         loadLanguage();
         getHotAreaDatas();
-       // addVersion();
+        addVersion();
         new UpdateManager(getActivity()).checkUpdate();
         return view;
     }
@@ -1019,7 +1019,7 @@ public class FirstFragment extends BaseFragment{
         JSONObject obj = new JSONObject();
         try {
             obj.put("config_id","androidVersion");
-            obj.put("config_content","10.0");
+            obj.put("config_content","11.0");
         } catch (JSONException e) {
             e.printStackTrace();
         }
