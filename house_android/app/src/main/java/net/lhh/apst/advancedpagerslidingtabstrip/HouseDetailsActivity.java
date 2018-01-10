@@ -379,7 +379,13 @@ public class HouseDetailsActivity extends BaseActivity implements BaiduMap.OnMap
 
                       //  JSONObject     taxes = items.getJSONObject("taxes");
 
-                        bundle.putSerializable("taxes", items.getString("rawValue"));
+                        if(items.get("rawValue") != null){
+                            bundle.putSerializable("taxes", items.getString("rawValue"));
+                        }else{
+                            bundle.putSerializable("taxes", "0");
+                        }
+
+
 
                         intent.putExtras(bundle);
 
@@ -689,19 +695,24 @@ public class HouseDetailsActivity extends BaseActivity implements BaiduMap.OnMap
             house_detial_touz_a.setText(roi.getString("est_annual_income_cash"));
             house_detial_touz_value_a.setText(roi.getString("ave_annual_income_cash"));
 
-            LatLng ll = new LatLng(alldata.getDouble("latitude"), alldata.getDouble("longitude"));
-            MapStatus.Builder builder = new MapStatus.Builder();
+            if(alldata.get("latitude") != null && alldata.get("longitude") != null){
+                LatLng ll = new LatLng(alldata.getDouble("latitude"), alldata.getDouble("longitude"));
+                MapStatus.Builder builder = new MapStatus.Builder();
 
-            builder.target(ll).zoom(12);
-            mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
-
-
-
-            List<MyItem> items = new ArrayList<MyItem>();
-            items.add(new MyItem(ll));
+                builder.target(ll).zoom(12);
+                mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
+                List<MyItem> items = new ArrayList<MyItem>();
+                items.add(new MyItem(ll));
 
 
-            mClusterManager.addItems(items);
+                mClusterManager.addItems(items);
+            }
+
+
+
+
+
+
 
             initLines();
 
