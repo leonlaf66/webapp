@@ -1404,7 +1404,7 @@ _searchTextInput.text = @"";
 
 //添加模型数组
 - (void)addPointJuheWithCoorArray:(NSArray *)array {
-      _clusterZoom = (NSInteger)self.mapView.zoomLevel+2;
+      _clusterZoom = (NSInteger)self.mapView.zoomLevel+3;
     _clusterCaches = [[NSMutableArray alloc] init];
     for (NSInteger i = 0; i < array.count; i++) {
         [_clusterCaches addObject:[NSMutableArray array]];
@@ -1570,7 +1570,7 @@ _searchTextInput.text = @"";
     }else{
         // [mapView setCenterCoordinate:view.annotation.coordinate];
         // [mapView zoomIn];
-        self.mapView.zoomLevel = self.mapView.zoomLevel + 3;
+        self.mapView.zoomLevel = self.mapView.zoomLevel + 4;
         _clusterZoom = (NSInteger)self.mapView.zoomLevel;
         CLLocationCoordinate2D coor;
         coor.latitude = annotationView.model.lat;

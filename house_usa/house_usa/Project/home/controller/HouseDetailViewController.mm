@@ -981,24 +981,28 @@ _mapView.showsUserLocation = YES;
         coor.longitude = -71.07108;
         
         [self.mapView setCenterCoordinate:coor animated:YES];
-        return;
+       
+    }else{
+    
+        MyBMKPointAnnotation      * pointAnnotationa = [[MyBMKPointAnnotation alloc]init];
+        CLLocationCoordinate2D coor;
+        // coor1.latitude = [obj[@"latitude"] doubleValue];
+        // coor1.longitude = [obj[@"longitude"] doubleValue];
+        coor.latitude = [obj[@"latitude"] doubleValue];
+        coor.longitude = [obj[@"longitude"] doubleValue];
+        pointAnnotationa.coordinate = coor;
+        pointAnnotationa.title = obj[@"location"];
+        
+        
+        NSMutableDictionary *ok = [[NSMutableDictionary alloc] initWithDictionary:obj];
+        [ok setObject:@"currentMap" forKey:@"icon"];
+        pointAnnotationa.data = ok;
+        [self.mapView setCenterCoordinate:coor animated:YES];
+        [_mapView addAnnotation:pointAnnotationa];
+
+    
     }
-    MyBMKPointAnnotation      * pointAnnotationa = [[MyBMKPointAnnotation alloc]init];
-    CLLocationCoordinate2D coor;
-    // coor1.latitude = [obj[@"latitude"] doubleValue];
-    // coor1.longitude = [obj[@"longitude"] doubleValue];
-    coor.latitude = [obj[@"latitude"] doubleValue];
-    coor.longitude = [obj[@"longitude"] doubleValue];
-    pointAnnotationa.coordinate = coor;
-    pointAnnotationa.title = obj[@"location"];
-    
-    
-    NSMutableDictionary *ok = [[NSMutableDictionary alloc] initWithDictionary:obj];
-    [ok setObject:@"currentMap" forKey:@"icon"];
-    pointAnnotationa.data = ok;
-    [self.mapView setCenterCoordinate:coor animated:YES];
-   [_mapView addAnnotation:pointAnnotationa];
-}
+  }
 
 // 添加动画Annotation
 - (void)addAnimatedAnnotation:(NSArray *)points{

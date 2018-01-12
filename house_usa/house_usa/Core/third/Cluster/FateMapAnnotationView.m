@@ -12,7 +12,7 @@
 
 @property (nonatomic,strong)UIImageView *imageView;
 @property (nonatomic,strong)UIImageView *userImage;
-@property (nonatomic,strong)UIButton *iconButton;
+@property (nonatomic,strong)UILabel *iconButton;
 @property (nonatomic,strong)MapItemView *itemView;
 @end
 
@@ -40,23 +40,25 @@
     self.userImage = [UIImageView new];
     self.itemView = [[MapItemView alloc] initWithFrame:CGRectMake(0, 0, 130/2, 30)] ;
     // self.itemView.center = CGPointMake(self.itemView.center.x, self.itemView.center.y-3);
-    self.iconButton = [UIButton new];
+    self.iconButton = [UILabel new];
     self.layer.cornerRadius = self.frame.size.width/2;
   
     self.imageView.frame = self.bounds;
     self.userImage.frame = CGRectMake(0, 0, 20, 20);
     
      //self.itemView.frame = CGRectMake(0, 0, 130/2, 130/2);
-    self.iconButton.frame = CGRectMake(140.0/2-20, 0, 20, 20);
-    self.iconButton.layer.cornerRadius = 10;
+    self.iconButton.frame = CGRectMake(3, 11,30, 11);
+    self.iconButton.textAlignment = NSTextAlignmentCenter;
+   
     self.iconButton.layer.masksToBounds = YES;
-    self.iconButton.backgroundColor = [UIColor globalTintColor];
-    self.iconButton.titleLabel.font = [UIFont systemFontOfSize:10];
-    [self.iconButton setTitle:@"99" forState:UIControlStateNormal];
+   //self.iconButton.backgroundColor = [UIColor redColor];
+    self.iconButton.font = [UIFont systemFontOfSize:10];
+    self.iconButton.textColor = [UIColor whiteColor];
+   // [self.iconButton setTitle:@"99" forState:UIControlStateNormal];
     self.userImage.center = CGPointMake(self.imageView.center.x-5, self.imageView.center.y+10);
    
     
-     self.iconButton.center = CGPointMake(self.imageView.center.x, self.imageView.center.y-3);
+    // self.iconButton.center = CGPointMake(self.imageView.center.x, self.imageView.center.y-3);
      self.itemView.center = CGPointMake(self.imageView.center.x, self.imageView.center.y-3);
 //    self.userImage.layer.borderColor = [MoyouColor colorWithLine].CGColor;
    // self.imageView.image = [UIImage imageNamed:@"currentMap"];
@@ -130,11 +132,12 @@
 - (void)setSize:(NSInteger)size {
      _size = size;
     if (_size > 1) {
-          [self setBounds:CGRectMake(0.f, 0.f, 140.0/2, 140.0/2)];
+          [self setBounds:CGRectMake(0.f, 0.f, 70.0/2, 70.0/2)];
         self.iconButton.hidden = NO;
           self.itemView.hidden = YES;
          self.userImage.hidden = YES;
-        [self.iconButton setTitle:[NSString stringWithFormat:@"%ld",_size] forState:UIControlStateNormal];
+        self.layer.cornerRadius = 17.5;
+        [self.iconButton setText:[NSString stringWithFormat:@"%ld",_size]];
           self.backgroundColor = [UIColor globalTintColor];
       
     }else {

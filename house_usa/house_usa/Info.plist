@@ -42,7 +42,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>8.3</string>
+	<string>8.3.2</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>wechat</string>
@@ -73,9 +73,9 @@
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>App需要您的同意,才能访问健康更新 </string>
 	<key>NSLocationUsageDescription</key>
-	<string>获取房源数据</string>
+	<string>便于你获取周边房源数据</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>获取房源数据</string>
+	<string>便于你获取周边房源数据</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>App需要您的同意,才能访问麦克风</string>
 	<key>NSMotionUsageDescription</key>
