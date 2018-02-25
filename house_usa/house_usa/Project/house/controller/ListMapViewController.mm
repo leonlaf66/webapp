@@ -516,12 +516,23 @@
     
     [_subwayBtn addTarget:self action:@selector(showSubway) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view insertSubview:_subwayBtn belowSubview:_bgView];
+    
+    NSString *area_id = [HomeModel sharedInstance].area;
+    
+    if([area_id isEqualToString:@"ma"]){
+        [self.view insertSubview:_subwayBtn belowSubview:_bgView];
+
+    }else{
+       // _subwayView.hidden = NO;
+    }
+
+    
     
     _subwayView = [[UIView alloc]initWithFrame: CGRectMake(0, ScreenHight, ScreenWidth, 200)];
     _subwayView.backgroundColor = [UIColor whiteColor];
     
     _pickView =  [[UIPickerView alloc]initWithFrame: CGRectMake(0,44, ScreenWidth, 156)];
+    
     
     _pickView.showsSelectionIndicator = YES;
     //在iOS 7之后可以自定义选择器视图的背景颜色改变其backgroundColor
@@ -535,6 +546,10 @@
     
     
     [_subwayView addSubview:_pickView];
+    
+    
+   
+    
     [self.view insertSubview:_subwayView belowSubview:_bgView];
     
     
@@ -1070,6 +1085,11 @@ _searchTextInput.text = @"";
                 
             }
             
+        
+           
+            
+            NSMutableDictionary *gf   = [NSMutableDictionary dictionary];
+            
             
             if ([[ds objectForKey:@"items"] count] > 0) {
                
@@ -1108,6 +1128,8 @@ _searchTextInput.text = @"";
                     FateModel *model = [FateModel new];
                     model.lon = [os[4] doubleValue];
                     model.lat = [os[3] doubleValue];
+                    
+                    model.location = [NSString stringWithFormat:@"%@,%@",os[4],os[3]];
                     model.price = newprice;
                     model.hid = os[0];
                     //model.type = @"独栋别墅";
@@ -1174,7 +1196,9 @@ _searchTextInput.text = @"";
                         
                     }
                     i++;
-                    [allDatas addObject:model];
+                   // [allDatas addObject:model];
+                    
+                    [gf setObject:model forKey:model.location];
                     
                     //  [allDatas addObject:@{@"id":os[0],@"type":os[2],@"price":newprice,
                     //            @"longitude":os[4],
@@ -1182,7 +1206,8 @@ _searchTextInput.text = @"";
                 }
                 // [self addAnimatedAnnotation:allDatas];
                 
-                _allDatas = allDatas;
+                _allDatas = [gf allValues];
+                [self.mapView setZoomLevel:13.0];
                 [self addPointJuheWithCoorArray:_allDatas];
                 
                 [self addLine:[ds objectForKey:@"polygons"]];

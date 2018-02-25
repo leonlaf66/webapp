@@ -1,6 +1,7 @@
 
 
 #import "LXActivity.h"
+#import "HomeModel.h"
 
 #define WINDOW_COLOR                            [UIColor colorWithRed:0 green:0 blue:0 alpha:0.2]
 #define ACTIONSHEET_BACKGROUNDCOLOR             [UIColor colorWithRed:106/255.00f green:106/255.00f blue:106/255.00f alpha:0.8]
@@ -413,7 +414,9 @@
             lang = @"en-US";
         }
         
-        NSString *url = [NSString stringWithFormat:@"http://app.usleju.cn/news.html?language=%@&id=%@",lang, _data[@"id"]];
+      //  NSString *area_id = [HomeModel sharedInstance].area;
+        
+        NSString *url = [NSString stringWithFormat:@"http://webapp.usleju.cn/ca/news/%@", _data[@"id"]];
         
         NSString *imgUrl = _data[@"image"];//;//[_data objectForKey:@"imgUrl"];
         
@@ -488,7 +491,10 @@
             lang = @"en-US";
         }
         
-        NSString *url = [NSString stringWithFormat:@"http://app.usleju.cn/home.html?language=%@&id=%@",lang, _data[@"id"]];
+         NSString *area_id = [HomeModel sharedInstance].area;
+        
+        
+        NSString *url = [NSString stringWithFormat:@"http://webapp.usleju.cn/%@/house/%@",area_id, _data[@"id"]];
         
         NSString *imgUrl = images[0];//;//[_data objectForKey:@"imgUrl"];
         

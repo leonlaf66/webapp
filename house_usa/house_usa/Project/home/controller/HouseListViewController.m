@@ -712,8 +712,6 @@
 
     if(_bedsFilterView.data){
         [filters setObject:_bedsFilterView.data[@"value"] forKey:@"beds"];
-    }else{
-        [filters setObject:@"2" forKey:@"beds"];
     }
     
     if(_priceFilterView.selectedData){

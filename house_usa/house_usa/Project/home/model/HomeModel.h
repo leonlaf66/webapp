@@ -86,4 +86,6 @@ AS_SINGLETON(HomeModel);
 
 
 -(void)getCfg:(NSDictionary *) data success:(void (^)(id operation))success failure:(void (^)(NSError *error))failure;
+
+-(void)addDeviceToken:(NSDictionary *) data success:(void (^)(id operation))success failure:(void (^)(NSError *error))failure;
 @end

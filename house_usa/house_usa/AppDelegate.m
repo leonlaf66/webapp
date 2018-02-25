@@ -33,9 +33,9 @@
     
    // [self loadKeys];
     
-  // [self addVersion];
-   
-
+   [self addVersion];
+  
+ [self registerRemoteNotification];
     return YES;
 }
 
@@ -43,7 +43,7 @@
     
     
     [[HomeModel sharedInstance] addCfg:@{@"config_id":@"iosVersion",
-                                         @"config_content":@"7.0"} success:^(id operation) {
+                                         @"config_content":@"8.5"} success:^(id operation) {
         
        
         
@@ -186,6 +186,57 @@
    
 
     
+}
+
+
+/// 远程通知
+- (void)registerRemoteNotification {
+    
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+    
+}
+
+// 本地通知响应
+- (void)receivedNotification:(NSNotification *)notification {
+    
+    //    if ([notification.name isEqualToString:kSessionExpiredNotification]) {
+    //
+    //    }
+}
+
+
+#pragma -mark RemoteNotification Delegate
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *deviceTokenStr = deviceToken.description;
+    deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@"<" withString:@""];
+    deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@">" withString:@""];
+    deviceTokenStr = [deviceTokenStr stringByReplacingOccurrencesOfString:@" " withString:@""];
+  //  _deviceToken = deviceTokenStr;
+//    NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
+//    
+//    [[HomeModel sharedInstance] addDeviceToken:@{@"token":deviceTokenStr,@"deviceID":idfv,@"deviceType":@"1",@"name":@"米乐居"} success:^(id operation) {
+//        
+//    } failure:^(NSError *error) {
+//        
+//    }];
+//    NSLog(@"#####deviceToken:%@", deviceTokenStr);
+    
+}
+
+-(void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    int a= 0;
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // 非运行状态
+    if (application.applicationState != UIApplicationStateActive) {
+        application.applicationIconBadgeNumber += 1;
+    }
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 
 @end

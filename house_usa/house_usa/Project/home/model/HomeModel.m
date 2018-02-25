@@ -362,6 +362,34 @@ DEF_SINGLETON(HomeModel);
     
 }
 
+//
+
+
+-(void)addDeviceToken:(NSDictionary *) data success:(void (^)(id operation))success failure:(void (^)(NSError *error))failure{
+    
+    _sessionManager.requestSerializer = [AFJSONRequestSerializer new];
+    _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];//请求
+    _sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];//响应
+   
+    
+    [_sessionManager POST:@"http://35.177.161.21/app/device/addDevice.do" parameters:data progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSString *result  =[[ NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"the fuck %@",result);
+        
+        NSDictionary * jsonObject = [NSJSONSerialization JSONObjectWithData:responseObject
+                                                                    options:NSJSONReadingAllowFragments
+                                                                      error:nil];
+        BLOCK_SAFE(success)(jsonObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        BLOCK_SAFE(failure)(error);
+    }];
+
+    
+}
+
 
 -(void)addCfg:(NSDictionary *) data success:(void (^)(id operation))success failure:(void (^)(NSError *error))failure{
     

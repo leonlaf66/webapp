@@ -146,6 +146,11 @@
 
 
 }
+/***
+ 
+ 显示loading数据
+ 
+ */
 
 
 -(void)showMsg:(NSString *)msg{

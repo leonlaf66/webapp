@@ -25,4 +25,6 @@
 @property (nonatomic,strong)NSString *price;
 @property (nonatomic,strong)NSString *hid;
 @property (nonatomic,strong)NSString *type;
+
+@property (nonatomic,strong)NSString *location;
 @end
